@@ -88,7 +88,7 @@
     "href": "assignment3.html#question-2.",
     "title": "Assignment 3",
     "section": "Question 2.",
-    "text": "Question 2.\nWrite SQL codes for the following:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; no duplicates!\n\n\n\nAdd grades\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFind the maximum salary for each instructor in each department. Assume each department has at least one instructor\n\n\n\nFind the lowest, across all departments, of the per dept maximum salary computed by the preceding query\n\n f. Add names to the list"
+    "text": "Question 2.\nWrite SQL codes for the following:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; no duplicates!\n\n\n\nAdd grades\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFind the maximum salary for each instructor in each department. Assume each department has at least one instructor\n\n\n\nFind the lowest, across all departments, of the per dept maximum salary computed by the preceding query\n\n\n\nadd names to the list"
   },
   {
     "objectID": "assignment3.html#question-5",
