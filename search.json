@@ -68,5 +68,33 @@
     "title": "EPPS 6354 - Assignment #1",
     "section": "Question 3.",
     "text": "Question 3.\nWhy is data mining needed if data is being able to be stored and reviewed effectively?\nData mining is very important because it allows for data to be analyzed and reviewed so that it can be used within all sectors of business, which includes but is not limited to healthcare, social media, banking, and retail. Even though the data is being retrieved in an accurate way, we still need to analyze the data to uncover different trends, patterns, and allow for accurate decision making. Data mining can help predict trends, help decision making, and detect any issues. In addition, we also need to understand real world necessities and trends and in turn would help us predict consumer patterns and make business decisions. There are certain things that databases are unable to provide, and external tools such as SQL, R, and Python are still needed.\n3 tables that might be used to store information in a social media system include a user name table, table that displays number of followers, and table that shows the number of interactions a user has with others. User name table - this table would show the user accounts and their information such as : user name, number of followers, email, biography. User account details Followers table - this table would show the number of followers that a user has, and possibly display what other attributes such as how long that person has been following them, or could be sorted by most recent, least interacted with, and followers that they don’t follow back. Manages following relationships Interactions table - this table would show the different interactions that someone would have with other followers. This would include the number of times a person liked their post, viewed their story, commented or responded to their post. Displays user engagement"
+  },
+  {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of the following:\n\nStudent IDs\n\n\n\nInstructors\n\n\n\nDepartments"
+  },
+  {
+    "objectID": "assignment3.html#question-1.",
+    "href": "assignment3.html#question-1.",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of the following:\n\nStudent IDs\n\n\n\nInstructors\n\n\n\nDepartments"
+  },
+  {
+    "objectID": "assignment3.html#question-2.",
+    "href": "assignment3.html#question-2.",
+    "title": "Assignment 3",
+    "section": "Question 2.",
+    "text": "Question 2.\nWrite SQL codes for the following:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; no duplicates!\n\n\n\nAdd grades\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFind the maximum salary for each instructor in each department. Assume each department has at least one instructor\n\n\n\nFind the lowest, across all departments, of the per dept maximum salary computed by the preceding query\n\n\n\nadd names to the list"
+  },
+  {
+    "objectID": "assignment3.html#question-5",
+    "href": "assignment3.html#question-5",
+    "title": "Assignment 3",
+    "section": "Question 5",
+    "text": "Question 5\nWrite the SQL code to find the number of students in each section. Results column should appear in the order, “course ID, sec ID, year, semester, num”"
   }
 ]
