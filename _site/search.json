@@ -96,5 +96,75 @@
     "title": "Assignment 3",
     "section": "Question 5",
     "text": "Question 5\nWrite the SQL code to find the number of students in each section. Results column should appear in the order, “course ID, sec ID, year, semester, num”"
+  },
+  {
+    "objectID": "assignment4.html",
+    "href": "assignment4.html",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "Weak entity set: one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity\nStrong entity set: the opposite of a weak entity set. It has a PK and does not depend on any other entity for its existence.\n------------------------------------------------------------------------\nEx. Hospital Management System:\nPatient Table in a Hospital Management System (Strong Entity) is the primary key because each patient has a unique Patient ID, it does not depend on another entity.\nWeak entities:\nPrescription: A prescription is given to a patient by a doctor relies on the doctor and cannot exist without the doctor as it depends on the Patient ID and Doctor ID.\nSurgery: Different patients might have the same surgery, so it depends on the patient ID and Doctor ID."
+  },
+  {
+    "objectID": "assignment4.html#question-1",
+    "href": "assignment4.html#question-1",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "Weak entity set: one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity\nStrong entity set: the opposite of a weak entity set. It has a PK and does not depend on any other entity for its existence.\n------------------------------------------------------\nEx. Hospital Management System:\nPatient Table in a Hospital Management System (Strong Entity) is the primary key because each patient has a unique Patient ID, it does not depend on another entity.\nWeak entities:\nPrescription: A prescription is given to a patient by a doctor relies on the doctor and cannot exist without the doctor as it depends on the Patient ID and Doctor ID.\nSurgery: Different patients might have the same surgery, so it depends on the patient ID and Doctor ID."
+  },
+  {
+    "objectID": "assignment4.html#question-2",
+    "href": "assignment4.html#question-2",
+    "title": "Assignment 4",
+    "section": "Question 2",
+    "text": "Question 2\nNov. 3rd, 2024\nDallas Mavericks vs Orlando Magic\n108 - 85\n----------------------------\nDallas Mavericks\nPlayers: \nOrlando Magic\nPlayers:\n\nGame Statistics:\n ----------------------------\nER Diagram:"
+  },
+  {
+    "objectID": "assignment4.html#question-3",
+    "href": "assignment4.html#question-3",
+    "title": "Assignment 4",
+    "section": "Question 3",
+    "text": "Question 3\nWhy does appending natural join section in the from clause would not change the result?\nNatural Join: this operation operates on two relations and produces a relations as the result. It only considered the pairs of tuples with the same value on those attributes that appear in the schemas of both relations.\n\nAutomatically matches columns with the same name in both tables\nRemoves duplicated columns in the output\n\nTherefore, the result is not changed because “takes” and “section” share the same attributes, therefore “Natural Join” would not add new information:\nShared Attributes:\n\ncourseID\nsecID\nsemester\nyear"
+  },
+  {
+    "objectID": "assignment4.html#question-3b",
+    "href": "assignment4.html#question-3b",
+    "title": "Assignment 4",
+    "section": "Question 3b",
+    "text": "Question 3b\nWrite an SQL query using the university schema to find the ID of each student who has never taken a course at the university.\nEx. \n\nUsing a left outer join ensures that all students appear in the result.\n(takes.ID IS NULL) filters out the students who have at least one course in takes, leaving those who have never taken a course at the university."
+  },
+  {
+    "objectID": "assignment4.html#question-2b-all-30-nba-teams",
+    "href": "assignment4.html#question-2b-all-30-nba-teams",
+    "title": "Assignment 4",
+    "section": "Question 2b: All 30 NBA Teams?",
+    "text": "Question 2b: All 30 NBA Teams?"
+  },
+  {
+    "objectID": "assignment4.html#question-2---dallas-mavericks-vs-orlando-magic",
+    "href": "assignment4.html#question-2---dallas-mavericks-vs-orlando-magic",
+    "title": "Assignment 4",
+    "section": "Question 2 - Dallas Mavericks vs Orlando Magic",
+    "text": "Question 2 - Dallas Mavericks vs Orlando Magic\n\nDallas Mavericks\nPlayers: \nOrlando Magic\nPlayers:\n\nGame Statistics:\n\nER Diagram:"
+  },
+  {
+    "objectID": "assignment4.html#question-1---strong-vs-weak-entity-set",
+    "href": "assignment4.html#question-1---strong-vs-weak-entity-set",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "Weak entity set: one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity\nStrong entity set: the opposite of a weak entity set. It has a PK and does not depend on any other entity for its existence.\n------------------------------------------------------------------------\nEx. Hospital Management System:\nPatient Table in a Hospital Management System (Strong Entity) is the primary key because each patient has a unique Patient ID, it does not depend on another entity.\nWeak entities:\nPrescription: A prescription is given to a patient by a doctor relies on the doctor and cannot exist without the doctor as it depends on the Patient ID and Doctor ID.\nSurgery: Different patients might have the same surgery, so it depends on the patient ID and Doctor ID."
+  },
+  {
+    "objectID": "assignment4.html#question-3---sql-exercise",
+    "href": "assignment4.html#question-3---sql-exercise",
+    "title": "Assignment 4",
+    "section": "Question 3 - SQL Exercise",
+    "text": "Question 3 - SQL Exercise\nWhy does appending natural join section in the from clause would not change the result?\nNatural Join: this operation operates on two relations and produces a relations as the result. It only considered the pairs of tuples with the same value on those attributes that appear in the schemas of both relations.\n\nAutomatically matches columns with the same name in both tables\nRemoves duplicated columns in the output\n\nTherefore, the result is not changed because “takes” and “section” share the same attributes, therefore “Natural Join” would not add new information:\nShared Attributes:\n\ncourseID\nsecID\nsemester\nyear"
+  },
+  {
+    "objectID": "assignment4.html#question-2---orlando-magic-vs-dallas-mavericks",
+    "href": "assignment4.html#question-2---orlando-magic-vs-dallas-mavericks",
+    "title": "Assignment 4",
+    "section": "Question 2 - Orlando Magic vs Dallas Mavericks",
+    "text": "Question 2 - Orlando Magic vs Dallas Mavericks\n\nMavericks\nPlayers: \nMagic\nPlayers:\n\nGame Statistics:\n\nER Diagram:"
   }
 ]

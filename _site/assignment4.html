@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Rose Mikame</title>
+<title>Assignment 4 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -142,15 +142,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question-1---strong-vs-weak-entity-set" id="toc-question-1---strong-vs-weak-entity-set" class="nav-link active" data-scroll-target="#question-1---strong-vs-weak-entity-set">Question 1 - Strong vs Weak Entity Set?</a></li>
+  <li><a href="#question-2---orlando-magic-vs-dallas-mavericks" id="toc-question-2---orlando-magic-vs-dallas-mavericks" class="nav-link" data-scroll-target="#question-2---orlando-magic-vs-dallas-mavericks">Question 2 - Orlando Magic vs Dallas Mavericks</a></li>
+  <li><a href="#question-2b-all-30-nba-teams" id="toc-question-2b-all-30-nba-teams" class="nav-link" data-scroll-target="#question-2b-all-30-nba-teams">Question 2b: All 30 NBA Teams?</a></li>
+  <li><a href="#question-3---sql-exercise" id="toc-question-3---sql-exercise" class="nav-link" data-scroll-target="#question-3---sql-exercise">Question 3 - SQL Exercise</a></li>
+  <li><a href="#question-3b" id="toc-question-3b" class="nav-link" data-scroll-target="#question-3b">Question 3b</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Rose Mikame</h1>
+<h1 class="title">Assignment 4</h1>
 </div>
 
 
@@ -167,9 +177,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to my website! I am a Social Data Analytics and Research Student at the University of Texas at Dallas.</p>
+<section id="question-1---strong-vs-weak-entity-set" class="level2">
+<h2 class="anchored" data-anchor-id="question-1---strong-vs-weak-entity-set">Question 1 - Strong vs Weak Entity Set?</h2>
+<p><strong>Weak entity set:</strong> one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity</p>
+<p><strong>Strong entity set:</strong> the opposite of a weak entity set. It has a <strong>PK</strong> and does not depend on any other entity for its existence.</p>
+<p>------------------------------------------------------------------------</p>
+<p><strong>Ex. Hospital Management System:</strong></p>
+<p>Patient Table in a Hospital Management System (Strong Entity) is the primary key because <strong>each patient has a unique Patient ID</strong>, it does not depend on another entity.</p>
+<p>Weak entities:</p>
+<p><strong>Prescription:</strong> A prescription is given to a patient by a doctor <strong>relies</strong> on the doctor and <strong>cannot exist without the doctor as it depends on the Patient ID and Doctor ID.</strong></p>
+<p><strong>Surgery:</strong> Different patients might have the same surgery, so it <strong>depends on the patient ID and Doctor ID.</strong></p>
+</section>
+<section id="question-2---orlando-magic-vs-dallas-mavericks" class="level2">
+<h2 class="anchored" data-anchor-id="question-2---orlando-magic-vs-dallas-mavericks">Question 2 - Orlando Magic vs Dallas Mavericks</h2>
+<p><img src="images/Mavs and Magic Score.png" class="img-fluid"></p>
+<p><strong>Mavericks</strong></p>
+<p>Players: <img src="images/Mavs Players Nov 3rd.png" class="img-fluid"></p>
+<p><strong>Magic</strong></p>
+<p>Players:</p>
+<p><img src="images/Magic Players Nov 3rd.png" class="img-fluid"></p>
+<p><strong>Game Statistics:</strong></p>
+<p><img src="images/Magic vs Mavs Scores Nov 3rd.png" class="img-fluid"></p>
+<p><strong>ER Diagram:</strong></p>
+<p><img src="images/ER Diagram - Mavs and Magic.png" class="img-fluid"></p>
+</section>
+<section id="question-2b-all-30-nba-teams" class="level2">
+<h2 class="anchored" data-anchor-id="question-2b-all-30-nba-teams">Question 2b: All 30 NBA Teams?</h2>
+<p><img src="images/ER Diagram - all teams.png" class="img-fluid"><br>
+</p>
+</section>
+<section id="question-3---sql-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="question-3---sql-exercise">Question 3 - SQL Exercise</h2>
+<p>Why does appending natural join section in the from clause would not change the result?</p>
+<p><strong>Natural Join:</strong> this operation operates on two relations and produces a relations as the result. It only considered the pairs of tuples with the same value on those attributes that appear in the schemas of both relations.</p>
+<ul>
+<li><p>Automatically matches columns with the same name in both tables</p></li>
+<li><p>Removes duplicated columns in the output</p></li>
+</ul>
+<p>Therefore, the result is not changed because “takes” and “section” share the same attributes, therefore “Natural Join” would not add new information:</p>
+<p>Shared Attributes:</p>
+<ul>
+<li><p>courseID</p></li>
+<li><p>secID</p></li>
+<li><p>semester</p></li>
+<li><p>year</p></li>
+</ul>
+</section>
+<section id="question-3b" class="level2">
+<h2 class="anchored" data-anchor-id="question-3b">Question 3b</h2>
+<p>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university.</p>
+<p>Ex. <img src="images/Assignment3_3b.png" class="img-fluid"></p>
+<ul>
+<li><p>Using a left outer join ensures that all students appear in the result.</p></li>
+<li><p>(takes.ID IS NULL) filters out the students who have at least one course in takes, leaving those who have never taken a course at the university.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
