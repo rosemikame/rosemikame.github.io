@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 4 – Rose Mikame</title>
+<title>EPPS 6354 Assignment 5 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,11 +151,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question-1---strong-vs-weak-entity-set" id="toc-question-1---strong-vs-weak-entity-set" class="nav-link active" data-scroll-target="#question-1---strong-vs-weak-entity-set">Question 1 - Strong vs Weak Entity Set?</a></li>
-  <li><a href="#question-2---orlando-magic-vs-dallas-mavericks" id="toc-question-2---orlando-magic-vs-dallas-mavericks" class="nav-link" data-scroll-target="#question-2---orlando-magic-vs-dallas-mavericks">Question 2 - Orlando Magic vs Dallas Mavericks</a></li>
-  <li><a href="#question-2b-all-30-nba-teams" id="toc-question-2b-all-30-nba-teams" class="nav-link" data-scroll-target="#question-2b-all-30-nba-teams">Question 2b: All 30 NBA Teams?</a></li>
+  <li><a href="#question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema" id="toc-question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema" class="nav-link active" data-scroll-target="#question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema">Question 1 - What does the following mean in terms of the structure of an enterprise schema?</a></li>
+  <li><a href="#question-2---why-do-we-still-have-weak-entity-sets" id="toc-question-2---why-do-we-still-have-weak-entity-sets" class="nav-link" data-scroll-target="#question-2---why-do-we-still-have-weak-entity-sets">Question 2 - Why do we still have weak entity sets?</a></li>
   <li><a href="#question-3---sql-exercise" id="toc-question-3---sql-exercise" class="nav-link" data-scroll-target="#question-3---sql-exercise">Question 3 - SQL Exercise</a></li>
-  <li><a href="#question-3b" id="toc-question-3b" class="nav-link" data-scroll-target="#question-3b">Question 3b</a></li>
   </ul>
 </nav>
     </div>
@@ -164,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 4</h1>
+<h1 class="title">EPPS 6354 Assignment 5</h1>
 </div>
 
 
@@ -181,60 +179,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="question-1---strong-vs-weak-entity-set" class="level2">
-<h2 class="anchored" data-anchor-id="question-1---strong-vs-weak-entity-set">Question 1 - Strong vs Weak Entity Set?</h2>
-<p><strong>Weak entity set:</strong> one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity</p>
-<p><strong>Strong entity set:</strong> the opposite of a weak entity set. It has a <strong>PK</strong> and does not depend on any other entity for its existence.</p>
-<p>------------------------------------------------------------------------</p>
-<p><strong>Ex. Hospital Management System:</strong></p>
-<p>Patient Table in a Hospital Management System (Strong Entity) is the primary key because <strong>each patient has a unique Patient ID</strong>, it does not depend on another entity.</p>
-<p>Weak entities:</p>
-<p><strong>Prescription:</strong> A prescription is given to a patient by a doctor <strong>relies</strong> on the doctor and <strong>cannot exist without the doctor as it depends on the Patient ID and Doctor ID.</strong></p>
-<p><strong>Surgery:</strong> Different patients might have the same surgery, so it <strong>depends on the patient ID and Doctor ID.</strong></p>
+<section id="question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema" class="level2">
+<h2 class="anchored" data-anchor-id="question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema">Question 1 - What does the following mean in terms of the structure of an enterprise schema?</h2>
+<p><strong>Disconnected</strong> - at least one entity set that has no relationships with any other entity sets. This suggests that some parts of the database are isolated and do not interact with others.</p>
+<p>Ex. 2 separate entity sets:</p>
+<p><u>Students (ID, Name, Age)</u></p>
+<p><u>Products (Product_ID, Name, Price)</u></p>
+<p>If there is no relationship between them, then they are disconnected. This might indicate missing relationships in the design, or could be intentional or a design flaw</p>
+<p><strong>Cycle</strong> - means there is a loop in the entity relationships. This implies that a sequence of relationships leads back to the original entity</p>
+<p><br>
+Ex.<br>
+Employee -&gt; works for -&gt; department Dept -&gt; managed by -&gt; manager (also employee)</p>
+<p>Manager -&gt; reports to -&gt; senior employee</p>
+<p>Senior Employee -&gt; works for -&gt; department (forming a circle)</p>
+<p>Cycle might be necessary in hierarchical structures like employee/manager relationships Unintended cycles can cause data redundancy or infinit loops in queries</p>
+<p>In Summary:</p>
+<p>Disconnected graph: some entities are isolated (meaning missing relationships</p>
+<p>Cycle in graph: entities are interconnected in a loop (could be intentional or a design issue)</p>
 </section>
-<section id="question-2---orlando-magic-vs-dallas-mavericks" class="level2">
-<h2 class="anchored" data-anchor-id="question-2---orlando-magic-vs-dallas-mavericks">Question 2 - Orlando Magic vs Dallas Mavericks</h2>
-<p><img src="images/Mavs and Magic Score.png" class="img-fluid"></p>
-<p><strong>Mavericks</strong></p>
-<p>Players: <img src="images/Mavs Players Nov 3rd.png" class="img-fluid"></p>
-<p><strong>Magic</strong></p>
-<p>Players:</p>
-<p><img src="images/Magic Players Nov 3rd.png" class="img-fluid"></p>
-<p><strong>Game Statistics:</strong></p>
-<p><img src="images/Magic vs Mavs Scores Nov 3rd.png" class="img-fluid"></p>
-<p><strong>ER Diagram:</strong></p>
-<p><img src="images/ER Diagram - Mavs and Magic.png" class="img-fluid"></p>
-</section>
-<section id="question-2b-all-30-nba-teams" class="level2">
-<h2 class="anchored" data-anchor-id="question-2b-all-30-nba-teams">Question 2b: All 30 NBA Teams?</h2>
-<p><img src="images/ER Diagram - all teams.png" class="img-fluid"><br>
-</p>
+<section id="question-2---why-do-we-still-have-weak-entity-sets" class="level2">
+<h2 class="anchored" data-anchor-id="question-2---why-do-we-still-have-weak-entity-sets">Question 2 - Why do we still have weak entity sets?</h2>
+<p>Weak entity sets naturally model real work scenarios where certain entities do not have an independent existence. They preserve the natural relationship in the data Reinforce constraints that ensure their existence depends on a related strong entity. This helps maintain data consistency.</p>
+<p>Ex. A dependent must always be associated with an employee, ensuring meaningful relationships in the database Real-world representation: some concepts naturally fit in the weak entity model better</p>
 </section>
 <section id="question-3---sql-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="question-3---sql-exercise">Question 3 - SQL Exercise</h2>
-<p>Why does appending natural join section in the from clause would not change the result?</p>
-<p><strong>Natural Join:</strong> this operation operates on two relations and produces a relations as the result. It only considered the pairs of tuples with the same value on those attributes that appear in the schemas of both relations.</p>
-<ul>
-<li><p>Automatically matches columns with the same name in both tables</p></li>
-<li><p>Removes duplicated columns in the output</p></li>
-</ul>
-<p>Therefore, the result is not changed because “takes” and “section” share the same attributes, therefore “Natural Join” would not add new information:</p>
-<p>Shared Attributes:</p>
-<ul>
-<li><p>courseID</p></li>
-<li><p>secID</p></li>
-<li><p>semester</p></li>
-<li><p>year</p></li>
-</ul>
-</section>
-<section id="question-3b" class="level2">
-<h2 class="anchored" data-anchor-id="question-3b">Question 3b</h2>
-<p>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university.</p>
-<p>Ex. <img src="images/Assignment3_3b.png" class="img-fluid"></p>
-<ul>
-<li><p>Using a left outer join ensures that all students appear in the result.</p></li>
-<li><p>(takes.ID IS NULL) filters out the students who have at least one course in takes, leaving those who have never taken a course at the university.</p></li>
-</ul>
+<p>SQL Exercise:</p>
+<p>i. Find the ID and name of each employee who lives in the same city as the location of the company for which the employee works:</p>
+<p><strong>SELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID JOIN company AS c ON w.company_name = c.company_name WHERE e.city = c.city;</strong></p>
+<p>Join employee with works using ID to get the company they work for Join works with company using company name to get the companies city Filter employees whos city matches the companies city</p>
+<p>ii. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager.</p>
+<p><strong>SELECT e.ID, e.person_nam FROM employee AS e JOIN manages AS m ON e.ID = m.ID JOIN employee AS mgr ON m.manager_id = mgr.ID WHERE e.city = mgr.city AND e.street = mgr.street;</strong></p>
+<p>Self join employee to compare an employee (e) with manager Use manages to get the manager id for each employee Filter employees who share the same city and street as their manager</p>
+<p>iii. Find ID and name of each employee who earns more than the average salary of all employees of her or his company.</p>
+<p><strong>SELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID WHERE w.salary &gt; ( SELECT AVG(w2.salary) FROM works AS w2 WHERE w.company_name = w2.company_name)</strong></p>
+<p>Join employee with works to get salary information Compare each employees salary to the average salary of all employees working in the same company</p>
+<hr>
+<p>Consider the query… what is wrong with it?:</p>
+<p>Using natural join can cause incorrect joins. Natural join joines tables based on common column names automatically If tables share multiple common columns, the database might join them incorrectly Could lead to wrong or missing results</p>
+<p>Ambiguous Column Names Semester and year columns are likely in the section table, but the query does not specify The database might get confused if other tables also have the columns</p>
+<p>Missing Explicit Conditions Instructor table has an ID column, but teaches also has ID Need to explicitly specify how tables are related using ON conditions</p>
+<p>In short, the issue was due to the natural join making unintended matches, and the fixed query uses join… on to explicitly define relationships, preventing errors.</p>
 
 
 </section>

@@ -166,5 +166,33 @@
     "title": "Assignment 4",
     "section": "Question 2 - Orlando Magic vs Dallas Mavericks",
     "text": "Question 2 - Orlando Magic vs Dallas Mavericks\n\nMavericks\nPlayers: \nMagic\nPlayers:\n\nGame Statistics:\n\nER Diagram:"
+  },
+  {
+    "objectID": "assignment5.html",
+    "href": "assignment5.html",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "",
+    "text": "Disconnected - at least one entity set that has no relationships with any other entity sets. This suggests that some parts of the database are isolated and do not interact with others.\nEx. 2 separate entity sets:\nStudents (ID, Name, Age)\nProducts (Product_ID, Name, Price)\nIf there is no relationship between them, then they are disconnected. This might indicate missing relationships in the design, or could be intentional or a design flaw\nCycle - means there is a loop in the entity relationships. This implies that a sequence of relationships leads back to the original entity\n\nEx.\nEmployee -&gt; works for -&gt; department Dept -&gt; managed by -&gt; manager (also employee)\nManager -&gt; reports to -&gt; senior employee\nSenior Employee -&gt; works for -&gt; department (forming a circle)\nCycle might be necessary in hierarchical structures like employee/manager relationships Unintended cycles can cause data redundancy or infinit loops in queries\nIn Summary:\nDisconnected graph: some entities are isolated (meaning missing relationships\nCycle in graph: entities are interconnected in a loop (could be intentional or a design issue)"
+  },
+  {
+    "objectID": "assignment5.html#question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema",
+    "href": "assignment5.html#question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "",
+    "text": "Disconnected - at least one entity set that has no relationships with any other entity sets. This suggests that some parts of the database are isolated and do not interact with others.\nEx. 2 separate entity sets:\nStudents (ID, Name, Age)\nProducts (Product_ID, Name, Price)\nIf there is no relationship between them, then they are disconnected. This might indicate missing relationships in the design, or could be intentional or a design flaw\nCycle - means there is a loop in the entity relationships. This implies that a sequence of relationships leads back to the original entity\n\nEx.\nEmployee -&gt; works for -&gt; department Dept -&gt; managed by -&gt; manager (also employee)\nManager -&gt; reports to -&gt; senior employee\nSenior Employee -&gt; works for -&gt; department (forming a circle)\nCycle might be necessary in hierarchical structures like employee/manager relationships Unintended cycles can cause data redundancy or infinit loops in queries\nIn Summary:\nDisconnected graph: some entities are isolated (meaning missing relationships\nCycle in graph: entities are interconnected in a loop (could be intentional or a design issue)"
+  },
+  {
+    "objectID": "assignment5.html#question-2---why-do-we-still-have-weak-entity-sets",
+    "href": "assignment5.html#question-2---why-do-we-still-have-weak-entity-sets",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "Question 2 - Why do we still have weak entity sets?",
+    "text": "Question 2 - Why do we still have weak entity sets?\nWeak entity sets naturally model real work scenarios where certain entities do not have an independent existence. They preserve the natural relationship in the data Reinforce constraints that ensure their existence depends on a related strong entity. This helps maintain data consistency.\nEx. A dependent must always be associated with an employee, ensuring meaningful relationships in the database Real-world representation: some concepts naturally fit in the weak entity model better"
+  },
+  {
+    "objectID": "assignment5.html#question-3---sql-exercise",
+    "href": "assignment5.html#question-3---sql-exercise",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "Question 3 - SQL Exercise",
+    "text": "Question 3 - SQL Exercise\nSQL Exercise:\ni. Find the ID and name of each employee who lives in the same city as the location of the company for which the employee works:\nSELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID JOIN company AS c ON w.company_name = c.company_name WHERE e.city = c.city;\nJoin employee with works using ID to get the company they work for Join works with company using company name to get the companies city Filter employees whos city matches the companies city\nii. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager.\nSELECT e.ID, e.person_nam FROM employee AS e JOIN manages AS m ON e.ID = m.ID JOIN employee AS mgr ON m.manager_id = mgr.ID WHERE e.city = mgr.city AND e.street = mgr.street;\nSelf join employee to compare an employee (e) with manager Use manages to get the manager id for each employee Filter employees who share the same city and street as their manager\niii. Find ID and name of each employee who earns more than the average salary of all employees of her or his company.\nSELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID WHERE w.salary &gt; ( SELECT AVG(w2.salary) FROM works AS w2 WHERE w.company_name = w2.company_name)\nJoin employee with works to get salary information Compare each employees salary to the average salary of all employees working in the same company\n\nConsider the query… what is wrong with it?:\nUsing natural join can cause incorrect joins. Natural join joines tables based on common column names automatically If tables share multiple common columns, the database might join them incorrectly Could lead to wrong or missing results\nAmbiguous Column Names Semester and year columns are likely in the section table, but the query does not specify The database might get confused if other tables also have the columns\nMissing Explicit Conditions Instructor table has an ID column, but teaches also has ID Need to explicitly specify how tables are related using ON conditions\nIn short, the issue was due to the natural join making unintended matches, and the fixed query uses join… on to explicitly define relationships, preventing errors."
   }
 ]
