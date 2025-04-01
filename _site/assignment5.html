@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8b20df304ae43519df5d458fcc8598a6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -190,26 +190,28 @@ ul.task-list li input[type="checkbox"] {
 <p><u>Students (ID, Name, Age)</u></p>
 <p><u>Products (Product_ID, Name, Price)</u></p>
 <p>If there is no relationship between them, then they are disconnected. This might indicate missing relationships in the design, or could be intentional or a design flaw</p>
-<p>-------------------------------------------------------------------------------------------</p>
+<hr>
 <p><strong>Cycle</strong> - means there is a loop in the entity relationships. This implies that a sequence of relationships leads back to the original entity</p>
 <p><br>
 <strong>Ex.</strong><br>
-<u>Employee -&gt; works for -&gt; department Dept -&gt; managed by -&gt; manager (also employee)</u></p>
+<u>Employee -&gt; works for -&gt; department</u></p>
+<p><u>Dept -&gt; managed by -&gt; manager (also employee)</u></p>
 <p><u>Manager -&gt; reports to -&gt; senior employee</u></p>
 <p><u>Senior Employee -&gt; works for -&gt; department</u></p>
 <ul>
 <li>forming a circle</li>
 </ul>
 <p>Cycles may be essential in hierarchical structures, such as employee-manager relationships. However, unintended cycles can lead to data redundancy or infinite loops in queries.</p>
-<p>-------------------------------------------------------------------------------------------</p>
+<hr>
 <p><strong>Summary:</strong></p>
-<p><u>Disconnected graph:</u> some entities are isolated (meaning missing relationships</p>
+<p><u>Disconnected graph:</u> some entities are isolated (meaning missing relationships)</p>
 <p><u>Cycle in graph:</u> entities are interconnected in a loop (could be intentional or a design issue)</p>
 </section>
 <section id="question-2---why-do-we-still-have-weak-entity-sets" class="level2">
 <h2 class="anchored" data-anchor-id="question-2---why-do-we-still-have-weak-entity-sets">Question 2 - Why do we still have weak entity sets?</h2>
 <p><u>Weak entity sets</u> naturally model real work scenarios where certain entities do not have an independent existence. They preserve the natural relationship in the data and reinforce constraints that ensure their existence depends on a related strong entity. <strong>This helps maintain data consistency.</strong></p>
-<p><strong>Ex.</strong> A dependent must always be associated with an employee, ensuring meaningful relationships in the database Real-world representation: some concepts naturally fit in the weak entity model better</p>
+<p><strong>Ex.</strong> A dependent must always be associated with an employee, ensuring meaningful relationships in the database.</p>
+<p>Real-world representation: some concepts naturally fit in the weak entity model better</p>
 </section>
 <section id="question-3---sql-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="question-3---sql-exercise">Question 3 - SQL Exercise</h2>
@@ -220,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Join works with company using company name to get the companies city</p></li>
 <li><p>Filter employees whos city matches the companies city</p></li>
 </ul>
-<p>-------------------------------------------------------------------------------------------</p>
+<hr>
 <p>ii. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager.</p>
 <p><strong>SELECT e.ID, e.person_nam FROM employee AS e JOIN manages AS m ON e.ID = m.ID JOIN employee AS mgr ON m.manager_id = mgr.ID WHERE e.city = mgr.city AND e.street = mgr.street;</strong></p>
 <ul>
@@ -228,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Use manages to get the manager id for each employee</p></li>
 <li><p>Filter employees who share the same city and street as their manager</p></li>
 </ul>
-<p>-------------------------------------------------------------------------------------------</p>
+<hr>
 <p>iii. Find ID and name of each employee who earns more than the average salary of all employees of her or his company.</p>
 <p><strong>SELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID WHERE w.salary &gt; ( SELECT AVG(w2.salary) FROM works AS w2 WHERE w.company_name = w2.company_name)</strong></p>
 <ul>
@@ -330,6 +332,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -440,6 +444,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
