@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EPPS 6354 Assignment 6 – Rose Mikame</title>
+<title>EPPS 6354 - Assignment 7 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,23 +154,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#question-1---websites-containing-json-xml" id="toc-question-1---websites-containing-json-xml" class="nav-link active" data-scroll-target="#question-1---websites-containing-json-xml">Question 1 - Websites containing JSON &amp; XML:</a></li>
-  <li><a href="#question-2---express-the-following-query-in-sql-using-no-subqueries-and-no-set-operations-using-outer-join" id="toc-question-2---express-the-following-query-in-sql-using-no-subqueries-and-no-set-operations-using-outer-join" class="nav-link" data-scroll-target="#question-2---express-the-following-query-in-sql-using-no-subqueries-and-no-set-operations-using-outer-join">Question 2 - Express the following query in SQL using no subqueries and no set operations using outer join:</a></li>
-  <li><a href="#question-3---r-and-postgresql-results" id="toc-question-3---r-and-postgresql-results" class="nav-link" data-scroll-target="#question-3---r-and-postgresql-results">Question 3 - R and PostgreSQL Results:</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">EPPS 6354 Assignment 6</h1>
+<h1 class="title">EPPS 6354 - Assignment 7</h1>
 </div>
 
 
@@ -187,71 +179,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="question-1---websites-containing-json-xml" class="level2">
-<h2 class="anchored" data-anchor-id="question-1---websites-containing-json-xml">Question 1 - Websites containing JSON &amp; XML:</h2>
-<p><strong>a. JSON - Tik Tok</strong></p>
-<p>Tik Tok uses JSON for data exchange between servers and users. Using JSON is efficient for the social media platform because it transmits data quickly and allows it to be well structured for efficient processing. It organizes the data into different categories, such as videos, likes, and comments etc. that is needed to make Tik Tok an enjoyable experience. It also allows users to share across different platforms!</p>
-<p>Structure and Composition of Tik Tok :</p>
-<ol type="1">
-<li><p><u>Front-end (User Experience):</u> The purpose is to provide a fast and smooth engaging user experience. Built with HTML, CSS, and JavaScript.</p>
-<p>Ex: FYP page and interactions</p></li>
-<li><p><u>Back-end (Processing):</u> The purpose is to manage user interactions, store videos, and real-time updates. Built with Python and Java.</p>
-<p>Ex: User information, content delivery, and security and data encryption</p></li>
-<li><p><u>Database System (Data Storage):</u> The purpose is to store user data, videos, engagement metrics, and recommendation data.</p></li>
-</ol>
-<p>Main Database Technologies used:</p>
-<ul>
-<li><p>SQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases</p></li>
-<li><p>NoSQL - for handling highspeed and unstructured data</p></li>
-</ul>
-<p><strong>b. XML - CNN</strong></p>
-<p>CNN uses XML for the distribution, storage, and sharing of news and updates. This allows for a quick and efficient data transfer to allow for more information to get across to the world.</p>
-<p>Structure and Composition of CNN:</p>
-<ol type="1">
-<li>News Updates: Provides news feeds in XML format, allowing for users to obtain real time news updates.</li>
-<li>Storing News Content: XML databases allows news websites to store articles and content. This makes retrieval of information efficient.</li>
-<li>Data Exchange: This allows for CNN to share its content across different platforms!</li>
-</ol>
-<p>Main Database Technologies used:</p>
-<ul>
-<li><p>SQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases</p></li>
-<li><p>NoSQL - for handling highspeed and unstructured data</p></li>
-<li><p>XML Databases - for storing news articles, headlines, and metadata</p></li>
-</ul>
-</section>
-<section id="question-2---express-the-following-query-in-sql-using-no-subqueries-and-no-set-operations-using-outer-join" class="level2">
-<h2 class="anchored" data-anchor-id="question-2---express-the-following-query-in-sql-using-no-subqueries-and-no-set-operations-using-outer-join">Question 2 - Express the following query in SQL using no subqueries and no set operations using outer join:</h2>
-<p><strong>SELECT student.ID<br>
-FROM student<br>
-LEFT OUTER JOIN advisor ON student.ID = advisor.s_id<br>
-WHERE advisor.s_id IS NULL</strong></p>
-<ul>
-<li><p>Left Outer Join includes all students even though they dont have a match in advisor.</p></li>
-<li><p>The (<strong>WHERE advisor.s_id IS NULL)</strong> filters out students who do have an advisor, leaving only those who dont.</p></li>
-</ul>
-<ol start="2" type="i">
-<li>Write a SQL query to find the names and IDs of the instructors who teach every course taught in their department. Order results by name:</li>
-</ol>
-<p><strong>SELECT i.ID, i.name<br>
-FROM instructor i<br>
-WHERE NOT EXISTS (<br>
-SELECT c.course_id<br>
-FROM course c<br>
-WHERE c.dept_name = i.dept_name<br>
-AND NOT EXISTS (<br>
-SELECT*<br>
-FROM teaches t WHERE t.ID = i.ID AND t.course_id = c.course_id</strong></p>
-</section>
-<section id="question-3---r-and-postgresql-results" class="level2">
-<h2 class="anchored" data-anchor-id="question-3---r-and-postgresql-results">Question 3 - R and PostgreSQL Results:</h2>
-<p><img src="images/6.1.png" class="img-fluid"></p>
-<p><img src="images/6.2.png" class="img-fluid"></p>
-<p><img src="images/6.3.png" class="img-fluid"></p>
-<p><img src="images/6.4.png" class="img-fluid"></p>
-<p><img src="images/6.5.png" class="img-fluid"></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
