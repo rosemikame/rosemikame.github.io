@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8b20df304ae43519df5d458fcc8598a6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -133,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./assignment5.html">
  <span class="dropdown-text">Assignment5</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment6.html">
+ <span class="dropdown-text">Assignment6</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -185,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="question-1---strong-vs-weak-entity-set">Question 1 - Strong vs Weak Entity Set?</h2>
 <p><strong>Weak entity set:</strong> one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity</p>
 <p><strong>Strong entity set:</strong> the opposite of a weak entity set. It has a <strong>PK</strong> and does not depend on any other entity for its existence.</p>
-<p>------------------------------------------------------------------------</p>
+<hr>
 <p><strong>Ex. Hospital Management System:</strong></p>
 <p>Patient Table in a Hospital Management System (Strong Entity) is the primary key because <strong>each patient has a unique Patient ID</strong>, it does not depend on another entity.</p>
 <p>Weak entities:</p>
@@ -322,6 +326,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -432,6 +438,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
