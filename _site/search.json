@@ -229,5 +229,12 @@
     "title": "EPPS 6354 Assignment 6",
     "section": "",
     "text": "a. JSON - Tik Tok\nTik Tok uses JSON for data exchange between servers and users. Using JSON is efficient for the social media platform because it transmits data quickly and allows it to be well structured for efficient processing. It organizes the data into different categories, such as videos, likes, and comments etc. that is needed to make Tik Tok an enjoyable experience. It also allows users to share across different platforms!\nStructure and Composition of Tik Tok :\n\nFront-end (User Experience): The purpose is to provide a fast and smooth engaging user experience. Built with HTML, CSS, and JavaScript.\nEx: FYP page and interactions\nBack-end (Processing): The purpose is to manage user interactions, store videos, and real-time updates. Built with Python and Java.\nEx: User information, content delivery, and security and data encryption\nDatabase System (Data Storage): The purpose is to store user data, videos, engagement metrics, and recommendation data.\n\nMain Database Technologies used:\n\nSQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases\nNoSQL - for handling highspeed and unstructured data\n\nb. XML - CNN\nCNN uses XML for the distribution, storage, and sharing of news and updates. This allows for a quick and efficient data transfer to allow for more information to get across to the world.\nStructure and Composition of CNN:\n\nNews Updates: Provides news feeds in XML format, allowing for users to obtain real time news updates.\nStoring News Content: XML databases allows news websites to store articles and content. This makes retrieval of information efficient.\nData Exchange: This allows for CNN to share its content across different platforms!\n\nMain Database Technologies used:\n\nSQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases\nNoSQL - for handling highspeed and unstructured data\nXML Databases - for storing news articles, headlines, and metadata"
+  },
+  {
+    "objectID": "assignment7.html",
+    "href": "assignment7.html",
+    "title": "EPPS 6354 - Assignment 7",
+    "section": "",
+    "text": "Shiny exercise:\n\napp.R in Shiny/1 Teams folder - Sorting changed to high to low:\n\n\n\napp.R in Shiny/2 Teams folder - Color changed from blue to green"
   }
 ]
