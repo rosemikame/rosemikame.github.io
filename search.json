@@ -9,9 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Rose Mikame",
+    "title": "About",
     "section": "",
-    "text": "Welcome to my website! I am a Social Data Analytics and Research Student at the University of Texas at Dallas."
+    "text": "Welcome to my website! I am currently pursuing a Masters in Social Data Analytics and Research at the University of Texas at Dallas.\nI graduated from UNT with a B.S. in Sociology and minored in Mathematics.\nCurrently working for Capital One Auto Finance for the past 4 years, and have been working towards furthering my education at the same time."
   },
   {
     "objectID": "about.html",
@@ -249,14 +249,14 @@
     "href": "research.html",
     "title": "Social Data Analytics and Research Projects",
     "section": "",
-    "text": "SQL Database Design - Graduate Project\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
+    "text": "SQL Database Design - Graduate Project - EPPS 6354 Information Management\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project - EPPS 6313 Intro to Quantitative Methods\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project - EPPS 6346 Qualitative Research Orientation\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
   },
   {
     "objectID": "research.html#academic-research-projects",
     "href": "research.html#academic-research-projects",
     "title": "Social Data Analytics and Research Projects",
     "section": "",
-    "text": "SQL Database Design - Graduate Project\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
+    "text": "SQL Database Design - Graduate Project - EPPS 6354 Information Management\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project - EPPS 6313 Intro to Quantitative Methods\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project - EPPS 6346 Qualitative Research Orientation\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
   },
   {
     "objectID": "CV.html",
@@ -264,5 +264,12 @@
     "title": "Resume",
     "section": "",
     "text": "Having trouble viewing? Open the PDF in a new tab."
+  },
+  {
+    "objectID": "index.html#contact-me",
+    "href": "index.html#contact-me",
+    "title": "About",
+    "section": "Contact me",
+    "text": "Contact me\n[rom230000@utdallas.edu]\nmikame.rose@gmail.com\nlinkedin"
   }
 ]
