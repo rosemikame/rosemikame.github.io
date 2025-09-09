@@ -18,14 +18,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am currently pursuing a Masters in Social Data Analytics and Research at the University of Texas at Dallas.\nI graduated from UNT with a B.S. in Sociology, minor in Mathematics\nCurrently working for Capital One Auto Finance."
+    "text": "Welcome to my website! I am currently pursuing a Masters in Social Data Analytics and Research at the University of Texas at Dallas.\nI graduated from UNT with a B.S. in Sociology and minored in Mathematics.\nCurrently working for Capital One Auto Finance for the past 4 years, and have been working towards furthering my education at the same time."
   },
   {
     "objectID": "about.html#contact-me",
     "href": "about.html#contact-me",
     "title": "About",
     "section": "Contact me",
-    "text": "Contact me\n[rom230000@utdallas.edu]\nWebsite"
+    "text": "Contact me\n[rom230000@utdallas.edu]"
   },
   {
     "objectID": "assignment1.html",
@@ -236,5 +236,26 @@
     "title": "EPPS 6354 - Assignment 7",
     "section": "",
     "text": "Shiny exercise:\n\napp.R in Shiny/1 Teams folder - Sorting changed to high to low:\n\n\n\napp.R in Shiny/2 Teams folder - Color changed from blue to green"
+  },
+  {
+    "objectID": "epps6302assignment1.html",
+    "href": "epps6302assignment1.html",
+    "title": "EPPS 6302 - Assignment 1",
+    "section": "",
+    "text": "Hello!\n\nThis website has been created using RStudio Quarto. I have chosen the theme called “Journal”, which is simple yet eye catching.\nThe navigation bar is organized between personal and educational tabs. I have included my information about myself, research projects, and my resume. The rest is organized by my previous courses that required the use of a Quarto website.\nThank you!"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Social Data Analytics and Research Projects",
+    "section": "",
+    "text": "SQL Database Design - Graduate Project\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
+  },
+  {
+    "objectID": "research.html#academic-research-projects",
+    "href": "research.html#academic-research-projects",
+    "title": "Social Data Analytics and Research Projects",
+    "section": "",
+    "text": "SQL Database Design - Graduate Project\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
   }
 ]
