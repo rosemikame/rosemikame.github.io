@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EPPS 6302 - Assignment 1 + DataFramed Podcast Review – Rose Mikame</title>
+<title>Assignment 2 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,6 +110,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./epps6302assignment1.html">
  <span class="dropdown-text">Assignment 1</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./epps6302assignment2.html">
+ <span class="dropdown-text">Assignment 2</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -163,15 +167,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-2-google-trends-data" id="toc-assignment-2-google-trends-data" class="nav-link active" data-scroll-target="#assignment-2-google-trends-data">Assignment 2: Google Trends Data</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">EPPS 6302 - Assignment 1 + DataFramed Podcast Review</h1>
+<h1 class="title">Assignment 2</h1>
 </div>
 
 
@@ -188,38 +198,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Hello!<br>
-</p>
-<p>This website has been created using <strong>RStudio Quarto</strong>. I have chosen the theme called “Journal”, which is simple yet eye catching.</p>
-<p>The navigation bar is organized between personal and educational tabs. I have included my information about myself, research projects, and my resume. The rest is organized by my previous courses that required the use of a Quarto website.</p>
-<p>Thank you!</p>
+<section id="assignment-2-google-trends-data" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-2-google-trends-data">Assignment 2: Google Trends Data</h2>
+<ol type="1">
+<li>Analyzing data for the following terms using Google trends:
+<ul>
+<li><p>Donald Trump (Blue) - Ironically Blue</p></li>
+<li><p>Kamala Harris (Red) - Ironically Red</p></li>
+<li><p>Elections (Yellow)</p></li>
+<li></li>
+<li><p><img src="images/EPPS6302/trumpkamalagoogletrend.png" class="img-fluid"></p></li>
+</ul></li>
+</ol>
+<p><strong>Analysis of Dates:</strong></p>
+<p>The data was analyzed for 6 months before leading up before the election <strong>(5/1/2024 - 11/5/2024).</strong></p>
+<p><strong>Analysis of Intervals:</strong></p>
+<p>The intervals are weekly, each segment is every 7 days.</p>
+<ul>
+<li><p><em>May-Early July:</em> The data is fairly low however Trump is mostly leading in searches</p></li>
+<li><p><em>Mid-July:</em> Large spike for Trump</p></li>
+<li><p><em>Late July-August:</em> Trump remains high, with Kamala Harris rising</p></li>
+<li><p><em>Sept-Oct:</em> Election begins a climb in late Oct</p></li>
+<li><p><em>Election week:</em> Election jumps, with Trump and Kamala Harris gaining momentum however not as high as “election”.</p></li>
+</ul>
 <hr>
-<p>DataFramed Podcast Review:&nbsp;</p>
-<p><strong>Can we Create an AI Doctor? with Aldo Faisal, Professor in AI &amp; Neuroscience at Imperial College</strong></p>
-<p>This podcast was presented by Dr.&nbsp;Aldo Faisal and discussed the role of AI in healthcare. Key takeaways from this podcast were:</p>
+<ol start="2" type="1">
+<li>Using gtrendsR01.r package to collect the data:</li>
+</ol>
+<p>gtrendsR01.r:</p>
+<p><strong>install.packages(“gtrendsR”) library(gtrendsR) TrumpHarrisElection = gtrends(c(“Trump”,“Harris”,“election”), onlyInterest = TRUE, geo = “US”, gprop = “web”, time = “today+5-y”, category = 0, ) # last five years the_df=TrumpHarrisElection$interest_over_time plot(TrumpHarrisElection) tg = gtrends(“tariff”, time = “all”)</strong></p>
+<p><img src="images/EPPS6302/plottrumpkamala.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>CSV and R formats:</li>
+</ol>
+<p>CSV format: write.csv(the_df, “TrumpHarrisElection.csv”, row.names = FALSE)</p>
+<p><img src="images/EPPS6302/trumpcsvscreenshot.png" class="img-fluid"></p>
+<p>Rds format: saveRDS(the_df, “TrumpHarrisElection.rds”)</p>
+<ol start="3" type="1">
+<li>What are the differences between the two methods?</li>
+</ol>
 <ul>
-<li><p>Utilize federated machine learning to train AI models on sensitive healthcare data while preserving patient privacy, enabling the development of robust AI systems without compromising data security.</p></li>
-<li><p>Investigate the potential of ambient intelligence in healthcare, which automates operational tasks like transcribing doctor-patient conversations and updating patient records, to reduce administrative burdens and enhance clinical decision-making.</p></li>
-<li><p>Consider the development of large health models, akin to large language models, that can process multimodal data from electronic health records, medical literature, and research data to provide comprehensive insights into patient care and treatment outcomes (DataCamp2025).</p></li>
+<li>The pros are that there is no coding required and it is a quick export to CSV using the Google Trends Website. However, it is less flexible and it is not easily automated or able to repeat your queries.</li>
+<li>Using gtrendsR in R, it is fully programmble which means there is reporoducible research. You can automate between multiple quieries and it is easy to save. However, you will need to know how to use R which everyone can learn!</li>
 </ul>
-<p><br>
-Review:</p>
-<p>Reading the title of the podcast, what immediately came to mind was an AI robot doctor that you would see on TV. This is what Dr.&nbsp;Faisal mentioned in the beginning of the podcast, that this is not to be mistaken with just that. Using AI in the medical field can help doctors and nurses treat patients faster and more accurately. An example of how AI has helped within the medical space has been regarding diagnostics. According to Dr.&nbsp;Faisal, licenses for these are already in the process of being licensed and used in the workspace. AI can be used to help tumor/shadow detection on scans, transcribe a conversation between a doctor and patient, identify symptoms, make suggestions on medication, and prefill information to make the doctor’s clerical load lighter.&nbsp;</p>
-<p>Nightingale AI is the name of Dr.&nbsp;Faisal’s project. Based in the UK, this is a large health model trained in electronic health records, imaging, labs, genetics, pathology, telemetry, and literature. The purpose is to have support provided for healthcare providers. Their main concern was how to obtain large amounts of medical data, which includes cooperating with healthcare providers and patients, and what to do with the data. It was mentioned that patients were concerned regarding their privacy and for their data to not be abused. However, Dr.&nbsp;Faisal stated that the main idea is to create an AI that learns about medicine in a different way that other large language models are applied to. They want to build models that are trained on multimodal data, so that the model is able to ingest, understand, and reason information the same way a medical doctor would reason science.&nbsp;<br>
-</p>
-<p>Example given of how Nightingale AI will help doctors in the future:&nbsp;</p>
-<ul>
-<li><p>Ex. The patient has a chest infection and the doctor will prescribe a certain type of penicillin. The system then can predict how the patient’s xray will look depending on what type of medicine that is prescribed to the patient.&nbsp;</p></li>
-<li><p>Ex. The patient has liver issues and the doctor prescribes a drug to cure another issue in the kidney. How will this medication affect your liver and what are all of the possible side effects and how do all of these drugs interact with each other? What are all the positive and negative side effects?&nbsp;</p></li>
-<li><p>Polypharmacy problem - this is what pharma researchers want to know when testing a medicine and which populations they can test on without issues.&nbsp;</p></li>
-<li><p>Ex. Can be used to understand how a patient evolves - the system has a “digital twin” which includes a description of your body’s physiology. This would be useful to see how an asthmatic patient would do in an environment that is hot, polluted, and can potentially save many lives</p></li>
-</ul>
-<p>Dr Faisal mentioned something that stuck with me. Concerning patients and their data privacy, he mentioned that sick patients almost always give their data away. They want to give their data to get better and to help others who are sick as well. The aim of the healthy is to not give their data away. There are different laws that protect people and their data, as well as how it can be used by insurers or employers. Data leakage is a possible risk however they are considering that as well.&nbsp;</p>
-<p>Overall, this particular podcast gave some amazing insights into the use of AI within the healthcare sector. I am not familiar with the healthcare world, so this was very insightful and allowed me to understand more of how AI can be used around the world.&nbsp;<br>
-</p>
-<p>DataCamp. 2025. “Can We Create an AI Doctor? with Aldo Faisal, Professor in AI &amp; Neuroscience at Imperial College.”&nbsp;<em>DataFramed</em>&nbsp;(podcast episode), July 28. DataCamp.&nbsp;<a href="https://www.datacamp.com/podcast/can-we-create-an-ai-doctor?utm_source=chatgpt.com">https://www.datacamp.com/podcast/can-we-create-an-ai-doctor</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
