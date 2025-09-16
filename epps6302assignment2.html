@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 2 – Rose Mikame</title>
+<title>Assignment 2 - Google Trends Data – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,7 +172,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-2-google-trends-data" id="toc-assignment-2-google-trends-data" class="nav-link active" data-scroll-target="#assignment-2-google-trends-data">Assignment 2: Google Trends Data</a></li>
+  <li><a href="#analyzing-data-for-the-following-terms-using-google-trends" id="toc-analyzing-data-for-the-following-terms-using-google-trends" class="nav-link active" data-scroll-target="#analyzing-data-for-the-following-terms-using-google-trends">1. Analyzing data for the following terms using Google trends:</a></li>
+  <li><a href="#using-gtrendsr01.r-package-to-collect-the-data" id="toc-using-gtrendsr01.r-package-to-collect-the-data" class="nav-link" data-scroll-target="#using-gtrendsr01.r-package-to-collect-the-data">2. Using gtrendsR01.r package to collect the data:</a></li>
+  <li><a href="#what-are-the-differences-between-the-two-methods" id="toc-what-are-the-differences-between-the-two-methods" class="nav-link" data-scroll-target="#what-are-the-differences-between-the-two-methods">3. What are the differences between the two methods?</a></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 2</h1>
+<h1 class="title">Assignment 2 - Google Trends Data</h1>
 </div>
 
 
@@ -198,18 +200,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assignment-2-google-trends-data" class="level2">
-<h2 class="anchored" data-anchor-id="assignment-2-google-trends-data">Assignment 2: Google Trends Data</h2>
-<ol type="1">
-<li>Analyzing data for the following terms using Google trends:
+<section id="analyzing-data-for-the-following-terms-using-google-trends" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-data-for-the-following-terms-using-google-trends">1. Analyzing data for the following terms using Google trends:</h2>
+<p>```<br>
+- Donald Trump (Blue)</p>
 <ul>
-<li><p>Donald Trump (Blue) - Ironically Blue</p></li>
-<li><p>Kamala Harris (Red) - Ironically Red</p></li>
+<li><p>Kamala Harris (Red)</p></li>
 <li><p>Elections (Yellow)</p></li>
-<li></li>
 <li><p><img src="images/EPPS6302/trumpkamalagoogletrend.png" class="img-fluid"></p></li>
-</ul></li>
-</ol>
+</ul>
 <p><strong>Analysis of Dates:</strong></p>
 <p>The data was analyzed for 6 months before leading up before the election <strong>(5/1/2024 - 11/5/2024).</strong></p>
 <p><strong>Analysis of Intervals:</strong></p>
@@ -222,9 +221,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><em>Election week:</em> Election jumps, with Trump and Kamala Harris gaining momentum however not as high as “election”.</p></li>
 </ul>
 <hr>
-<ol start="2" type="1">
-<li>Using gtrendsR01.r package to collect the data:</li>
-</ol>
+</section>
+<section id="using-gtrendsr01.r-package-to-collect-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="using-gtrendsr01.r-package-to-collect-the-data">2. Using gtrendsR01.r package to collect the data:</h2>
 <p>gtrendsR01.r:</p>
 <p><strong>install.packages(“gtrendsR”) library(gtrendsR) TrumpHarrisElection = gtrends(c(“Trump”,“Harris”,“election”), onlyInterest = TRUE, geo = “US”, gprop = “web”, time = “today+5-y”, category = 0, ) # last five years the_df=TrumpHarrisElection$interest_over_time plot(TrumpHarrisElection) tg = gtrends(“tariff”, time = “all”)</strong></p>
 <p><img src="images/EPPS6302/plottrumpkamala.png" class="img-fluid"></p>
@@ -233,10 +232,11 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>CSV format: write.csv(the_df, “TrumpHarrisElection.csv”, row.names = FALSE)</p>
 <p><img src="images/EPPS6302/trumpcsvscreenshot.png" class="img-fluid"></p>
-<p>Rds format: saveRDS(the_df, “TrumpHarrisElection.rds”)</p>
-<ol start="3" type="1">
-<li>What are the differences between the two methods?</li>
-</ol>
+<p>Rds format:</p>
+<p>saveRDS(the_df, “TrumpHarrisElection.rds”)</p>
+</section>
+<section id="what-are-the-differences-between-the-two-methods" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-the-differences-between-the-two-methods">3. What are the differences between the two methods?</h2>
 <ul>
 <li>The pros are that there is no coding required and it is a quick export to CSV using the Google Trends Website. However, it is less flexible and it is not easily automated or able to repeat your queries.</li>
 <li>Using gtrendsR in R, it is fully programmble which means there is reporoducible research. You can automate between multiple quieries and it is easy to save. However, you will need to know how to use R which everyone can learn!</li>
