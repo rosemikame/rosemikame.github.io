@@ -284,7 +284,7 @@
     "href": "epps6302assignment3.html#downloading-the-data",
     "title": "Assignment 3 - Maping Census Data",
     "section": "3. Downloading the data",
-    "text": "3. Downloading the data\nR-Script:\n![]images/EPPS6302/assignment3rscript1.png\n![]images/EPPS6302/assignment3rscript2.png"
+    "text": "3. Downloading the data\nR-Script:"
   },
   {
     "objectID": "epps6302assignment3.html#deliverables",
@@ -312,6 +312,6 @@
     "href": "epps6302assignment3.html#deliverables-and-interpretation",
     "title": "Assignment 3 - Maping Census Data",
     "section": "4. Deliverables and Interpretation",
-    "text": "4. Deliverables and Interpretation\nMap: ![]:images/EPPS6302/acs2023japanpop.png\nTable: ![]images/EPPS6302/epps6302assignment3table.png\nR-Script for Table:\n![]images/EPPS6302/assignment3tablerscript1.png\n![]images/EPPS6302/assignment3tablerscript2.png"
+    "text": "4. Deliverables and Interpretation\nMap: \nTable: \nR-Script for Table:"
   }
 ]
