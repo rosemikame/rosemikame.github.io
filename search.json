@@ -254,9 +254,9 @@
   {
     "objectID": "epps6302assignment3.html",
     "href": "epps6302assignment3.html",
-    "title": "Assignment 3: Mapping Census Data",
+    "title": "Assignment 3 - Maping Census Data",
     "section": "",
-    "text": "Objective:\nWill use tidycensus to retrieve ACS 2023 5-year estimates, including creating a tidy data set and producing one map table with an interpretation."
+    "text": "Objective:\nUsing tidycensus to retrieve ACS 2023 5 years estimates, to create a tidy data set, and to produce one map and one table along with an interpretation."
   },
   {
     "objectID": "epps6302assignment3.html#assignment-3-mapping-census-data",
@@ -268,9 +268,9 @@
   {
     "objectID": "epps6302assignment3.html#set-up",
     "href": "epps6302assignment3.html#set-up",
-    "title": "Assignment 3: Mapping Census Data",
-    "section": "1. Set-Up",
-    "text": "1. Set-Up\nAn API census key was obtained using the following website: (https://api.census.gov/data/key_signup.html)\n\nAPI Key: ae35c975d8902be5656eaf5d7f3c5d36e1682a8e\n\nUsing R, the following command was imputted:\n\ncensus_api_key(“ae35c975d8902be5656eaf5d7f3c5d36e1682a8e +”, install = FALSE)\n\nThe following R packages were installed: tidycensus, tigris, sf, dplyr, ggplot2, and readr."
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "1. Set Up",
+    "text": "1. Set Up\nThe Census Key was obtained from the following website (https://api.census.gov/data/key_signup.html)\nAPI Key: ae35c975d8902be5656eaf5d7f3c5d36e1682a8e\nThe following R packages were installed into R:\n\ntidycensus\ntigris\nsf\ndplyr\nggplot2\nreadr.\n\nThe API key was then put into R using the following R-Script:\ncensus_api_key(“ae35c975d8902be5656eaf5d7f3c5d36e1682a8e”, install = FALSE)."
   },
   {
     "objectID": "epps6302assignment3.html#choosing-geography-location-and-variables.",
@@ -282,9 +282,9 @@
   {
     "objectID": "epps6302assignment3.html#downloading-the-data",
     "href": "epps6302assignment3.html#downloading-the-data",
-    "title": "Assignment 3: Mapping Census Data",
+    "title": "Assignment 3 - Maping Census Data",
     "section": "3. Downloading the data",
-    "text": "3. Downloading the data\nRScript:"
+    "text": "3. Downloading the data\nR-Script:\n![]images/EPPS6302/assignment3rscript1.png\n![]images/EPPS6302/assignment3rscript2.png"
   },
   {
     "objectID": "epps6302assignment3.html#deliverables",
@@ -299,5 +299,19 @@
     "title": "Assignment 3: Mapping Census Data",
     "section": "5. Interpretation:",
     "text": "5. Interpretation:"
+  },
+  {
+    "objectID": "epps6302assignment3.html#geography-and-variables",
+    "href": "epps6302assignment3.html#geography-and-variables",
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "2. Geography and Variables",
+    "text": "2. Geography and Variables\nChosen Location: Texas, USA\nThe variables were searched using the following R-script: load_variables(2023, “acs5”, cache = TRUE)\nVariables:\nB02015_004: Estimate Total: East Asian - Japanese - Asian Alone by Selected Groups\nB17001_054: Income in the past 12 months at or above poverty level - Female - 25 to 34 years - Poverty Status in the Past 12 Months by Sex by Age"
+  },
+  {
+    "objectID": "epps6302assignment3.html#deliverables-and-interpretation",
+    "href": "epps6302assignment3.html#deliverables-and-interpretation",
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "4. Deliverables and Interpretation",
+    "text": "4. Deliverables and Interpretation\nMap: ![]:images/EPPS6302/acs2023japanpop.png\nTable: ![]images/EPPS6302/epps6302assignment3table.png\nR-Script for Table:\n![]images/EPPS6302/assignment3tablerscript1.png\n![]images/EPPS6302/assignment3tablerscript2.png"
   }
 ]

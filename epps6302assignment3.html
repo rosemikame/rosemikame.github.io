@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 3: Mapping Census Data – Rose Mikame</title>
+<title>Assignment 3 - Maping Census Data – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./epps6302assingment3.qmd">
+    <a class="dropdown-item" href="./epps6302assignment3.html">
  <span class="dropdown-text">Assignment 3</span></a>
   </li>  
     </ul>
@@ -176,11 +176,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">1. Set-Up</a></li>
-  <li><a href="#choosing-geography-location-and-variables." id="toc-choosing-geography-location-and-variables." class="nav-link" data-scroll-target="#choosing-geography-location-and-variables.">2. Choosing geography location and variables.</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">1. Set Up</a></li>
+  <li><a href="#geography-and-variables" id="toc-geography-and-variables" class="nav-link" data-scroll-target="#geography-and-variables">2. Geography and Variables</a></li>
   <li><a href="#downloading-the-data" id="toc-downloading-the-data" class="nav-link" data-scroll-target="#downloading-the-data">3. Downloading the data</a></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">4. Deliverables</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">5. Interpretation:</a></li>
+  <li><a href="#deliverables-and-interpretation" id="toc-deliverables-and-interpretation" class="nav-link" data-scroll-target="#deliverables-and-interpretation">4. Deliverables and Interpretation</a></li>
   </ul>
 </nav>
     </div>
@@ -189,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 3: Mapping Census Data</h1>
+<h1 class="title">Assignment 3 - Maping Census Data</h1>
 </div>
 
 
@@ -207,47 +206,44 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Objective:</p>
-<p>Will use tidycensus to retrieve <strong>ACS 2023</strong> 5-year estimates, including creating a tidy data set and producing one map table with an interpretation.</p>
+<p>Using <em>tidycensus</em> to retrieve ACS 2023 5 years estimates, to create a tidy data set, and to produce <strong>one map and one table</strong> along with an interpretation.</p>
 <section id="set-up" class="level2">
-<h2 class="anchored" data-anchor-id="set-up">1. Set-Up</h2>
-<p>An API census key was obtained using the following website: (<em>https://api.census.gov/data/key_signup.html</em>)</p>
+<h2 class="anchored" data-anchor-id="set-up">1. Set Up</h2>
+<p>The Census Key was obtained from the following website (https://api.census.gov/data/key_signup.html)</p>
+<p><strong>API Key: ae35c975d8902be5656eaf5d7f3c5d36e1682a8e</strong></p>
+<p>The following R packages were installed into R:</p>
 <ul>
-<li><strong>API Key: ae35c975d8902be5656eaf5d7f3c5d36e1682a8e</strong></li>
+<li><p><em>tidycensus</em></p></li>
+<li><p><em>tigris</em></p></li>
+<li><p><em>sf</em></p></li>
+<li><p><em>dplyr</em></p></li>
+<li><p><em>ggplot2</em></p></li>
+<li><p><em>readr.</em></p></li>
 </ul>
-<p>Using R, the following command was imputted:</p>
-<ul>
-<li>census_api_key(“ae35c975d8902be5656eaf5d7f3c5d36e1682a8e +”, install = FALSE)</li>
-</ul>
-<p>The following R packages were installed: <em>tidycensus, tigris, sf, dplyr, ggplot2, and readr.</em></p>
+<p>The API key was then put into R using the following R-Script:</p>
+<p><strong>census_api_key(“ae35c975d8902be5656eaf5d7f3c5d36e1682a8e”, install = FALSE).</strong></p>
 </section>
-<section id="choosing-geography-location-and-variables." class="level2">
-<h2 class="anchored" data-anchor-id="choosing-geography-location-and-variables.">2. Choosing geography location and variables.</h2>
-<p>Location: <strong><em>Texas, USA.</em></strong></p>
-<p>ACS variables chosen:</p>
-<ul>
-<li><p>(<strong>B02015_004 - East Asian - Japanese</strong>) - Asian Alone by Selected Groups</p></li>
-<li><p>(<strong>B17001_054 - Income in the past 12 months at or above poverty level - Female - 25 to 34 years</strong>) - Poverty Status in the Past 12 Months by Sex by Age</p></li>
-</ul>
-<p><strong>load_variables(2023, “acs5”, cache = TRUE)</strong> was used to search the previous codes.</p>
+<section id="geography-and-variables" class="level2">
+<h2 class="anchored" data-anchor-id="geography-and-variables">2. Geography and Variables</h2>
+<p>Chosen Location: <em>Texas, USA</em></p>
+<p>The variables were searched using the following R-script: <strong>load_variables(2023, “acs5”, cache = TRUE)</strong></p>
+<p>Variables:</p>
+<p><strong>B02015_004: Estimate Total: East Asian - Japanese - Asian Alone by Selected Groups</strong></p>
+<p><strong>B17001_054: Income in the past 12 months at or above poverty level - Female - 25 to 34 years - Poverty Status in the Past 12 Months by Sex by Age</strong></p>
 </section>
 <section id="downloading-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="downloading-the-data">3. Downloading the data</h2>
-<p><strong>RScript:</strong></p>
-<p><img src="images/EPPS6302/assignment3rscript1.png" class="img-fluid"></p>
-<p><img src="images/EPPS6302/assignment3rscript2.png" class="img-fluid"></p>
+<p>R-Script:</p>
+<p>![]images/EPPS6302/assignment3rscript1.png</p>
+<p>![]images/EPPS6302/assignment3rscript2.png</p>
 </section>
-<section id="deliverables" class="level2">
-<h2 class="anchored" data-anchor-id="deliverables">4. Deliverables</h2>
-<p>Map:</p>
-<p><img src="images/EPPS6302/acs2023japanpop.png" class="img-fluid"></p>
-<p>Table:</p>
-<p><img src="images/EPPS6302/epps6302assignment3table.png" class="img-fluid"></p>
-<p>Table R script:</p>
-<p>![]images(EPPS6302/assignment3tablerscript1)</p>
-<p>![]images(EPPS6302/assignment3tablerscript2)</p>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">5. Interpretation:</h2>
+<section id="deliverables-and-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables-and-interpretation">4. Deliverables and Interpretation</h2>
+<p>Map: ![]:images/EPPS6302/acs2023japanpop.png</p>
+<p>Table: ![]images/EPPS6302/epps6302assignment3table.png</p>
+<p>R-Script for Table:</p>
+<p>![]images/EPPS6302/assignment3tablerscript1.png</p>
+<p>![]images/EPPS6302/assignment3tablerscript2.png</p>
 
 
 </section>
