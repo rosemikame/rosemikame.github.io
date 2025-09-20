@@ -250,5 +250,54 @@
     "title": "Assignment 2 - Google Trends Data",
     "section": "3. What are the differences between the two methods?",
     "text": "3. What are the differences between the two methods?\n\nThe pros are that there is no coding required and it is a quick export to CSV using the Google Trends Website. However, it is less flexible and it is not easily automated or able to repeat your queries.\nUsing gtrendsR in R, it is fully programmble which means there is reporoducible research. You can automate between multiple quieries and it is easy to save. However, you will need to know how to use R which everyone can learn!"
+  },
+  {
+    "objectID": "epps6302assignment3.html",
+    "href": "epps6302assignment3.html",
+    "title": "Assignment 3: Mapping Census Data",
+    "section": "",
+    "text": "Objective:\nWill use tidycensus to retrieve ACS 2023 5-year estimates, including creating a tidy data set and producing one map table with an interpretation."
+  },
+  {
+    "objectID": "epps6302assignment3.html#assignment-3-mapping-census-data",
+    "href": "epps6302assignment3.html#assignment-3-mapping-census-data",
+    "title": "Assignment 3: Mapping Census Data",
+    "section": "",
+    "text": "Objective:\nWill use tidycensus to retrieve ACS 2023 5-year estimates, including creating a tidy data set and producing one map table with an interpretation."
+  },
+  {
+    "objectID": "epps6302assignment3.html#set-up",
+    "href": "epps6302assignment3.html#set-up",
+    "title": "Assignment 3: Mapping Census Data",
+    "section": "1. Set-Up",
+    "text": "1. Set-Up\nAn API census key was obtained using the following website: (https://api.census.gov/data/key_signup.html)\n\nAPI Key: ae35c975d8902be5656eaf5d7f3c5d36e1682a8e\n\nUsing R, the following command was imputted:\n\ncensus_api_key(“ae35c975d8902be5656eaf5d7f3c5d36e1682a8e +”, install = FALSE)\n\nThe following R packages were installed: tidycensus, tigris, sf, dplyr, ggplot2, and readr."
+  },
+  {
+    "objectID": "epps6302assignment3.html#choosing-geography-location-and-variables.",
+    "href": "epps6302assignment3.html#choosing-geography-location-and-variables.",
+    "title": "Assignment 3: Mapping Census Data",
+    "section": "2. Choosing geography location and variables.",
+    "text": "2. Choosing geography location and variables.\nLocation: Texas, USA.\nACS variables chosen:\n\n(B02015_004 - East Asian - Japanese) - Asian Alone by Selected Groups\n(B17001_054 - Income in the past 12 months at or above poverty level - Female - 25 to 34 years) - Poverty Status in the Past 12 Months by Sex by Age\n\nload_variables(2023, “acs5”, cache = TRUE) was used to search the previous codes."
+  },
+  {
+    "objectID": "epps6302assignment3.html#downloading-the-data",
+    "href": "epps6302assignment3.html#downloading-the-data",
+    "title": "Assignment 3: Mapping Census Data",
+    "section": "3. Downloading the data",
+    "text": "3. Downloading the data\nRScript:"
+  },
+  {
+    "objectID": "epps6302assignment3.html#deliverables",
+    "href": "epps6302assignment3.html#deliverables",
+    "title": "Assignment 3: Mapping Census Data",
+    "section": "4. Deliverables",
+    "text": "4. Deliverables\nMap:\n\nTable:\n\nTable R script:\n![]images(EPPS6302/assignment3tablerscript1)\n![]images(EPPS6302/assignment3tablerscript2)"
+  },
+  {
+    "objectID": "epps6302assignment3.html#interpretation",
+    "href": "epps6302assignment3.html#interpretation",
+    "title": "Assignment 3: Mapping Census Data",
+    "section": "5. Interpretation:",
+    "text": "5. Interpretation:"
   }
 ]
