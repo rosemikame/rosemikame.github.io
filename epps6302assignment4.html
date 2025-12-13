@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -189,6 +218,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#webscraping-1" id="toc-webscraping-1" class="nav-link active" data-scroll-target="#webscraping-1">Webscraping 1</a></li>
+  <li><a href="#now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website" id="toc-now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website" class="nav-link" data-scroll-target="#now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website">Now we can modify the program to start scraping the tables provided in the website!</a></li>
   </ul>
 </nav>
     </div>
@@ -217,16 +247,31 @@ ul.task-list li input[type="checkbox"] {
 <section id="webscraping-1" class="level2">
 <h2 class="anchored" data-anchor-id="webscraping-1">Webscraping 1</h2>
 <p>Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!</p>
-<ol type="a">
-<li><p>Modifying the program to scrape tables in Wikipedia:</p></li>
-<li><p>Cleaning up the dataframe:</p></li>
-<li><p>Date variable:</p></li>
+<ol type="1">
+<li>Download rvest_wiki01.R and download the packages!</li>
 </ol>
-<!-- -->
-<ol start="2" type="i">
-<li><p>Removing unneeded rows and columns:</p></li>
-<li><p>Suggested data plan to acquire web data for research:</p></li>
+<p>library(tidyverse) library(rvest) library(stringr)</p>
+<ol start="2" type="1">
+<li><p>The website in question (https://en.wikipedia.org/wiki/List_of_countries_by_foreign-exchange_reserves)</p></li>
+<li><p>Read the HTML! wikireserve&lt;- read_html(url)</p></li>
+<li><p>Need to tell R which table to grab foreignreserve &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*<span class="citation" data-cites="id">[@id="mw-content-text"]</span>/div/table[1]’) %&gt;% html_table()</p></li>
+<li><p>Save the table! fores &lt;- foreignreserve[[1]]</p></li>
+<li><p>Rename the columns names(fores) &lt;- c(“Rank”, “Country”, “Forexres”, “Date”, “Change”, “Sources”)</p></li>
 </ol>
+</section>
+<section id="now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website" class="level2">
+<h2 class="anchored" data-anchor-id="now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website">Now we can modify the program to start scraping the tables provided in the website!</h2>
+<p>foreignreserve2 &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*<span class="citation" data-cites="id">[@id="mw-content-text"]</span>/div/table[2]’) %&gt;% html_table()</p>
+<ol start="7" type="1">
+<li>Cleaning up the dataframe:</li>
+</ol>
+<p>str(fores)</p>
+<p>fores<span class="math inline">\(newdate &lt;- stringr::str_split_fixed(fores\)</span>Date, “\[”, n = 2)[,1] fores<span class="math inline">\(newdate &lt;- trimws(fores\)</span>newdate) fores<span class="math inline">\(newdate_date &lt;- as.Date(fores\)</span>newdate, format = “%d %B %Y”)</p>
+<p>newfores &lt;- fores[-c(1, 2), ]</p>
+<p>newfores_clean &lt;- newfores %&gt;% select(Country, Forexres, newdate_date)</p>
+<p>newfores_clean &lt;- newfores_clean %&gt;% mutate( Forexres_clean = stringr::str_replace_all(Forexres, “,”, ““), Forexres_clean = as.numeric(Forexres_clean) )</p>
+<p>fx_reserves_final &lt;- newfores_clean %&gt;% select( Country, Forexres_clean, Date = newdate_date )</p>
+<p>head(fx_reserves_final) str(fx_reserves_final)</p>
 
 
 </section>

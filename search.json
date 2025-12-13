@@ -18,7 +18,7 @@
     "href": "epps6302assignment5.html",
     "title": "EPPS 6302 Assignment 5",
     "section": "",
-    "text": "Government documents searched using the following link: https://www.govinfo.gov/app/search/\n\n\n\nDownloading the ten most recent documents from “Foregin Relations Committee” using govtdata.R\n\n\n\nReport on difficulties encountered in the scraping process:\n\n\n\nHow useable was the scraped data?\nHow to improve this process?"
+    "text": "Go to the GovInfo search page:\nhttps://www.govinfo.gov/app/search/\n\nEnter search terms or filters to narrow the results to the Foreign Relations Committee.\n\nExample search string might include \"Foreign Relations Committee\" or similar filtering by committee (metadata filters vary).\n\nUse the advanced search options on GovInfo to narrow by date issued, committee, or type of document.\n\nExamine the returned results."
   },
   {
     "objectID": "epps6302assignment5.html#government-data-api",
@@ -32,14 +32,14 @@
     "href": "epps6302assignment4.html",
     "title": "EPPS 6302 Assignment 4",
     "section": "",
-    "text": "Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!\n\nModifying the program to scrape tables in Wikipedia:\nCleaning up the dataframe:\nDate variable:\n\n\n\nRemoving unneeded rows and columns:\nSuggested data plan to acquire web data for research:"
+    "text": "Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!\n\nDownload rvest_wiki01.R and download the packages!\n\nlibrary(tidyverse) library(rvest) library(stringr)\n\nThe website in question (https://en.wikipedia.org/wiki/List_of_countries_by_foreign-exchange_reserves)\nRead the HTML! wikireserve&lt;- read_html(url)\nNeed to tell R which table to grab foreignreserve &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*[@id=\"mw-content-text\"]/div/table[1]’) %&gt;% html_table()\nSave the table! fores &lt;- foreignreserve[[1]]\nRename the columns names(fores) &lt;- c(“Rank”, “Country”, “Forexres”, “Date”, “Change”, “Sources”)"
   },
   {
     "objectID": "epps6302assignment4.html#webscraping-1",
     "href": "epps6302assignment4.html#webscraping-1",
     "title": "EPPS 6302 Assignment 4",
     "section": "",
-    "text": "Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!\n\nModifying the program to scrape tables in Wikipedia:\nCleaning up the dataframe:\nDate variable:\n\n\n\nRemoving unneeded rows and columns:\nSuggested data plan to acquire web data for research:"
+    "text": "Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!\n\nDownload rvest_wiki01.R and download the packages!\n\nlibrary(tidyverse) library(rvest) library(stringr)\n\nThe website in question (https://en.wikipedia.org/wiki/List_of_countries_by_foreign-exchange_reserves)\nRead the HTML! wikireserve&lt;- read_html(url)\nNeed to tell R which table to grab foreignreserve &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*[@id=\"mw-content-text\"]/div/table[1]’) %&gt;% html_table()\nSave the table! fores &lt;- foreignreserve[[1]]\nRename the columns names(fores) &lt;- c(“Rank”, “Country”, “Forexres”, “Date”, “Change”, “Sources”)"
   },
   {
     "objectID": "epps6302assignment3.html",
@@ -334,5 +334,19 @@
     "title": "About",
     "section": "",
     "text": "My name is Rose Mikame and I am pursuing my Master’s in Social Data Analytics and Research at the University of Texas at Dallas, building on my background in sociology, mathematics, and statistics.\nPreviously completed my undergraduate studies at the University of North Texas with a degree in Sociology and minor in Math.\nCurrently working for Capital One within the Auto Finance Department, and have been working towards furthering my education at the same time. My career goal is to join an organization where I can contribute as a data analyst, using tools like R, SQL, and data visualization platforms to uncover trends, optimize strategies, and inform decision-making."
+  },
+  {
+    "objectID": "epps6302assignment4.html#now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website",
+    "href": "epps6302assignment4.html#now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website",
+    "title": "EPPS 6302 Assignment 4",
+    "section": "Now we can modify the program to start scraping the tables provided in the website!",
+    "text": "Now we can modify the program to start scraping the tables provided in the website!\nforeignreserve2 &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*[@id=\"mw-content-text\"]/div/table[2]’) %&gt;% html_table()\n\nCleaning up the dataframe:\n\nstr(fores)\nfores\\(newdate &lt;- stringr::str_split_fixed(fores\\)Date, “\\[”, n = 2)[,1] fores\\(newdate &lt;- trimws(fores\\)newdate) fores\\(newdate_date &lt;- as.Date(fores\\)newdate, format = “%d %B %Y”)\nnewfores &lt;- fores[-c(1, 2), ]\nnewfores_clean &lt;- newfores %&gt;% select(Country, Forexres, newdate_date)\nnewfores_clean &lt;- newfores_clean %&gt;% mutate( Forexres_clean = stringr::str_replace_all(Forexres, “,”, ““), Forexres_clean = as.numeric(Forexres_clean) )\nfx_reserves_final &lt;- newfores_clean %&gt;% select( Country, Forexres_clean, Date = newdate_date )\nhead(fx_reserves_final) str(fx_reserves_final)"
+  },
+  {
+    "objectID": "epps6302assignment5.html#r-script-govtdata01.r-downloading-documents",
+    "href": "epps6302assignment5.html#r-script-govtdata01.r-downloading-documents",
+    "title": "EPPS 6302 Assignment 5",
+    "section": "1.3 R Script (govtdata01.R) – Downloading Documents",
+    "text": "1.3 R Script (govtdata01.R) – Downloading Documents\n\nLoad R packages for web requests and file downloads (for example, httr, jsonlite, tidyverse).\nCraft search queries or use GovInfo’s API to pull results that match Foreign Relations Committee.\n\nGovInfo has a Search API that accepts POST requests. :contentReferenceoaicite:3\n\nDownload documents using returned URLs.\nSave each downloaded file locally (e.g., as PDF, XML, or text)."
   }
 ]

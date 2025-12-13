@@ -188,7 +188,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#government-data-api" id="toc-government-data-api" class="nav-link active" data-scroll-target="#government-data-api">Government Data API</a></li>
+  <li><a href="#r-script-govtdata01.r-downloading-documents" id="toc-r-script-govtdata01.r-downloading-documents" class="nav-link active" data-scroll-target="#r-script-govtdata01.r-downloading-documents">1.3 R Script (<code>govtdata01.R</code>) – Downloading Documents</a></li>
+  <li><a href="#define-search-query" id="toc-define-search-query" class="nav-link" data-scroll-target="#define-search-query">Define search query</a></li>
   </ul>
 </nav>
     </div>
@@ -214,24 +215,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="government-data-api" class="level2">
-<h2 class="anchored" data-anchor-id="government-data-api">Government Data API</h2>
 <ol type="1">
-<li>Government documents searched using the following link: https://www.govinfo.gov/app/search/</li>
+<li>Go to the GovInfo search page:<br>
+https://www.govinfo.gov/app/search/<br>
+</li>
+<li>Enter search terms or filters to narrow the results to the <strong>Foreign Relations Committee</strong>.
+<ul>
+<li>Example search string might include <code>"Foreign Relations Committee"</code> or similar filtering by committee (metadata filters vary).<br>
+</li>
+<li>Use the advanced search options on GovInfo to narrow by <strong>date issued</strong>, <strong>committee</strong>, or <strong>type of document</strong>.</li>
+</ul></li>
+<li>Examine the returned results.</li>
 </ol>
-<!-- -->
-<ol type="a">
-<li>Downloading the ten most recent documents from “Foregin Relations Committee” using govtdata.R</li>
+<hr>
+<section id="r-script-govtdata01.r-downloading-documents" class="level2">
+<h2 class="anchored" data-anchor-id="r-script-govtdata01.r-downloading-documents">1.3 R Script (<code>govtdata01.R</code>) – Downloading Documents</h2>
+<ol type="1">
+<li>Load R packages for web requests and file downloads (for example, <code>httr</code>, <code>jsonlite</code>, <code>tidyverse</code>).</li>
+<li>Craft search queries or use GovInfo’s API to pull results that match Foreign Relations Committee.
+<ul>
+<li>GovInfo has a Search API that accepts POST requests. :contentReference<span data-index="3">oaicite:3</span></li>
+</ul></li>
+<li>Download documents using returned URLs.</li>
+<li>Save each downloaded file locally (e.g., as PDF, XML, or text).</li>
 </ol>
-<!-- -->
-<ol start="2" type="1">
-<li>Report on difficulties encountered in the scraping process:</li>
-</ol>
-<!-- -->
-<ol type="a">
-<li>How useable was the scraped data?</li>
-<li>How to improve this process?</li>
-</ol>
+</section>
+<section id="define-search-query" class="level1">
+<h1>Define search query</h1>
+<p>search_url &lt;- “https://api.govinfo.gov/search” query_body &lt;- list( query = “Committee on Foreign Relations”, pageSize = 10, offsetMark = “*” )</p>
+<p>API key</p>
+<p>api_key &lt;- Sys.getenv(“GOVINFO_API_KEY”)</p>
+<p>response &lt;- POST( search_url, add_headers(<code>X-Api-Key</code> = api_key), body = query_body, encode = “json” )</p>
+<p>search_results &lt;- content(response, as = “parsed”, simplifyVector = TRUE)</p>
+<p>Access result items</p>
+<p>docs &lt;- search_results$results</p>
+<p>Loop to download each document (if a direct document link is available)</p>
+<p>for (i in seq_along(docs)) { doc &lt;- docs[[i]] download_link &lt;- doc$link # Replace with actual document URL element download_file &lt;- paste0(“doc_”, i, “.pdf”) GET(download_link, write_disk(download_file)) }</p>
 
 
 </section>
