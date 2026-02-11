@@ -1,0 +1,373 @@
+[
+  {
+    "objectID": "CV.html",
+    "href": "CV.html",
+    "title": "Rose Mikame",
+    "section": "",
+    "text": "Trouble viewing? Open in a new tab."
+  },
+  {
+    "objectID": "epps6302assignment6.html",
+    "href": "epps6302assignment6.html",
+    "title": "EPPS 6302 Assignment 6",
+    "section": "",
+    "text": "What is Quanteda?\n\nQuanteda is an R package used for managing and analyzing text. Designed for users needing to apply natural language processing (NLP) to texts. Examples of this include:\n\nTurning raw text into structured data\nMakes it easier to analyze patterns and topics\nSupports reproducible and quantitative text research\n\nThe API is designed to enable powerful, efficient analysis with a minimum of steps.\nInfo taken from: https://quanteda.io/\n\n\nDownload quanteda_textanalytic01.R/quanteda_textanalytic02.R\n\n\n\nAnalyze:\na. Biden-Xi summit data:\n\n    \n   b. US Presidential inaugural speeches\n- Any similarities and differences over time and among presidents?\nThe blue bars (target) represent words that appear much more often in the Biden related tweets. The gray bars (reference) represent the words that appear more often in the Xi related tweets.\nTarget: - Common Words: Summit, virtual, Jinping, president, Joe, Biden-Xi, Monday, Chinese, Friend, White House, and Calls.\nWhat do these mean? The words emohaize diplomatic relations and highlight formal engagement. They also describe the event itself and are more U.S. focused.\nReference: - Common Words: NYT, Times\nWhat do these mean? The words, though few, appear to be more media and context driven. It focuses more on outside reporting and commentary rather than the speeches themselves.\n\nWhat is Wordfish?\n\nWordfish is a text scaling model with the goal to measure and place each document in a corpus into a continuous, one-dimensional scale.\nIt is super useful within the Data Analytics field because its unsupervised do we dont have to define beforehand what the dimension means or label any documents. It lets you compare and visualize doucments espeically in\nInfo taken from: https://quanteda.io/"
+  },
+  {
+    "objectID": "epps6302assignment6.html#text-analytics-using-quanteda",
+    "href": "epps6302assignment6.html#text-analytics-using-quanteda",
+    "title": "EPPS 6302 Assignment 6",
+    "section": "",
+    "text": "What is Quanteda?\n\nQuanteda is an R package used for managing and analyzing text. Designed for users needing to apply natural language processing (NLP) to texts. Examples of this include:\n\nTurning raw text into structured data\nMakes it easier to analyze patterns and topics\nSupports reproducible and quantitative text research\n\nThe API is designed to enable powerful, efficient analysis with a minimum of steps.\nInfo taken from: https://quanteda.io/\n\n\nDownload quanteda_textanalytic01.R/quanteda_textanalytic02.R\n\n\n\nAnalyze:\na. Biden-Xi summit data:\n\n    \n   b. US Presidential inaugural speeches\n- Any similarities and differences over time and among presidents?\nThe blue bars (target) represent words that appear much more often in the Biden related tweets. The gray bars (reference) represent the words that appear more often in the Xi related tweets.\nTarget: - Common Words: Summit, virtual, Jinping, president, Joe, Biden-Xi, Monday, Chinese, Friend, White House, and Calls.\nWhat do these mean? The words emohaize diplomatic relations and highlight formal engagement. They also describe the event itself and are more U.S. focused.\nReference: - Common Words: NYT, Times\nWhat do these mean? The words, though few, appear to be more media and context driven. It focuses more on outside reporting and commentary rather than the speeches themselves.\n\nWhat is Wordfish?\n\nWordfish is a text scaling model with the goal to measure and place each document in a corpus into a continuous, one-dimensional scale.\nIt is super useful within the Data Analytics field because its unsupervised do we dont have to define beforehand what the dimension means or label any documents. It lets you compare and visualize doucments espeically in\nInfo taken from: https://quanteda.io/"
+  },
+  {
+    "objectID": "epps6302assignment3.html",
+    "href": "epps6302assignment3.html",
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "",
+    "text": "Objective:\nUsing tidycensus to retrieve ACS 2023 5 years estimates, to create a tidy data set, and to produce one map and one table along with an interpretation."
+  },
+  {
+    "objectID": "epps6302assignment3.html#set-up",
+    "href": "epps6302assignment3.html#set-up",
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "1. Set Up",
+    "text": "1. Set Up\nThe Census Key was obtained from the following website (https://api.census.gov/data/key_signup.html)\nAPI Key: ae35c975d8902be5656eaf5d7f3c5d36e1682a8e\nThe following R packages were installed into R:\n\ntidycensus\ntigris\nsf\ndplyr\nggplot2\nreadr.\n\nThe API key was then put into R using the following R-Script:\ncensus_api_key(“ae35c975d8902be5656eaf5d7f3c5d36e1682a8e”, install = FALSE)."
+  },
+  {
+    "objectID": "epps6302assignment3.html#geography-and-variables",
+    "href": "epps6302assignment3.html#geography-and-variables",
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "2. Geography and Variables",
+    "text": "2. Geography and Variables\nChosen Location: Texas, USA\nThe variables were searched using the following R-script: load_variables(2023, “acs5”, cache = TRUE)\nVariables:\nB02015_004: Estimate Total: East Asian - Japanese - Asian Alone by Selected Groups\nB17001_054: Income in the past 12 months at or above poverty level - Female - 25 to 34 years - Poverty Status in the Past 12 Months by Sex by Age"
+  },
+  {
+    "objectID": "epps6302assignment3.html#downloading-the-data",
+    "href": "epps6302assignment3.html#downloading-the-data",
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "3. Downloading the data",
+    "text": "3. Downloading the data\nR-Script:"
+  },
+  {
+    "objectID": "epps6302assignment3.html#deliverables-and-interpretation",
+    "href": "epps6302assignment3.html#deliverables-and-interpretation",
+    "title": "Assignment 3 - Maping Census Data",
+    "section": "4. Deliverables and Interpretation",
+    "text": "4. Deliverables and Interpretation\nMap: \nTable: \nR-Script for Table:\n\n\nInterpretation:\nMap: The map shows and visualizes where Japanese residents are most numerous in. There is a heavy concentration in major cities, such as Dallas, Houston, Austin, and San Antonio. It is very low or near-zero in rural areas, which is expected due to the population settlement. The table ranks the top/bottom 10 tracts by the Japanese population below poverty. The two visuals are related due to the clustering of the Japanese population can be directly correlated with the level of poverty within the counties that are shown in the table."
+  },
+  {
+    "objectID": "epps6323assignment1.html",
+    "href": "epps6323assignment1.html",
+    "title": "EPPS 6323 - Assignment #1",
+    "section": "",
+    "text": "Breiman, Leo: Statistical Modeling: The Two Cultures\nMain takeaways:\n\nThere are two cultures in statistics: data modeling and algorithmic modeling.\nData models dominate but often:\n\nAssume the wrong structure\nGive fragile conclusions\nHide poor predictive performance.\n\nPredictive accuracy is the most honest test of a model.\nMany different models can fit the same data equally well - Rashomon effect.\nSimplicity and accuracy are in conflict - Occam dilemma\nHigh dimensionality can help, not hurt - Bellman’s reversal\nAlgorithmic models:\n\nOften predict better and can provide more reliable information\n\nHe argues that statistics should focus on solving problems, not defending models.\nThe future of statistics depends on embracing different types of tools\n\nShmueli, Galit: To Explain or to Predict?\n\nMain takeaways:\n\nStatistical modeling is used for causal explanation, prediction, and description.\nMany fields conflate explanation and prediction, assuming models with high explanatory power automatically has high predictive power - this would be wrong and harmful to scientific progress.\nExplanatory modeling and predictive modeling serve different scientific goals and affect every step of the modeling process.\nFocuses on explanatory modeling (causal explanation) vs. predictive modeling (empirical prediction)\n\nHow the two articles compare:\nBreiman argues that statistics should prioritize prediction accuracy and real-world performance over strict probabilistic modeling assumptions.\n\nSees explanatory models as often weak predictors.\nArgues that prediction is undervalued in classical statistics.\nPromotes models like random forests and other black-box methods.\n\nShmueli argues that confusion in statistics arises because explanation (inference) and prediction are fundamentally different goals that require different methods and evaluation criteria.\n\nExplanatory modeling→ causality, theory testing\nPredictive modeling→ forecasting, decision support\nWarns against using inferential tools (p-values, coefficients) for predictive claims.\n\nHow are they similar?:\nBoth criticize traditional statistical practice for conflating explanation and prediction.\nHow are they different?:\n\nBreiman pushes statistics for prediction and algorithms.\nShmueli pushes statistics toward clarity and goal alignment,"
+  },
+  {
+    "objectID": "epps6323assignment1.html#comparing-articles-breiman-vs-shmueli",
+    "href": "epps6323assignment1.html#comparing-articles-breiman-vs-shmueli",
+    "title": "EPPS 6323 - Assignment #1",
+    "section": "",
+    "text": "Breiman, Leo: Statistical Modeling: The Two Cultures\nMain takeaways:\n\nThere are two cultures in statistics: data modeling and algorithmic modeling.\nData models dominate but often:\n\nAssume the wrong structure\nGive fragile conclusions\nHide poor predictive performance.\n\nPredictive accuracy is the most honest test of a model.\nMany different models can fit the same data equally well - Rashomon effect.\nSimplicity and accuracy are in conflict - Occam dilemma\nHigh dimensionality can help, not hurt - Bellman’s reversal\nAlgorithmic models:\n\nOften predict better and can provide more reliable information\n\nHe argues that statistics should focus on solving problems, not defending models.\nThe future of statistics depends on embracing different types of tools\n\nShmueli, Galit: To Explain or to Predict?\n\nMain takeaways:\n\nStatistical modeling is used for causal explanation, prediction, and description.\nMany fields conflate explanation and prediction, assuming models with high explanatory power automatically has high predictive power - this would be wrong and harmful to scientific progress.\nExplanatory modeling and predictive modeling serve different scientific goals and affect every step of the modeling process.\nFocuses on explanatory modeling (causal explanation) vs. predictive modeling (empirical prediction)\n\nHow the two articles compare:\nBreiman argues that statistics should prioritize prediction accuracy and real-world performance over strict probabilistic modeling assumptions.\n\nSees explanatory models as often weak predictors.\nArgues that prediction is undervalued in classical statistics.\nPromotes models like random forests and other black-box methods.\n\nShmueli argues that confusion in statistics arises because explanation (inference) and prediction are fundamentally different goals that require different methods and evaluation criteria.\n\nExplanatory modeling→ causality, theory testing\nPredictive modeling→ forecasting, decision support\nWarns against using inferential tools (p-values, coefficients) for predictive claims.\n\nHow are they similar?:\nBoth criticize traditional statistical practice for conflating explanation and prediction.\nHow are they different?:\n\nBreiman pushes statistics for prediction and algorithms.\nShmueli pushes statistics toward clarity and goal alignment,"
+  },
+  {
+    "objectID": "epps6323assignment2.html",
+    "href": "epps6323assignment2.html",
+    "title": "EPPS 6323 - Assignment 2",
+    "section": "",
+    "text": "Step 1:\nReview\n\nIntroduction to R\nEPPS Math and Coding Camp (Day 3)\n\n\nStep 2:\n\nLab 01\nLab 02\n\n\nStep 3:\nReview\n\nChapters 3-7 in R4DS\nSection 3.5 in Data Programming\nRun the exploratory data analysis with R using the TEDS2016 dataset:\n\nlibrary(haven) TEDS_2016 &lt;- haven::read_dta(“https://github.com/datageneration/home/blob/master/DataProgra mming/data/TEDS_2016.dta?raw=true”) str(TEDS_2016) summary(TEDS_2016)\n\nChallenges:\nWhen running the code, I had this error:\nError in haven::read_dta(): ! This kind of input is not handled. Run rlang::last_trace() to see where the error occurred."
+  },
+  {
+    "objectID": "epps6323assignment2.html#assignment-2---brushing-up-on-r-and-quarto",
+    "href": "epps6323assignment2.html#assignment-2---brushing-up-on-r-and-quarto",
+    "title": "EPPS 6323 - Assignment 2",
+    "section": "",
+    "text": "Step 1:\nReview\n\nIntroduction to R\nEPPS Math and Coding Camp (Day 3)\n\n\nStep 2:\n\nLab 01\nLab 02\n\n\nStep 3:\nReview\n\nChapters 3-7 in R4DS\nSection 3.5 in Data Programming\nRun the exploratory data analysis with R using the TEDS2016 dataset:\n\nlibrary(haven) TEDS_2016 &lt;- haven::read_dta(“https://github.com/datageneration/home/blob/master/DataProgra mming/data/TEDS_2016.dta?raw=true”) str(TEDS_2016) summary(TEDS_2016)\n\nChallenges:\nWhen running the code, I had this error:\nError in haven::read_dta(): ! This kind of input is not handled. Run rlang::last_trace() to see where the error occurred."
+  },
+  {
+    "objectID": "assignment4.html",
+    "href": "assignment4.html",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "Weak entity set: one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity\nStrong entity set: the opposite of a weak entity set. It has a PK and does not depend on any other entity for its existence.\n\nEx. Hospital Management System:\nPatient Table in a Hospital Management System (Strong Entity) is the primary key because each patient has a unique Patient ID, it does not depend on another entity.\nWeak entities:\nPrescription: A prescription is given to a patient by a doctor relies on the doctor and cannot exist without the doctor as it depends on the Patient ID and Doctor ID.\nSurgery: Different patients might have the same surgery, so it depends on the patient ID and Doctor ID."
+  },
+  {
+    "objectID": "assignment4.html#question-1---strong-vs-weak-entity-set",
+    "href": "assignment4.html#question-1---strong-vs-weak-entity-set",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "Weak entity set: one whose existence that is dependent on another entity set, called its identifying entity set instead of associating a primary key with a weak entity. We use the PK of the identifying entity along with discriminator attributes to uniquely identify a weak entity\nStrong entity set: the opposite of a weak entity set. It has a PK and does not depend on any other entity for its existence.\n\nEx. Hospital Management System:\nPatient Table in a Hospital Management System (Strong Entity) is the primary key because each patient has a unique Patient ID, it does not depend on another entity.\nWeak entities:\nPrescription: A prescription is given to a patient by a doctor relies on the doctor and cannot exist without the doctor as it depends on the Patient ID and Doctor ID.\nSurgery: Different patients might have the same surgery, so it depends on the patient ID and Doctor ID."
+  },
+  {
+    "objectID": "assignment4.html#question-2---orlando-magic-vs-dallas-mavericks",
+    "href": "assignment4.html#question-2---orlando-magic-vs-dallas-mavericks",
+    "title": "Assignment 4",
+    "section": "Question 2 - Orlando Magic vs Dallas Mavericks",
+    "text": "Question 2 - Orlando Magic vs Dallas Mavericks\n\nMavericks\nPlayers: \nMagic\nPlayers:\n\nGame Statistics:\n\nER Diagram:"
+  },
+  {
+    "objectID": "assignment4.html#question-2b-all-30-nba-teams",
+    "href": "assignment4.html#question-2b-all-30-nba-teams",
+    "title": "Assignment 4",
+    "section": "Question 2b: All 30 NBA Teams?",
+    "text": "Question 2b: All 30 NBA Teams?"
+  },
+  {
+    "objectID": "assignment4.html#question-3---sql-exercise",
+    "href": "assignment4.html#question-3---sql-exercise",
+    "title": "Assignment 4",
+    "section": "Question 3 - SQL Exercise",
+    "text": "Question 3 - SQL Exercise\nWhy does appending natural join section in the from clause would not change the result?\nNatural Join: this operation operates on two relations and produces a relations as the result. It only considered the pairs of tuples with the same value on those attributes that appear in the schemas of both relations.\n\nAutomatically matches columns with the same name in both tables\nRemoves duplicated columns in the output\n\nTherefore, the result is not changed because “takes” and “section” share the same attributes, therefore “Natural Join” would not add new information:\nShared Attributes:\n\ncourseID\nsecID\nsemester\nyear"
+  },
+  {
+    "objectID": "assignment4.html#question-3b",
+    "href": "assignment4.html#question-3b",
+    "title": "Assignment 4",
+    "section": "Question 3b",
+    "text": "Question 3b\nWrite an SQL query using the university schema to find the ID of each student who has never taken a course at the university.\nEx. \n\nUsing a left outer join ensures that all students appear in the result.\n(takes.ID IS NULL) filters out the students who have at least one course in takes, leaving those who have never taken a course at the university."
+  },
+  {
+    "objectID": "assignment7.html",
+    "href": "assignment7.html",
+    "title": "EPPS 6354 - Assignment 7",
+    "section": "",
+    "text": "Shiny exercise:\n\napp.R in Shiny/1 Teams folder - Sorting changed to high to low:\n\n\n\napp.R in Shiny/2 Teams folder - Color changed from blue to green"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Social Data Analytics and Research Projects",
+    "section": "",
+    "text": "SQL Database Design - Graduate Project - EPPS 6354 Information Management\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project - EPPS 6313 Intro to Quantitative Methods\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project - EPPS 6346 Qualitative Research Orientation\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
+  },
+  {
+    "objectID": "research.html#academic-research-projects",
+    "href": "research.html#academic-research-projects",
+    "title": "Social Data Analytics and Research Projects",
+    "section": "",
+    "text": "SQL Database Design - Graduate Project - EPPS 6354 Information Management\n\nTopic: Rabbit Intake Database - Link Provided\nDesigned and implemented a functional database using reliable data sources\nResolved troubleshooting errors to ensure database accuracy and usability \nTools: PostgreSQL, Shiny Apps, RStudio, Github, Excel \n\nQuantitative Data Analysis - Graduate Project - EPPS 6313 Intro to Quantitative Methods\n\nTopic: How do Education Levels Influence the Development of Pacifist Attitudes?\nAnalyzed multiple datasets to test and reject the null hypothesis through statistical modeling \nTools: STATA, RStudio\n\nQualitative Research - Graduate Project - EPPS 6346 Qualitative Research Orientation\n\nTopic: Social Assimilation and Immigration in the United States \nConducted qualitative research through interviews, literature review and coding of transcripts.\nCollected, analyzed, and synthesized qualitative data to draw conclusions."
+  },
+  {
+    "objectID": "weeklyreflectionepps6323.html",
+    "href": "weeklyreflectionepps6323.html",
+    "title": "Weekly Reflections",
+    "section": "",
+    "text": "Feb 10: Cathy O’Neil: Weapons of Math Destruction\nWeapons of Math Destruction\n\nAI and originality\n\nO’Neils argument is that AI and algorithimc systems are not original and replicate and amplify existing human bias despite being thought as being objective and neutral.\n\nAlgorithims are built from historical data, which can be unequal, have discrimination bias, and flawed ideas.\nThey are pattern enforcers\nAI automates old assumptions and gives them legitimacy.\n\nAI is being too heavily relied on, and too trusted!\n\nWhat is AGI? How does AGI affect scientific research?\n\nAGI is defined as Artificial General Intelligence: this is a form of AI that can reason across domains, being flexible to learn, and can apply intelligence broadly. It affects scientific research because it can add faster data analysis and pattern detection, automation of repetitive tasks, and give insights at a large scale. However, it can reduce research quality, have hidden bias, and a loss of interpretability."
+  },
+  {
+    "objectID": "weeklyreflectionepps6323.html#weekly-reflections",
+    "href": "weeklyreflectionepps6323.html#weekly-reflections",
+    "title": "Weekly Reflections",
+    "section": "",
+    "text": "Feb 10: Cathy O’Neil: Weapons of Math Destruction\nWeapons of Math Destruction\n\nAI and originality\n\nO’Neils argument is that AI and algorithimc systems are not original and replicate and amplify existing human bias despite being thought as being objective and neutral.\n\nAlgorithims are built from historical data, which can be unequal, have discrimination bias, and flawed ideas.\nThey are pattern enforcers\nAI automates old assumptions and gives them legitimacy.\n\nAI is being too heavily relied on, and too trusted!\n\nWhat is AGI? How does AGI affect scientific research?\n\nAGI is defined as Artificial General Intelligence: this is a form of AI that can reason across domains, being flexible to learn, and can apply intelligence broadly. It affects scientific research because it can add faster data analysis and pattern detection, automation of repetitive tasks, and give insights at a large scale. However, it can reduce research quality, have hidden bias, and a loss of interpretability."
+  },
+  {
+    "objectID": "assignment1.html",
+    "href": "assignment1.html",
+    "title": "EPPS 6354 - Assignment #1",
+    "section": "",
+    "text": "Title Management System (TMS) is a program that I use at my workplace, Capital One, in the Auto Finance Department. It is a third party company that Capital One partners with to store customers’ titles and information; it is used alongside another program called Titan to store and display information related to customers’ auto finance loans. It also allows Associates to document action taken on the account and displays information about title related processes. Specifically, it tracks down information regarding title information, such as preferred titling state, title perfection status, and any action regarding their title work. Information includes: Account number Address Title information Documents sent to customer, DMV, insurance, or dealer\nTitan is a program that I use at my workplace, Capital One, longside TMS. Both programs are similar in the information that is displayed regarding auto finance loans, however Titan offers additional features. From this program, we are able to access sensitive customer information such as NPI. By definition, “NPI” stands for “Non-Public Information,” which refers to personally identifiable financial information that a consumer provides to a financial institution when obtaining a product or service, and is not considered publicly available information; Titan shows this information as well as loan, payment, financial, insurance information.\nMonarch is another program that is used at Capital One alongside TMS and Titan. The main goal for this program is for customers to have a seamless experience with their auto loan, in turn allowing for a better experience for customers. This program allows individuals to view the progress of their auto loan, including receiving updates from Capital One agents for any needed documents/title work. Customers can view progress of their loan Upload needed documents such as Power of Attorneys/copy of DL/insurance\nThe main data that these programs store and allow us to access is customers’ auto loan information, which includes title information, addresses, NPI, and financial information that is essential in providing services within the Auto Finance Department."
+  },
+  {
+    "objectID": "assignment1.html#question-1.",
+    "href": "assignment1.html#question-1.",
+    "title": "EPPS 6354 - Assignment #1",
+    "section": "",
+    "text": "Title Management System (TMS) is a program that I use at my workplace, Capital One, in the Auto Finance Department. It is a third party company that Capital One partners with to store customers’ titles and information; it is used alongside another program called Titan to store and display information related to customers’ auto finance loans. It also allows Associates to document action taken on the account and displays information about title related processes. Specifically, it tracks down information regarding title information, such as preferred titling state, title perfection status, and any action regarding their title work. Information includes: Account number Address Title information Documents sent to customer, DMV, insurance, or dealer\nTitan is a program that I use at my workplace, Capital One, longside TMS. Both programs are similar in the information that is displayed regarding auto finance loans, however Titan offers additional features. From this program, we are able to access sensitive customer information such as NPI. By definition, “NPI” stands for “Non-Public Information,” which refers to personally identifiable financial information that a consumer provides to a financial institution when obtaining a product or service, and is not considered publicly available information; Titan shows this information as well as loan, payment, financial, insurance information.\nMonarch is another program that is used at Capital One alongside TMS and Titan. The main goal for this program is for customers to have a seamless experience with their auto loan, in turn allowing for a better experience for customers. This program allows individuals to view the progress of their auto loan, including receiving updates from Capital One agents for any needed documents/title work. Customers can view progress of their loan Upload needed documents such as Power of Attorneys/copy of DL/insurance\nThe main data that these programs store and allow us to access is customers’ auto loan information, which includes title information, addresses, NPI, and financial information that is essential in providing services within the Auto Finance Department."
+  },
+  {
+    "objectID": "assignment1.html#question-2.",
+    "href": "assignment1.html#question-2.",
+    "title": "EPPS 6354 - Assignment #1",
+    "section": "Question 2.",
+    "text": "Question 2.\nGoogle Translate - Language Translation Services -\n\nPurpose of this is to give translation services to consumers. You are able to translate text, speech, images, and websites from one language to another.\nFunctions include: Text, Speech, Image, and Website translation.\n\niii.The Interface design of Google Translate has input/output fields where you can text/speak into the original language then translate it to the preferred language. It contains different translation methods, such as text, voice, image, and even a handwriting option. It has a simple interface, I imagine because when in a situation to use the app in real life where there are language barriers, it is important to keep it simple and in a way where anyone can understand how to use it regardless of the language you speak.\nDoorDash - E-commerce and Food Delivery -\n\nPurpose is to provide consumers food, grocery, convenience store, and additional deliveries such as pet supplies and flower delivery. There are 3 parties involved, the consumer, merchant (restaurant/store), and delivery driver.\nFunctions of DoorDash for each party involved are as follows. Consumer Functions include the easy to use browsing for food/products, ordering/customizing your order, payment processing, tracking your order, and leaving a review. Functions of the merchant include order management, being able to update menus/prices, promotions, and sales information. Functions of the delivery driver include the ability to accept deliveries, navigating to the location, tracking earnings and tips, and showing delivery hotspots.\nThe interface design of Door Dash is user friendly, yet attention grabbing. There are many tabs showing what is popular, as well as any promotions or deals happening, including different categories of food or restaurants. It should be easy to use and navigate, as being hungry and confused is not a good combination. It is organized and attention grabbing, as well as displaying a simple check out screen.\n\nYelp - E-commerce and Digital Marketing -\n\nPurpose is to help businesses and professionals to expand their clientele and gain visibility, and help consumers search and discover businesses depending on their need and wants. They are also able to leave reviews, make reservations, and check in at certain locations.\nFunctions of Yelp for consumers include being able to search and discover businesses by category, location, and name, as well as leaving reviews including uploading photos. Functions of Yelp for businesses include having the ability to advertise and promote their business, respond to reviews, and create their own business profile.\n\niii.The simple interface design of Yelp includes being able to easily search different businesses by category and name. It lists the business name and rating, as well as pictures of the menu/photos of the establishment with reviews that are easily sorted by number of stars. The action of writing a review is simple and easy to follow. It is very user friendly and allows for t"
+  },
+  {
+    "objectID": "assignment1.html#question-3.",
+    "href": "assignment1.html#question-3.",
+    "title": "EPPS 6354 - Assignment #1",
+    "section": "Question 3.",
+    "text": "Question 3.\nWhy is data mining needed if data is being able to be stored and reviewed effectively?\nData mining is very important because it allows for data to be analyzed and reviewed so that it can be used within all sectors of business, which includes but is not limited to healthcare, social media, banking, and retail. Even though the data is being retrieved in an accurate way, we still need to analyze the data to uncover different trends, patterns, and allow for accurate decision making. Data mining can help predict trends, help decision making, and detect any issues. In addition, we also need to understand real world necessities and trends and in turn would help us predict consumer patterns and make business decisions. There are certain things that databases are unable to provide, and external tools such as SQL, R, and Python are still needed.\n3 tables that might be used to store information in a social media system include a user name table, table that displays number of followers, and table that shows the number of interactions a user has with others. User name table - this table would show the user accounts and their information such as : user name, number of followers, email, biography. User account details Followers table - this table would show the number of followers that a user has, and possibly display what other attributes such as how long that person has been following them, or could be sorted by most recent, least interacted with, and followers that they don’t follow back. Manages following relationships Interactions table - this table would show the different interactions that someone would have with other followers. This would include the number of times a person liked their post, viewed their story, commented or responded to their post. Displays user engagement"
+  },
+  {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of the following:\n\nStudent IDs\n\n\n\nInstructors\n\n\n\nDepartments"
+  },
+  {
+    "objectID": "assignment3.html#question-1.",
+    "href": "assignment3.html#question-1.",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of the following:\n\nStudent IDs\n\n\n\nInstructors\n\n\n\nDepartments"
+  },
+  {
+    "objectID": "assignment3.html#question-2.",
+    "href": "assignment3.html#question-2.",
+    "title": "Assignment 3",
+    "section": "Question 2.",
+    "text": "Question 2.\nWrite SQL codes for the following:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; no duplicates!\n\n\n\nAdd grades\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFind the maximum salary for each instructor in each department. Assume each department has at least one instructor\n\n\n\nFind the lowest, across all departments, of the per dept maximum salary computed by the preceding query\n\n\n\nadd names to the list"
+  },
+  {
+    "objectID": "assignment3.html#question-5",
+    "href": "assignment3.html#question-5",
+    "title": "Assignment 3",
+    "section": "Question 5",
+    "text": "Question 5\nWrite the SQL code to find the number of students in each section. Results column should appear in the order, “course ID, sec ID, year, semester, num”"
+  },
+  {
+    "objectID": "assignment6.html",
+    "href": "assignment6.html",
+    "title": "EPPS 6354 Assignment 6",
+    "section": "",
+    "text": "a. JSON - Tik Tok\nTik Tok uses JSON for data exchange between servers and users. Using JSON is efficient for the social media platform because it transmits data quickly and allows it to be well structured for efficient processing. It organizes the data into different categories, such as videos, likes, and comments etc. that is needed to make Tik Tok an enjoyable experience. It also allows users to share across different platforms!\nStructure and Composition of Tik Tok :\n\nFront-end (User Experience): The purpose is to provide a fast and smooth engaging user experience. Built with HTML, CSS, and JavaScript.\nEx: FYP page and interactions\nBack-end (Processing): The purpose is to manage user interactions, store videos, and real-time updates. Built with Python and Java.\nEx: User information, content delivery, and security and data encryption\nDatabase System (Data Storage): The purpose is to store user data, videos, engagement metrics, and recommendation data.\n\nMain Database Technologies used:\n\nSQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases\nNoSQL - for handling highspeed and unstructured data\n\nb. XML - CNN\nCNN uses XML for the distribution, storage, and sharing of news and updates. This allows for a quick and efficient data transfer to allow for more information to get across to the world.\nStructure and Composition of CNN:\n\nNews Updates: Provides news feeds in XML format, allowing for users to obtain real time news updates.\nStoring News Content: XML databases allows news websites to store articles and content. This makes retrieval of information efficient.\nData Exchange: This allows for CNN to share its content across different platforms!\n\nMain Database Technologies used:\n\nSQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases\nNoSQL - for handling highspeed and unstructured data\nXML Databases - for storing news articles, headlines, and metadata"
+  },
+  {
+    "objectID": "assignment6.html#question-1---websites-containing-json-xml",
+    "href": "assignment6.html#question-1---websites-containing-json-xml",
+    "title": "EPPS 6354 Assignment 6",
+    "section": "",
+    "text": "a. JSON - Tik Tok\nTik Tok uses JSON for data exchange between servers and users. Using JSON is efficient for the social media platform because it transmits data quickly and allows it to be well structured for efficient processing. It organizes the data into different categories, such as videos, likes, and comments etc. that is needed to make Tik Tok an enjoyable experience. It also allows users to share across different platforms!\nStructure and Composition of Tik Tok :\n\nFront-end (User Experience): The purpose is to provide a fast and smooth engaging user experience. Built with HTML, CSS, and JavaScript.\nEx: FYP page and interactions\nBack-end (Processing): The purpose is to manage user interactions, store videos, and real-time updates. Built with Python and Java.\nEx: User information, content delivery, and security and data encryption\nDatabase System (Data Storage): The purpose is to store user data, videos, engagement metrics, and recommendation data.\n\nMain Database Technologies used:\n\nSQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases\nNoSQL - for handling highspeed and unstructured data\n\nb. XML - CNN\nCNN uses XML for the distribution, storage, and sharing of news and updates. This allows for a quick and efficient data transfer to allow for more information to get across to the world.\nStructure and Composition of CNN:\n\nNews Updates: Provides news feeds in XML format, allowing for users to obtain real time news updates.\nStoring News Content: XML databases allows news websites to store articles and content. This makes retrieval of information efficient.\nData Exchange: This allows for CNN to share its content across different platforms!\n\nMain Database Technologies used:\n\nSQL/Postgre SQL for structured data (user accounts, interactions). Relational Databases\nNoSQL - for handling highspeed and unstructured data\nXML Databases - for storing news articles, headlines, and metadata"
+  },
+  {
+    "objectID": "assignment6.html#question-2---express-the-following-query-in-sql-using-no-subqueries-and-no-set-operations-using-outer-join",
+    "href": "assignment6.html#question-2---express-the-following-query-in-sql-using-no-subqueries-and-no-set-operations-using-outer-join",
+    "title": "EPPS 6354 Assignment 6",
+    "section": "Question 2 - Express the following query in SQL using no subqueries and no set operations using outer join:",
+    "text": "Question 2 - Express the following query in SQL using no subqueries and no set operations using outer join:\nSELECT student.ID\nFROM student\nLEFT OUTER JOIN advisor ON student.ID = advisor.s_id\nWHERE advisor.s_id IS NULL\n\nLeft Outer Join includes all students even though they dont have a match in advisor.\nThe (WHERE advisor.s_id IS NULL) filters out students who do have an advisor, leaving only those who dont.\n\n\nWrite a SQL query to find the names and IDs of the instructors who teach every course taught in their department. Order results by name:\n\nSELECT i.ID, i.name\nFROM instructor i\nWHERE NOT EXISTS (\nSELECT c.course_id\nFROM course c\nWHERE c.dept_name = i.dept_name\nAND NOT EXISTS (\nSELECT*\nFROM teaches t WHERE t.ID = i.ID AND t.course_id = c.course_id"
+  },
+  {
+    "objectID": "assignment6.html#question-3---r-and-postgresql-results",
+    "href": "assignment6.html#question-3---r-and-postgresql-results",
+    "title": "EPPS 6354 Assignment 6",
+    "section": "Question 3 - R and PostgreSQL Results:",
+    "text": "Question 3 - R and PostgreSQL Results:"
+  },
+  {
+    "objectID": "assignment5.html",
+    "href": "assignment5.html",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "",
+    "text": "Disconnected - at least one entity set that has no relationships with any other entity sets. This suggests that some parts of the database are isolated and do not interact with others.\nEx. 2 separate entity sets:\nStudents (ID, Name, Age)\nProducts (Product_ID, Name, Price)\nIf there is no relationship between them, then they are disconnected. This might indicate missing relationships in the design, or could be intentional or a design flaw\n\nCycle - means there is a loop in the entity relationships. This implies that a sequence of relationships leads back to the original entity\n\nEx.\nEmployee -&gt; works for -&gt; department\nDept -&gt; managed by -&gt; manager (also employee)\nManager -&gt; reports to -&gt; senior employee\nSenior Employee -&gt; works for -&gt; department\n\nforming a circle\n\nCycles may be essential in hierarchical structures, such as employee-manager relationships. However, unintended cycles can lead to data redundancy or infinite loops in queries.\n\nSummary:\nDisconnected graph: some entities are isolated (meaning missing relationships)\nCycle in graph: entities are interconnected in a loop (could be intentional or a design issue)"
+  },
+  {
+    "objectID": "assignment5.html#question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema",
+    "href": "assignment5.html#question-1---what-does-the-following-mean-in-terms-of-the-structure-of-an-enterprise-schema",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "",
+    "text": "Disconnected - at least one entity set that has no relationships with any other entity sets. This suggests that some parts of the database are isolated and do not interact with others.\nEx. 2 separate entity sets:\nStudents (ID, Name, Age)\nProducts (Product_ID, Name, Price)\nIf there is no relationship between them, then they are disconnected. This might indicate missing relationships in the design, or could be intentional or a design flaw\n\nCycle - means there is a loop in the entity relationships. This implies that a sequence of relationships leads back to the original entity\n\nEx.\nEmployee -&gt; works for -&gt; department\nDept -&gt; managed by -&gt; manager (also employee)\nManager -&gt; reports to -&gt; senior employee\nSenior Employee -&gt; works for -&gt; department\n\nforming a circle\n\nCycles may be essential in hierarchical structures, such as employee-manager relationships. However, unintended cycles can lead to data redundancy or infinite loops in queries.\n\nSummary:\nDisconnected graph: some entities are isolated (meaning missing relationships)\nCycle in graph: entities are interconnected in a loop (could be intentional or a design issue)"
+  },
+  {
+    "objectID": "assignment5.html#question-2---why-do-we-still-have-weak-entity-sets",
+    "href": "assignment5.html#question-2---why-do-we-still-have-weak-entity-sets",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "Question 2 - Why do we still have weak entity sets?",
+    "text": "Question 2 - Why do we still have weak entity sets?\nWeak entity sets naturally model real work scenarios where certain entities do not have an independent existence. They preserve the natural relationship in the data and reinforce constraints that ensure their existence depends on a related strong entity. This helps maintain data consistency.\nEx. A dependent must always be associated with an employee, ensuring meaningful relationships in the database.\nReal-world representation: some concepts naturally fit in the weak entity model better"
+  },
+  {
+    "objectID": "assignment5.html#question-3---sql-exercise",
+    "href": "assignment5.html#question-3---sql-exercise",
+    "title": "EPPS 6354 Assignment 5",
+    "section": "Question 3 - SQL Exercise",
+    "text": "Question 3 - SQL Exercise\ni. Find the ID and name of each employee who lives in the same city as the location of the company for which the employee works:\nSELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID JOIN company AS c ON w.company_name = c.company_name WHERE e.city = c.city;\n\nJoin employee with works using ID to get the company they work for\nJoin works with company using company name to get the companies city\nFilter employees whos city matches the companies city\n\n\nii. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager.\nSELECT e.ID, e.person_nam FROM employee AS e JOIN manages AS m ON e.ID = m.ID JOIN employee AS mgr ON m.manager_id = mgr.ID WHERE e.city = mgr.city AND e.street = mgr.street;\n\nSelf join employee to compare an employee (e) with manager\nUse manages to get the manager id for each employee\nFilter employees who share the same city and street as their manager\n\n\niii. Find ID and name of each employee who earns more than the average salary of all employees of her or his company.\nSELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID WHERE w.salary &gt; ( SELECT AVG(w2.salary) FROM works AS w2 WHERE w.company_name = w2.company_name)\n\nJoin employee with works to get salary information\nCompare each employees salary to the average salary of all employees working in the same company\n\n\nb) Consider the query… what is wrong with it?:\nUsing natural join can cause incorrect joins. Natural join joines tables based on common column names automatically If tables share multiple common columns, the database might join them incorrectly Could lead to wrong or missing results\n\nAmbiguous Column Names Semester and year columns are likely in the section table, but the query does not specify The database might get confused if other tables also have the columns\nMissing Explicit Conditions Instructor table has an ID column, but teaches also has ID Need to explicitly specify how tables are related using ON conditions\n\nIn short, the issue was due to the natural join making unintended matches, and the fixed query uses join… on to explicitly define relationships, preventing errors."
+  },
+  {
+    "objectID": "podcast.html",
+    "href": "podcast.html",
+    "title": "DataFramed Podcast Reviews",
+    "section": "",
+    "text": "This podcast was presented by Dr. Aldo Faisal and discussed the role of AI in healthcare. Key takeaways from this podcast were:\n\nUtilize federated machine learning to train AI models on sensitive healthcare data while preserving patient privacy, enabling the development of robust AI systems without compromising data security.\nInvestigate the potential of ambient intelligence in healthcare, which automates operational tasks like transcribing doctor-patient conversations and updating patient records, to reduce administrative burdens and enhance clinical decision-making.\nConsider the development of large health models, akin to large language models, that can process multimodal data from electronic health records, medical literature, and research data to provide comprehensive insights into patient care and treatment outcomes.\n\nReading the title of the podcast, what immediately came to mind was an AI robot doctor that you would see on TV. This is what Dr. Faisal mentioned in the beginning of the podcast, that this is not to be mistaken with just that. Using AI in the medical field can help doctors and nurses treat patients faster and more accurately. An example of how AI has helped within the medical space has been regarding diagnostics. According to Dr. Faisal, licenses for these are already in the process of being licensed and used in the workspace. AI can be used to help tumor/shadow detection on scans, transcribe a conversation between a doctor and patient, identify symptoms, make suggestions on medication, and prefill information to make the doctor’s clerical load lighter. \nNightingale AI is the name of Dr. Faisal’s project. Based in the UK, this is a large health model trained in electronic health records, imaging, labs, genetics, pathology, telemetry, and literature. The purpose is to have support provided for healthcare providers. Their main concern was how to obtain large amounts of medical data, which includes cooperating with healthcare providers and patients, and what to do with the data. It was mentioned that patients were concerned regarding their privacy and for their data to not be abused. However, Dr. Faisal stated that the main idea is to create an AI that learns about medicine in a different way that other large language models are applied to. They want to build models that are trained on multimodal data, so that the model is able to ingest, understand, and reason information the same way a medical doctor would reason science. \nExample given of how Nightingale AI will help doctors in the future: \n\nEx. The patient has a chest infection and the doctor will prescribe a certain type of penicillin. The system then can predict how the patient’s xray will look depending on what type of medicine that is prescribed to the patient. \nEx. The patient has liver issues and the doctor prescribes a drug to cure another issue in the kidney. How will this medication affect your liver and what are all of the possible side effects and how do all of these drugs interact with each other? What are all the positive and negative side effects? \nPolypharmacy problem - this is what pharma researchers want to know when testing a medicine and which populations they can test on without issues. \nEx. Can be used to understand how a patient evolves - the system has a “digital twin” which includes a description of your body’s physiology. This would be useful to see how an asthmatic patient would do in an environment that is hot, polluted, and can potentially save many lives\n\n\nNightingale AI is intended for use by AI, digital health, and clinical researchers so it can be focused on user experience and interface. Once the system evolves with a proper chat conversation prompt, it can be expanded for use within the general population. Dr Faisal mentioned something that stuck with me. Concerning patients and their data privacy, he mentioned that sick patients almost always give their data away. They want to give their data to get better and to help others who are sick as well. The aim of the healthy is to not give their data away. There are different laws that protect people and their data, as well as how it can be used by insurers or employers. Data leakage is a possible risk however they are considering that as well. \nOverall, this particular podcast gave some amazing insights into the use of AI within the healthcare sector. I am not familiar with the healthcare world, so this was very insightful and allowed me to understand more of how AI can be used around the world."
+  },
+  {
+    "objectID": "podcast.html#can-we-create-an-ai-doctor-with-aldo-faisal-professor-in-ai-neuroscience-at-imperial-college",
+    "href": "podcast.html#can-we-create-an-ai-doctor-with-aldo-faisal-professor-in-ai-neuroscience-at-imperial-college",
+    "title": "DataFramed Podcast Reviews",
+    "section": "",
+    "text": "This podcast was presented by Dr. Aldo Faisal and discussed the role of AI in healthcare. Key takeaways from this podcast were:\n\nUtilize federated machine learning to train AI models on sensitive healthcare data while preserving patient privacy, enabling the development of robust AI systems without compromising data security.\nInvestigate the potential of ambient intelligence in healthcare, which automates operational tasks like transcribing doctor-patient conversations and updating patient records, to reduce administrative burdens and enhance clinical decision-making.\nConsider the development of large health models, akin to large language models, that can process multimodal data from electronic health records, medical literature, and research data to provide comprehensive insights into patient care and treatment outcomes.\n\nReading the title of the podcast, what immediately came to mind was an AI robot doctor that you would see on TV. This is what Dr. Faisal mentioned in the beginning of the podcast, that this is not to be mistaken with just that. Using AI in the medical field can help doctors and nurses treat patients faster and more accurately. An example of how AI has helped within the medical space has been regarding diagnostics. According to Dr. Faisal, licenses for these are already in the process of being licensed and used in the workspace. AI can be used to help tumor/shadow detection on scans, transcribe a conversation between a doctor and patient, identify symptoms, make suggestions on medication, and prefill information to make the doctor’s clerical load lighter. \nNightingale AI is the name of Dr. Faisal’s project. Based in the UK, this is a large health model trained in electronic health records, imaging, labs, genetics, pathology, telemetry, and literature. The purpose is to have support provided for healthcare providers. Their main concern was how to obtain large amounts of medical data, which includes cooperating with healthcare providers and patients, and what to do with the data. It was mentioned that patients were concerned regarding their privacy and for their data to not be abused. However, Dr. Faisal stated that the main idea is to create an AI that learns about medicine in a different way that other large language models are applied to. They want to build models that are trained on multimodal data, so that the model is able to ingest, understand, and reason information the same way a medical doctor would reason science. \nExample given of how Nightingale AI will help doctors in the future: \n\nEx. The patient has a chest infection and the doctor will prescribe a certain type of penicillin. The system then can predict how the patient’s xray will look depending on what type of medicine that is prescribed to the patient. \nEx. The patient has liver issues and the doctor prescribes a drug to cure another issue in the kidney. How will this medication affect your liver and what are all of the possible side effects and how do all of these drugs interact with each other? What are all the positive and negative side effects? \nPolypharmacy problem - this is what pharma researchers want to know when testing a medicine and which populations they can test on without issues. \nEx. Can be used to understand how a patient evolves - the system has a “digital twin” which includes a description of your body’s physiology. This would be useful to see how an asthmatic patient would do in an environment that is hot, polluted, and can potentially save many lives\n\n\nNightingale AI is intended for use by AI, digital health, and clinical researchers so it can be focused on user experience and interface. Once the system evolves with a proper chat conversation prompt, it can be expanded for use within the general population. Dr Faisal mentioned something that stuck with me. Concerning patients and their data privacy, he mentioned that sick patients almost always give their data away. They want to give their data to get better and to help others who are sick as well. The aim of the healthy is to not give their data away. There are different laws that protect people and their data, as well as how it can be used by insurers or employers. Data leakage is a possible risk however they are considering that as well. \nOverall, this particular podcast gave some amazing insights into the use of AI within the healthcare sector. I am not familiar with the healthcare world, so this was very insightful and allowed me to understand more of how AI can be used around the world."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome to my website! My name is Rose Mikame and I am pursuing my Master’s in Social Data Analytics and Research at the University of Texas at Dallas, building on my background in sociology, mathematics, and statistics.\nPreviously completed my undergraduate studies at the University of North Texas with a degree in Sociology and minor in Math.\nCurrently working for Capital One within the Auto Finance Department, and have been working towards furthering my education at the same time. My career goal is to join an organization where I can contribute as a data analyst, using tools like R, SQL, and data visualization platforms to uncover trends, optimize strategies, and inform decision-making."
+  },
+  {
+    "objectID": "index.html#contact-me",
+    "href": "index.html#contact-me",
+    "title": "About",
+    "section": "Contact me",
+    "text": "Contact me\n[rom230000@utdallas.edu]\nmikame.rose@gmail.com\nlinkedin"
+  },
+  {
+    "objectID": "epps6302assignment1.html",
+    "href": "epps6302assignment1.html",
+    "title": "EPPS 6302 - Assignment 1 + DataFramed Podcast Review",
+    "section": "",
+    "text": "Hello!\n\nThis website has been created using RStudio Quarto. I have chosen the theme called “Journal”, which is simple yet eye catching.\nThe navigation bar is organized between personal and educational tabs. I have included my information about myself, research projects, and my resume. The rest is organized by my previous courses that required the use of a Quarto website.\nThank you!\n\nDataFramed Podcast Review: \nCan we Create an AI Doctor? with Aldo Faisal, Professor in AI & Neuroscience at Imperial College\nThis podcast was presented by Dr. Aldo Faisal and discussed the role of AI in healthcare. Key takeaways from this podcast were:\n\nUtilize federated machine learning to train AI models on sensitive healthcare data while preserving patient privacy, enabling the development of robust AI systems without compromising data security.\nInvestigate the potential of ambient intelligence in healthcare, which automates operational tasks like transcribing doctor-patient conversations and updating patient records, to reduce administrative burdens and enhance clinical decision-making.\nConsider the development of large health models, akin to large language models, that can process multimodal data from electronic health records, medical literature, and research data to provide comprehensive insights into patient care and treatment outcomes (DataCamp2025).\n\n\nReview:\nReading the title of the podcast, what immediately came to mind was an AI robot doctor that you would see on TV. This is what Dr. Faisal mentioned in the beginning of the podcast, that this is not to be mistaken with just that. Using AI in the medical field can help doctors and nurses treat patients faster and more accurately. An example of how AI has helped within the medical space has been regarding diagnostics. According to Dr. Faisal, licenses for these are already in the process of being licensed and used in the workspace. AI can be used to help tumor/shadow detection on scans, transcribe a conversation between a doctor and patient, identify symptoms, make suggestions on medication, and prefill information to make the doctor’s clerical load lighter. \nNightingale AI is the name of Dr. Faisal’s project. Based in the UK, this is a large health model trained in electronic health records, imaging, labs, genetics, pathology, telemetry, and literature. The purpose is to have support provided for healthcare providers. Their main concern was how to obtain large amounts of medical data, which includes cooperating with healthcare providers and patients, and what to do with the data. It was mentioned that patients were concerned regarding their privacy and for their data to not be abused. However, Dr. Faisal stated that the main idea is to create an AI that learns about medicine in a different way that other large language models are applied to. They want to build models that are trained on multimodal data, so that the model is able to ingest, understand, and reason information the same way a medical doctor would reason science. \n\nExample given of how Nightingale AI will help doctors in the future: \n\nEx. The patient has a chest infection and the doctor will prescribe a certain type of penicillin. The system then can predict how the patient’s xray will look depending on what type of medicine that is prescribed to the patient. \nEx. The patient has liver issues and the doctor prescribes a drug to cure another issue in the kidney. How will this medication affect your liver and what are all of the possible side effects and how do all of these drugs interact with each other? What are all the positive and negative side effects? \nPolypharmacy problem - this is what pharma researchers want to know when testing a medicine and which populations they can test on without issues. \nEx. Can be used to understand how a patient evolves - the system has a “digital twin” which includes a description of your body’s physiology. This would be useful to see how an asthmatic patient would do in an environment that is hot, polluted, and can potentially save many lives\n\nDr Faisal mentioned something that stuck with me. Concerning patients and their data privacy, he mentioned that sick patients almost always give their data away. They want to give their data to get better and to help others who are sick as well. The aim of the healthy is to not give their data away. There are different laws that protect people and their data, as well as how it can be used by insurers or employers. Data leakage is a possible risk however they are considering that as well. \nOverall, this particular podcast gave some amazing insights into the use of AI within the healthcare sector. I am not familiar with the healthcare world, so this was very insightful and allowed me to understand more of how AI can be used around the world. \n\nDataCamp. 2025. “Can We Create an AI Doctor? with Aldo Faisal, Professor in AI & Neuroscience at Imperial College.” DataFramed (podcast episode), July 28. DataCamp. https://www.datacamp.com/podcast/can-we-create-an-ai-doctor"
+  },
+  {
+    "objectID": "epps6302assignment2.html",
+    "href": "epps6302assignment2.html",
+    "title": "Assignment 2 - Google Trends Data",
+    "section": "",
+    "text": "```\n- Donald Trump (Blue)\n\nKamala Harris (Red)\nElections (Yellow)\n\n\nAnalysis of Dates:\nThe data was analyzed for 6 months before leading up before the election (5/1/2024 - 11/5/2024).\nAnalysis of Intervals:\nThe intervals are weekly, each segment is every 7 days.\n\nMay-Early July: The data is fairly low however Trump is mostly leading in searches\nMid-July: Large spike for Trump\nLate July-August: Trump remains high, with Kamala Harris rising\nSept-Oct: Election begins a climb in late Oct\nElection week: Election jumps, with Trump and Kamala Harris gaining momentum however not as high as “election”."
+  },
+  {
+    "objectID": "epps6302assignment2.html#analyzing-data-for-the-following-terms-using-google-trends",
+    "href": "epps6302assignment2.html#analyzing-data-for-the-following-terms-using-google-trends",
+    "title": "Assignment 2 - Google Trends Data",
+    "section": "",
+    "text": "```\n- Donald Trump (Blue)\n\nKamala Harris (Red)\nElections (Yellow)\n\n\nAnalysis of Dates:\nThe data was analyzed for 6 months before leading up before the election (5/1/2024 - 11/5/2024).\nAnalysis of Intervals:\nThe intervals are weekly, each segment is every 7 days.\n\nMay-Early July: The data is fairly low however Trump is mostly leading in searches\nMid-July: Large spike for Trump\nLate July-August: Trump remains high, with Kamala Harris rising\nSept-Oct: Election begins a climb in late Oct\nElection week: Election jumps, with Trump and Kamala Harris gaining momentum however not as high as “election”."
+  },
+  {
+    "objectID": "epps6302assignment2.html#using-gtrendsr01.r-package-to-collect-the-data",
+    "href": "epps6302assignment2.html#using-gtrendsr01.r-package-to-collect-the-data",
+    "title": "Assignment 2 - Google Trends Data",
+    "section": "2. Using gtrendsR01.r package to collect the data:",
+    "text": "2. Using gtrendsR01.r package to collect the data:\ngtrendsR01.r:\ninstall.packages(“gtrendsR”) library(gtrendsR) TrumpHarrisElection = gtrends(c(“Trump”,“Harris”,“election”), onlyInterest = TRUE, geo = “US”, gprop = “web”, time = “today+5-y”, category = 0, ) # last five years the_df=TrumpHarrisElection$interest_over_time plot(TrumpHarrisElection) tg = gtrends(“tariff”, time = “all”)\n\n\nCSV and R formats:\n\nCSV format: write.csv(the_df, “TrumpHarrisElection.csv”, row.names = FALSE)\n\nRds format:\nsaveRDS(the_df, “TrumpHarrisElection.rds”)"
+  },
+  {
+    "objectID": "epps6302assignment2.html#what-are-the-differences-between-the-two-methods",
+    "href": "epps6302assignment2.html#what-are-the-differences-between-the-two-methods",
+    "title": "Assignment 2 - Google Trends Data",
+    "section": "3. What are the differences between the two methods?",
+    "text": "3. What are the differences between the two methods?\n\nThe pros are that there is no coding required and it is a quick export to CSV using the Google Trends Website. However, it is less flexible and it is not easily automated or able to repeat your queries.\nUsing gtrendsR in R, it is fully programmble which means there is reporoducible research. You can automate between multiple quieries and it is easy to save. However, you will need to know how to use R which everyone can learn!"
+  },
+  {
+    "objectID": "epps6302assignment5.html",
+    "href": "epps6302assignment5.html",
+    "title": "EPPS 6302 Assignment 5",
+    "section": "",
+    "text": "Go to the GovInfo search page:\nhttps://www.govinfo.gov/app/search/\n\nEnter search terms or filters to narrow the results to the Foreign Relations Committee.\n\nExample search string might include \"Foreign Relations Committee\" or similar filtering by committee (metadata filters vary).\n\nUse the advanced search options on GovInfo to narrow by date issued, committee, or type of document.\n\nExamine the returned results."
+  },
+  {
+    "objectID": "epps6302assignment5.html#r-script-govtdata01.r-downloading-documents",
+    "href": "epps6302assignment5.html#r-script-govtdata01.r-downloading-documents",
+    "title": "EPPS 6302 Assignment 5",
+    "section": "1.3 R Script (govtdata01.R) – Downloading Documents",
+    "text": "1.3 R Script (govtdata01.R) – Downloading Documents\n\nLoad R packages for web requests and file downloads (for example, httr, jsonlite, tidyverse).\nCraft search queries or use GovInfo’s API to pull results that match Foreign Relations Committee.\n\nGovInfo has a Search API that accepts POST requests. :contentReferenceoaicite:3\n\nDownload documents using returned URLs.\nSave each downloaded file locally (e.g., as PDF, XML, or text)."
+  },
+  {
+    "objectID": "epps6302assignment4.html",
+    "href": "epps6302assignment4.html",
+    "title": "EPPS 6302 Assignment 4",
+    "section": "",
+    "text": "Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!\n\nDownload rvest_wiki01.R and download the packages!\n\nlibrary(tidyverse) library(rvest) library(stringr)\n\nThe website in question (https://en.wikipedia.org/wiki/List_of_countries_by_foreign-exchange_reserves)\nRead the HTML! wikireserve&lt;- read_html(url)\nNeed to tell R which table to grab foreignreserve &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*[@id=\"mw-content-text\"]/div/table[1]’) %&gt;% html_table()\nSave the table! fores &lt;- foreignreserve[[1]]\nRename the columns names(fores) &lt;- c(“Rank”, “Country”, “Forexres”, “Date”, “Change”, “Sources”)"
+  },
+  {
+    "objectID": "epps6302assignment4.html#webscraping-1",
+    "href": "epps6302assignment4.html#webscraping-1",
+    "title": "EPPS 6302 Assignment 4",
+    "section": "",
+    "text": "Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!\n\nDownload rvest_wiki01.R and download the packages!\n\nlibrary(tidyverse) library(rvest) library(stringr)\n\nThe website in question (https://en.wikipedia.org/wiki/List_of_countries_by_foreign-exchange_reserves)\nRead the HTML! wikireserve&lt;- read_html(url)\nNeed to tell R which table to grab foreignreserve &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*[@id=\"mw-content-text\"]/div/table[1]’) %&gt;% html_table()\nSave the table! fores &lt;- foreignreserve[[1]]\nRename the columns names(fores) &lt;- c(“Rank”, “Country”, “Forexres”, “Date”, “Change”, “Sources”)"
+  },
+  {
+    "objectID": "epps6302assignment4.html#now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website",
+    "href": "epps6302assignment4.html#now-we-can-modify-the-program-to-start-scraping-the-tables-provided-in-the-website",
+    "title": "EPPS 6302 Assignment 4",
+    "section": "Now we can modify the program to start scraping the tables provided in the website!",
+    "text": "Now we can modify the program to start scraping the tables provided in the website!\nforeignreserve2 &lt;- wikiforreserve %&gt;% html_nodes(xpath = ’//*[@id=\"mw-content-text\"]/div/table[2]’) %&gt;% html_table()\n\nCleaning up the dataframe:\n\nstr(fores)\nfores\\(newdate &lt;- stringr::str_split_fixed(fores\\)Date, “\\[”, n = 2)[,1] fores\\(newdate &lt;- trimws(fores\\)newdate) fores\\(newdate_date &lt;- as.Date(fores\\)newdate, format = “%d %B %Y”)\nnewfores &lt;- fores[-c(1, 2), ]\nnewfores_clean &lt;- newfores %&gt;% select(Country, Forexres, newdate_date)\nnewfores_clean &lt;- newfores_clean %&gt;% mutate( Forexres_clean = stringr::str_replace_all(Forexres, “,”, ““), Forexres_clean = as.numeric(Forexres_clean) )\nfx_reserves_final &lt;- newfores_clean %&gt;% select( Country, Forexres_clean, Date = newdate_date )\nhead(fx_reserves_final) str(fx_reserves_final)"
+  }
+]
