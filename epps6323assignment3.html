@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EPPS 6302 Assignment 5 – Rose Mikame</title>
+<title>EPPS 6323 - Assignment #3 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -212,8 +212,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-script-govtdata01.r-downloading-documents" id="toc-r-script-govtdata01.r-downloading-documents" class="nav-link active" data-scroll-target="#r-script-govtdata01.r-downloading-documents">1.3 R Script (<code>govtdata01.R</code>) – Downloading Documents</a></li>
-  <li><a href="#define-search-query" id="toc-define-search-query" class="nav-link" data-scroll-target="#define-search-query">Define search query</a></li>
+  <li><a href="#prompt-exercise" id="toc-prompt-exercise" class="nav-link active" data-scroll-target="#prompt-exercise">Prompt Exercise</a></li>
+  <li><a href="#step-1-initial-prompt-creation-input-into-chatgpt" id="toc-step-1-initial-prompt-creation-input-into-chatgpt" class="nav-link" data-scroll-target="#step-1-initial-prompt-creation-input-into-chatgpt">Step 1: Initial Prompt Creation + input into ChatGPT</a></li>
+  <li><a href="#step-2-analyze-model-responses" id="toc-step-2-analyze-model-responses" class="nav-link" data-scroll-target="#step-2-analyze-model-responses">Step 2: Analyze Model Responses</a></li>
+  <li><a href="#step-3-refine-the-prompt" id="toc-step-3-refine-the-prompt" class="nav-link" data-scroll-target="#step-3-refine-the-prompt">Step 3: Refine the Prompt</a></li>
+  <li><a href="#step-4-cross-model-collaboration" id="toc-step-4-cross-model-collaboration" class="nav-link" data-scroll-target="#step-4-cross-model-collaboration">Step 4: Cross-Model Collaboration</a></li>
+  <li><a href="#step-5-reflection" id="toc-step-5-reflection" class="nav-link" data-scroll-target="#step-5-reflection">Step 5: Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -222,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">EPPS 6302 Assignment 5</h1>
+<h1 class="title">EPPS 6323 - Assignment #3</h1>
 </div>
 
 
@@ -239,42 +243,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ol type="1">
-<li>Go to the GovInfo search page:<br>
-https://www.govinfo.gov/app/search/<br>
-</li>
-<li>Enter search terms or filters to narrow the results to the <strong>Foreign Relations Committee</strong>.
-<ul>
-<li>Example search string might include <code>"Foreign Relations Committee"</code> or similar filtering by committee (metadata filters vary).<br>
-</li>
-<li>Use the advanced search options on GovInfo to narrow by <strong>date issued</strong>, <strong>committee</strong>, or <strong>type of document</strong>.</li>
-</ul></li>
-<li>Examine the returned results.</li>
-</ol>
-<hr>
-<section id="r-script-govtdata01.r-downloading-documents" class="level2">
-<h2 class="anchored" data-anchor-id="r-script-govtdata01.r-downloading-documents">1.3 R Script (<code>govtdata01.R</code>) – Downloading Documents</h2>
-<ol type="1">
-<li>Load R packages for web requests and file downloads (for example, <code>httr</code>, <code>jsonlite</code>, <code>tidyverse</code>).</li>
-<li>Craft search queries or use GovInfo’s API to pull results that match Foreign Relations Committee.
-<ul>
-<li>GovInfo has a Search API that accepts POST requests. :contentReference<span data-index="3">oaicite:3</span></li>
-</ul></li>
-<li>Download documents using returned URLs.</li>
-<li>Save each downloaded file locally (e.g., as PDF, XML, or text).</li>
-</ol>
+<section id="prompt-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-exercise">Prompt Exercise</h2>
+<p>Objective: Design a prompt to conduc a structured systematic literature review on data mining and machine learning using multiple AI models.</p>
+<p>Model in Use: ChatGPT Plus</p>
 </section>
-<section id="define-search-query" class="level1">
-<h1>Define search query</h1>
-<p>search_url &lt;- “https://api.govinfo.gov/search” query_body &lt;- list( query = “Committee on Foreign Relations”, pageSize = 10, offsetMark = “*” )</p>
-<p>API key</p>
-<p>api_key &lt;- Sys.getenv(“GOVINFO_API_KEY”)</p>
-<p>response &lt;- POST( search_url, add_headers(<code>X-Api-Key</code> = api_key), body = query_body, encode = “json” )</p>
-<p>search_results &lt;- content(response, as = “parsed”, simplifyVector = TRUE)</p>
-<p>Access result items</p>
-<p>docs &lt;- search_results$results</p>
-<p>Loop to download each document (if a direct document link is available)</p>
-<p>for (i in seq_along(docs)) { doc &lt;- docs[[i]] download_link &lt;- doc$link # Replace with actual document URL element download_file &lt;- paste0(“doc_”, i, “.pdf”) GET(download_link, write_disk(download_file)) }</p>
+<section id="step-1-initial-prompt-creation-input-into-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-initial-prompt-creation-input-into-chatgpt">Step 1: Initial Prompt Creation + input into ChatGPT</h2>
+<p>Prompt: “Conduct a 150 word structured systematic literature review on the applications of data mining and machine learning in real-world domains. Include the methodology section, synthesize key findings, identify trends and gaps, and propose a one testable hypothesis. Use an academic tone and emulate systematic review standards”.</p>
+</section>
+<section id="step-2-analyze-model-responses" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-analyze-model-responses">Step 2: Analyze Model Responses</h2>
+</section>
+<section id="step-3-refine-the-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-refine-the-prompt">Step 3: Refine the Prompt</h2>
+</section>
+<section id="step-4-cross-model-collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-cross-model-collaboration">Step 4: Cross-Model Collaboration</h2>
+</section>
+<section id="step-5-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-reflection">Step 5: Reflection</h2>
 
 
 </section>
