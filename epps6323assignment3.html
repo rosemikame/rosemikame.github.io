@@ -213,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#prompt-exercise" id="toc-prompt-exercise" class="nav-link active" data-scroll-target="#prompt-exercise">Prompt Exercise</a></li>
-  <li><a href="#step-1-initial-prompt-creation-input-into-chatgpt" id="toc-step-1-initial-prompt-creation-input-into-chatgpt" class="nav-link" data-scroll-target="#step-1-initial-prompt-creation-input-into-chatgpt">Step 1: Initial Prompt Creation + input into ChatGPT</a></li>
+  <li><a href="#step-1-initial-prompt-creation-input" id="toc-step-1-initial-prompt-creation-input" class="nav-link" data-scroll-target="#step-1-initial-prompt-creation-input">Step 1: Initial Prompt Creation + Input</a></li>
   <li><a href="#step-2-analyze-model-responses" id="toc-step-2-analyze-model-responses" class="nav-link" data-scroll-target="#step-2-analyze-model-responses">Step 2: Analyze Model Responses</a></li>
   <li><a href="#step-3-refine-the-prompt" id="toc-step-3-refine-the-prompt" class="nav-link" data-scroll-target="#step-3-refine-the-prompt">Step 3: Refine the Prompt</a></li>
   <li><a href="#step-4-cross-model-collaboration" id="toc-step-4-cross-model-collaboration" class="nav-link" data-scroll-target="#step-4-cross-model-collaboration">Step 4: Cross-Model Collaboration</a></li>
@@ -245,15 +245,38 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="prompt-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="prompt-exercise">Prompt Exercise</h2>
-<p>Objective: Design a prompt to conduc a structured systematic literature review on data mining and machine learning using multiple AI models.</p>
-<p>Model in Use: ChatGPT Plus</p>
+<p>Objective: Design a prompt to conduct a structured systematic literature review on data mining and machine learning using multiple AI models.</p>
+<p>Models in Use: ChatGPT Plus, Copilot, &amp; Grok.</p>
 </section>
-<section id="step-1-initial-prompt-creation-input-into-chatgpt" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-initial-prompt-creation-input-into-chatgpt">Step 1: Initial Prompt Creation + input into ChatGPT</h2>
+<section id="step-1-initial-prompt-creation-input" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-initial-prompt-creation-input">Step 1: Initial Prompt Creation + Input</h2>
 <p>Prompt: “Conduct a 150 word structured systematic literature review on the applications of data mining and machine learning in real-world domains. Include the methodology section, synthesize key findings, identify trends and gaps, and propose a one testable hypothesis. Use an academic tone and emulate systematic review standards”.</p>
 </section>
 <section id="step-2-analyze-model-responses" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-analyze-model-responses">Step 2: Analyze Model Responses</h2>
+<p><strong>ChatGPT:</strong></p>
+<p><em>Objective:</em> Summarize real-world applications of data mining and machine learning (ML) across domains.</p>
+<p><em>Methods:</em> Using PRISMA-style screening, we searched IEEE Xplore, ACM DL, PubMed, and Scopus (2015–2025) for (“data mining” OR “machine learning”) AND (healthcare OR finance OR manufacturing OR transportation OR agriculture). Included were peer-reviewed empirical studies reporting deployment or field evaluation; excluded were purely methodological papers. Title/abstract then full-text screening was applied; evidence was narratively synthesized by domain and task.</p>
+<p><em>Findings:</em> Supervised learning dominates (risk scoring, defect detection, demand forecasting); unsupervised methods support anomaly/fraud detection and segmentation. Benefits include higher accuracy, faster decision cycles, and cost reduction, but external validity is limited by single-site datasets.</p>
+<p><em>Trends and gaps:</em> Deep learning and real-time/edge analytics are rising; gaps persist in monitoring, fairness auditing, interpretability, and prospective trials.</p>
+<p><em>Testable hypothesis:</em> In high-stakes workflows, interpretable ML with calibrated uncertainty increases adoption and reduces errors versus opaque models, measurably in routine operational settings.</p>
+<p>Analysis: Chat delivered on their results! However, compared to Copilot and Grok, Chat did not do the best job. The language was fairly academic and more vague compared to the other models.</p>
+<hr>
+<p><strong>Copilot:</strong></p>
+<p><em>Methodology:</em> A systematic search of recent peer‑reviewed articles and reviews on data mining and machine learning (ML) applications across domains such as healthcare, finance, cybersecurity, education, transportation, and e‑commerce was conducted using scholarly databases. Inclusion criteria focused on empirical or review studies reporting real‑world deployments or large‑scale evaluations of ML or data mining techniques.</p>
+<p><em>Synthesis of key findings:</em> Across domains, supervised learning (e.g., SVMs, neural networks) dominates tasks such as diagnosis, fraud detection, demand forecasting, and intrusion detection, while clustering and association mining support segmentation and pattern discovery. Studies consistently report performance gains over rule‑based or statistical baselines, especially with high‑volume, heterogeneous data. Springer</p>
+<p><em>Trends and gaps:</em> Emerging trends include hybrid models, integration with IoT streams, and domain‑specific optimization. Persistent gaps involve limited external validation, scarce interpretability analyses, and underreporting of fairness, privacy, and deployment costs. msijr.msi-ggsip.org</p>
+<p><em>Testable hypothesis:</em> In real‑world healthcare prediction tasks, interpretable ML models with domain‑informed features achieve non‑inferior accuracy compared with black‑box deep models while yielding higher clinician trust.</p>
+<p>Analysis: Copilot delivered on their results! More academic on their tone compared to ChatGPT. However, I personally believe Grok delivered better results.</p>
+<hr>
+<p><strong>Grok:</strong></p>
+<p>Data mining and machine learning (ML) have transformed real-world domains by enabling predictive analytics, pattern discovery, and automated decision-making from large datasets.</p>
+<p><em>Methodology:</em> This mini-systematic review synthesizes evidence from prominent reviews and studies (primarily 2020–2025), drawing on sources identified through web searches for systematic literature reviews and application-focused papers on ML/data mining in domains like healthcare, agriculture, finance, and industry. Inclusion focused on high-impact works discussing real-world applicability, trends, and challenges, emulating PRISMA-inspired selection for recency and relevance.</p>
+<p><em>Key Findings:</em> ML applications dominate healthcare (e.g., disease prediction using random forests, logistic regression, and support vector machines on real-world data for oncology/neurology prognosis), finance (fraud detection, risk assessment), agriculture (precision farming, yield prediction, pest/disease management via deep learning), manufacturing (predictive maintenance, quality control), and others like cybersecurity and smart cities. Supervised techniques (e.g., neural networks, decision trees) prevail, with deep learning enhancing image/video analysis.</p>
+<p><em>Trends and Gaps Trends:</em> include integration with big data/IoT for sustainable practices and real-time processing, alongside growing emphasis on explainable AI. Gaps persist in external validation (&lt;1% in some healthcare reviews), limited longitudinal/open datasets, underrepresentation of basic/lower-education contexts or non-Western domains, ethical/security concerns, and rare adoption of advanced reinforcement learning in complex real-world scaling.</p>
+<p><em>Testable Hypothesis:</em> Hypothesis: Models incorporating explainable AI techniques (e.g., SHAP values) will achieve higher adoption rates in regulated domains like healthcare compared to black-box deep learning models, as measured by deployment frequency in clinical trials or production systems over the next five years.</p>
+<p>(Word count: 150)</p>
+<p>Analysis: Grok delivered on their results! The language used was very academic compared to the previous models.</p>
 </section>
 <section id="step-3-refine-the-prompt" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-refine-the-prompt">Step 3: Refine the Prompt</h2>
