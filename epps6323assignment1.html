@@ -112,16 +112,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Weekly Reflections</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./epps6323prepareforclass.html">
+ <span class="dropdown-text">Prepare for Class</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./epps6323assignment1.html">
  <span class="dropdown-text">Assignment 1</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./epps6323assignment2.html">
  <span class="dropdown-text">Assignment 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./epps6323assignment3.html">
- <span class="dropdown-text">Assignment 3</span></a>
   </li>  
     </ul>
   </li>
@@ -212,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#comparing-articles-breiman-vs-shmueli" id="toc-comparing-articles-breiman-vs-shmueli" class="nav-link active" data-scroll-target="#comparing-articles-breiman-vs-shmueli">Comparing Articles: Breiman vs Shmueli</a></li>
+  <li><a href="#assignment-1---brushing-up-on-r-and-quarto" id="toc-assignment-1---brushing-up-on-r-and-quarto" class="nav-link active" data-scroll-target="#assignment-1---brushing-up-on-r-and-quarto">Assignment #1 - Brushing up on R and Quarto</a></li>
   </ul>
 </nav>
     </div>
@@ -238,58 +238,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="comparing-articles-breiman-vs-shmueli" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-articles-breiman-vs-shmueli">Comparing Articles: Breiman vs Shmueli</h2>
-<p>Breiman, Leo: Statistical Modeling: The Two Cultures</p>
-<p><strong>Main takeaways:</strong></p>
-<ul>
-<li><p>There are&nbsp;<strong>two cultures</strong>&nbsp;in statistics: <strong>data modeling and algorithmic modeling.</strong></p></li>
-<li><p>Data models dominate but often:</p>
-<ul>
-<li><p>Assume the wrong structure</p></li>
-<li><p>Give fragile conclusions</p></li>
-<li><p>Hide poor predictive performance.</p></li>
-</ul></li>
-<li><p>Predictive accuracy is the most honest test&nbsp;of a model.</p></li>
-<li><p>Many different models can fit the same data equally well - <strong>Rashomon effect</strong>.</p></li>
-<li><p>Simplicity and accuracy are in conflict - <strong>Occam dilemma</strong></p></li>
-<li><p>High dimensionality can help, not hurt - <strong>Bellman’s reversal</strong></p></li>
-<li><p>Algorithmic models:</p>
-<ul>
-<li>Often predict better and can provide&nbsp;more reliable information</li>
-</ul></li>
-<li><p>He argues that statistics should focus on&nbsp;solving problems, not defending models.</p></li>
-<li><p>The future of statistics depends on embracing different types of tools</p></li>
-</ul>
-<p>Shmueli, Galit: To Explain or to Predict?</p>
+<section id="assignment-1---brushing-up-on-r-and-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-1---brushing-up-on-r-and-quarto">Assignment #1 - Brushing up on R and Quarto</h2>
+<p>Step 1:</p>
+<p>Review</p>
+<ol type="i">
+<li><p><a href="https://www.uscspec.org/applied-data-science-trainings/introduction-to-r">Introduction to R</a></p></li>
+<li><p><a href="https://eppsmathandcodingcamp.com/modules/">EPPS Math and Coding Camp (Day 3)</a></p></li>
+</ol>
 <hr>
-<p><strong>Main takeaways:</strong></p>
+<p>Step 2:</p>
 <ul>
-<li><p>Statistical modeling is used for causal explanation, prediction, and description.</p></li>
-<li><p>Many fields conflate explanation and prediction, assuming models with high explanatory power automatically has high predictive power - this would be wrong and harmful to scientific progress.</p></li>
-<li><p>Explanatory modeling and predictive modeling serve&nbsp;different scientific goals&nbsp;and affect&nbsp;every step of the modeling process.</p></li>
-<li><p>Focuses on&nbsp;explanatory modeling (causal explanation)&nbsp;vs.&nbsp;predictive modeling (empirical prediction)</p></li>
+<li><p><a href="Labs/Lab01.html">Lab 01</a></p></li>
+<li><p><a href="Labs/Lab02.html">Lab 02</a></p></li>
 </ul>
-<p><strong>How the two articles compare:</strong></p>
-<p>Breiman argues that statistics should prioritize&nbsp;prediction accuracy and real-world performance over strict probabilistic modeling assumptions.</p>
-<ul>
-<li><p>Sees&nbsp;explanatory models&nbsp;as often weak predictors.</p></li>
-<li><p>Argues that prediction is undervalued in classical statistics.</p></li>
-<li><p>Promotes models like random forests and other black-box methods.</p></li>
-</ul>
-<p>Shmueli argues that confusion in statistics arises because&nbsp;explanation (inference)&nbsp;and&nbsp;prediction&nbsp;are fundamentally different goals that require different methods and evaluation criteria.</p>
-<ul>
-<li><p><strong>Explanatory modeling</strong>→ causality, theory testing</p></li>
-<li><p><strong>Predictive modeling</strong>→ forecasting, decision support</p></li>
-<li><p>Warns against using inferential tools (p-values, coefficients) for predictive claims.</p></li>
-</ul>
-<p><strong>How are they similar?:</strong><br>
-Both criticize traditional statistical practice for conflating explanation and prediction.</p>
-<p><strong>How are they different?</strong>:</p>
-<ul>
-<li><p>Breiman pushes statistics <strong>for prediction and algorithms</strong>.</p></li>
-<li><p>Shmueli pushes statistics&nbsp;<strong>toward clarity and goal alignment</strong>,</p></li>
-</ul>
+<hr>
+<p>Step 3:</p>
+<p>Review</p>
+<ol type="i">
+<li><p>Chapters 3-7 in <a href="https://r4ds.had.co.nz/index.html">R4DS</a></p></li>
+<li><p>Section 3.5 in <a href="https://datageneration.io/dataprogramming/r-programming.html#illustration">Data Programming</a></p></li>
+<li><p>Run the exploratory data analysis with R using the TEDS2016 dataset:</p></li>
+</ol>
+<p>library(haven) TEDS_2016 &lt;- haven::read_dta(“https://github.com/datageneration/home/blob/master/DataProgra mming/data/TEDS_2016.dta?raw=true”) str(TEDS_2016) summary(TEDS_2016)</p>
+<hr>
+<p>Challenges:</p>
+<p>When running the code, I had this error:</p>
+<p>Error in <code>haven::read_dta()</code>: ! This kind of input is not handled. Run <code>rlang::last_trace()</code> to see where the error occurred.</p>
 
 
 </section>

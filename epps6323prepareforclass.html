@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Weekly Reflections – Rose Mikame</title>
+<title>Prepare for Class #1 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -212,7 +212,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#weekly-reflections" id="toc-weekly-reflections" class="nav-link active" data-scroll-target="#weekly-reflections">Weekly Reflections</a></li>
+  <li><a href="#prepare-for-class-assignments" id="toc-prepare-for-class-assignments" class="nav-link active" data-scroll-target="#prepare-for-class-assignments">Prepare for Class Assignments</a></li>
+  <li><a href="#class-2-comparing-articles-breiman-vs-shmueli" id="toc-class-2-comparing-articles-breiman-vs-shmueli" class="nav-link" data-scroll-target="#class-2-comparing-articles-breiman-vs-shmueli">Class #2: <strong>Comparing Articles: Breiman vs Shmueli</strong></a></li>
+  <li><a href="#class-4-summarize-mining-scientific-papers" id="toc-class-4-summarize-mining-scientific-papers" class="nav-link" data-scroll-target="#class-4-summarize-mining-scientific-papers">Class #4: Summarize “Mining Scientific Papers”</a></li>
+  <li><a href="#class-5-text-data" id="toc-class-5-text-data" class="nav-link" data-scroll-target="#class-5-text-data">Class #5: Text Data</a></li>
+  <li><a href="#class-6-association-rules-and-proposal-presentation" id="toc-class-6-association-rules-and-proposal-presentation" class="nav-link" data-scroll-target="#class-6-association-rules-and-proposal-presentation">Class #6: Association Rules and Proposal Presentation</a></li>
+  <li><a href="#class-7" id="toc-class-7" class="nav-link" data-scroll-target="#class-7">Class #7:</a></li>
   </ul>
 </nav>
     </div>
@@ -221,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Weekly Reflections</h1>
+<h1 class="title">Prepare for Class #1</h1>
 </div>
 
 
@@ -238,51 +243,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="weekly-reflections" class="level2">
-<h2 class="anchored" data-anchor-id="weekly-reflections">Weekly Reflections</h2>
+<section id="prepare-for-class-assignments" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-for-class-assignments">Prepare for Class Assignments</h2>
 <hr>
-<p><strong>February 10th: Cathy O’Neil: Weapons of Math Destruction</strong></p>
-<p><a href="https://www.youtube.com/watch?v=TQHs8SA1qpk">Weapons of Math Destruction</a></p>
-<ol type="a">
-<li>AI and originality</li>
+</section>
+<section id="class-2-comparing-articles-breiman-vs-shmueli" class="level2">
+<h2 class="anchored" data-anchor-id="class-2-comparing-articles-breiman-vs-shmueli">Class #2: <strong>Comparing Articles: Breiman vs Shmueli</strong></h2>
+<p>Breiman, Leo: Statistical Modeling: The Two Cultures</p>
+<p><strong>Main takeaways:</strong></p>
+<ul>
+<li><p>There are&nbsp;<strong>two cultures</strong>&nbsp;in statistics: <strong>data modeling and algorithmic modeling.</strong></p></li>
+<li><p>Data models dominate but often:</p>
+<ul>
+<li><p>Assume the wrong structure</p></li>
+<li><p>Give fragile conclusions</p></li>
+<li><p>Hide poor predictive performance.</p></li>
+</ul></li>
+<li><p>Predictive accuracy is the most honest test&nbsp;of a model.</p></li>
+<li><p>Many different models can fit the same data equally well - <strong>Rashomon effect</strong>.</p></li>
+<li><p>Simplicity and accuracy are in conflict - <strong>Occam dilemma</strong></p></li>
+<li><p>High dimensionality can help, not hurt - <strong>Bellman’s reversal</strong></p></li>
+<li><p>Algorithmic models:</p>
+<ul>
+<li>Often predict better and can provide&nbsp;more reliable information</li>
+</ul></li>
+<li><p>He argues that statistics should focus on&nbsp;solving problems, not defending models.</p></li>
+<li><p>The future of statistics depends on embracing different types of tools</p></li>
+</ul>
+<p>Shmueli, Galit: To Explain or to Predict?</p>
+<hr>
+<p><strong>Main takeaways:</strong></p>
+<ul>
+<li><p>Statistical modeling is used for causal explanation, prediction, and description.</p></li>
+<li><p>Many fields conflate explanation and prediction, assuming models with high explanatory power automatically has high predictive power - this would be wrong and harmful to scientific progress.</p></li>
+<li><p>Explanatory modeling and predictive modeling serve&nbsp;different scientific goals&nbsp;and affect&nbsp;every step of the modeling process.</p></li>
+<li><p>Focuses on&nbsp;explanatory modeling (causal explanation)&nbsp;vs.&nbsp;predictive modeling (empirical prediction)</p></li>
+</ul>
+<p><strong>How the two articles compare:</strong></p>
+<p>Breiman argues that statistics should prioritize&nbsp;prediction accuracy and real-world performance over strict probabilistic modeling assumptions.</p>
+<ul>
+<li><p>Sees&nbsp;explanatory models&nbsp;as often weak predictors.</p></li>
+<li><p>Argues that prediction is undervalued in classical statistics.</p></li>
+<li><p>Promotes models like random forests and other black-box methods.</p></li>
+</ul>
+<p>Shmueli argues that confusion in statistics arises because&nbsp;explanation (inference)&nbsp;and&nbsp;prediction&nbsp;are fundamentally different goals that require different methods and evaluation criteria.</p>
+<ul>
+<li><p><strong>Explanatory modeling</strong>→ causality, theory testing</p></li>
+<li><p><strong>Predictive modeling</strong>→ forecasting, decision support</p></li>
+<li><p>Warns against using inferential tools (p-values, coefficients) for predictive claims.</p></li>
+</ul>
+<p><strong>How are they similar?:</strong><br>
+Both criticize traditional statistical practice for conflating explanation and prediction.</p>
+<p><strong>How are they different?</strong>:</p>
+<ul>
+<li><p>Breiman pushes statistics <strong>for prediction and algorithms</strong>.</p></li>
+<li><p>Shmueli pushes statistics&nbsp;<strong>toward clarity and goal alignment</strong>.</p></li>
+</ul>
+<hr>
+</section>
+<section id="class-4-summarize-mining-scientific-papers" class="level2">
+<h2 class="anchored" data-anchor-id="class-4-summarize-mining-scientific-papers">Class #4: Summarize “Mining Scientific Papers”</h2>
+<p>i. “Mining Scientific Papers: NLP-enhanced Bibliometrics”</p>
+<ul>
+<li><p>Traditional bibliometrics relies mainly on&nbsp;<strong>metadata</strong>, but new methods analyze&nbsp;<strong>full-text scientific papers</strong>.</p></li>
+<li><p><strong>NLP and machine learning</strong>&nbsp;allow deeper analysis of citation context, argument structure, and scientific writing.</p></li>
+<li><p>The growth of&nbsp;<strong>open access datasets and NLP tools</strong>&nbsp;enables large-scale mining of research literature.</p></li>
+<li><p>Combining&nbsp;<strong>bibliometrics + NLP + computational linguistics</strong>&nbsp;helps reveal patterns in how knowledge is produced and cited.</p></li>
+<li><p>Future research focuses on&nbsp;<strong>better datasets, citation analysis, and automated knowledge extraction from scientific papers</strong>.</p></li>
+</ul>
+<p>ii. “Mining Scientific Papers, Volume II: Knowledge Discovert and Data Exploitation”</p>
+<ul>
+<li><p>Scientific literature is growing rapidly, making&nbsp;<strong>automated analysis essential</strong>.</p></li>
+<li><p><strong>Text mining, NLP, and machine learning</strong>&nbsp;allow researchers to analyze large collections of papers.</p></li>
+<li><p>These techniques help identify&nbsp;<strong>research trends, citation networks, and knowledge structures</strong>.</p></li>
+<li><p>The field relies heavily on&nbsp;<strong>open-access datasets and large research corpora</strong>.</p></li>
+<li><p>Combining&nbsp;<strong>bibliometrics with computational methods</strong>&nbsp;enables deeper insights into how scientific knowledge develops.</p></li>
+</ul>
+<p>Discussion questions based on “Mining Scientific Paper”</p>
+<ol type="1">
+<li>Why is it useful to use NLP and machine learning to analyze scientific papers?</li>
+<li>How can analyzing the full text of research papers help researchers understand scientific trends better than just looking at citations?</li>
+<li>What are some benefits of using automated tools to study large collections of scientific articles?</li>
 </ol>
-<p>O’Neils argument is that AI and algorithimc systems are not original and replicate and amplify existing human bias despite being thought as being objective and neutral.</p>
-<ul>
-<li>Algorithms are built from historical data, which can be unequal, have discrimination bias, and flawed ideas.</li>
-<li>They are pattern enforcers</li>
-<li>AI automates old assumptions and gives them legitimacy.</li>
-</ul>
-<p>AI is being too heavily relied on, and too trusted!</p>
-<ol start="2" type="a">
-<li>What is AGI? How does AGI affect scientific research?</li>
-</ol>
-<p>AGI is defined as Artificial General Intelligence: this is a form of AI that can reason across domains, being flexible to learn, and can apply intelligence broadly. It affects scientific research because it can add faster data analysis and pattern detection, automation of repetitive tasks, and give insights at a large scale. However, it can reduce research quality, have hidden bias, and a loss of interpretability.</p>
 <hr>
-<p><strong>February 17th: AI</strong></p>
-<p>How to start using AI for our project?</p>
-<ul>
-<li>We will be using AI as a tool in our project. We will be using it to aid in the brainstorming, creation, and implementation of our research project. The whole exchange will be documented and disclosed at the end of the project.</li>
-</ul>
-<p>Which two AI models will we be using? and how to leverage them to help your research?</p>
-<ul>
-<li>Within our team members, we have access to ChatGPT and Gemini. We will use them to brainstorm and use as a tool for our research project.</li>
-</ul>
+</section>
+<section id="class-5-text-data" class="level2">
+<h2 class="anchored" data-anchor-id="class-5-text-data">Class #5: Text Data</h2>
+<p>Identify a topic with text data to analyze:</p>
+<p>a. Data source? Social Media Data, Tik Tok</p>
+<p>b. How to get the data? Research API or Web Scraping Tools</p>
 <hr>
-<p><strong>February 24th: Humans and Knowledge</strong></p>
-<p>a. I believe that humans find knowledge in many different ways. Whether it is through pure curiosity and researching, or simply through life experience, it is something that happens on an everyday basis. Children learn in school everyday, but it would not be until you apply it to real life situations is where that information becomes knowledge. What we choose to do with the information is what knowledge becomes. For example, I can read the guidebook to how to use R/RStudio all that I want. However, I will not know how to apply that information until I am getting hands on use with R to really learn it.</p>
-<p>b. AI discrepancies/failures.</p>
-<ul>
-<li><p>High profile cases where AI was utilized as a therapist/mental health resource.</p></li>
-<li><p>AI may be bias, as it is only knowledgeable as the information it has been trained on</p></li>
-<li><p>May generate errors that are outdated or misinformation</p></li>
-<li><p>Cheating - students can use AI to write essays and complete assignments. AI is a tool and should be utilized as a tool instead of a replacement.</p></li>
-</ul>
+</section>
+<section id="class-6-association-rules-and-proposal-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="class-6-association-rules-and-proposal-presentation">Class #6: Association Rules and Proposal Presentation</h2>
+<p>What is Association Rules? These are a data mining method use to find relationships or patterns between items in a dataset.</p>
+<p>Whats the difference between Data Mining and Unsupervised Learning? <strong>Data mining</strong>&nbsp;is a&nbsp;<strong>broad process</strong>&nbsp;of discovering useful patterns, trends, or knowledge from large datasets. <strong>Unsupervised learning</strong>&nbsp;is a&nbsp;<strong>type of machine learning</strong>&nbsp;where the algorithm learns patterns&nbsp;<strong>without labeled data</strong>.</p>
 <hr>
-<p><strong>March 3rd: Machine Learning Pipeline</strong></p>
-<p>a. Starting a Machine Learning pipeline! What is a Machine Learning pipeline? This is an automated, end to end workflow that connects every step of the machine learning life cycle.</p>
-<p>b. What did the error analysis reveal that the accuracy score alone did not? How does over fitting relate to knowledge vs noise?</p>
-<hr>
-<p><strong>March 10th: Prediction vs Explanation</strong></p>
+</section>
+<section id="class-7" class="level2">
+<h2 class="anchored" data-anchor-id="class-7">Class #7:</h2>
+<p>Assigned Reading:</p>
+<p>What is cross-validation? Cross-validation is a method used to evaluate how well a model will perform on new, unseen data. Instead of testing the model on the same data used to train it, the data is split into multiple parts so the model is tested on data it has not seen before.</p>
+<p>How to sample big data? Why is it important? What are the difficulties? How to solve the problem?:</p>
+<p>Sampling means selecting a smaller subset of data from a very large dataset so analysis becomes manageable. Common sampling methods 1. Random Sampling Every observation has equal probability. 2. Stratified Sampling Data is divided into groups (strata), then sampled from each group. 3. Systematic Sampling Select every kth observation. 4. Cluster Sampling Divide data into clusters and sample entire clusters.</p>
+<p>Why is this important? Big datasets often have millions or billions of observations, high computational cost, long processing time, and memory limitations</p>
 
 
 </section>
