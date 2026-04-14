@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 3 - Maping Census Data – Rose Mikame</title>
+<title>Labs – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -220,10 +220,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">1. Set Up</a></li>
-  <li><a href="#geography-and-variables" id="toc-geography-and-variables" class="nav-link" data-scroll-target="#geography-and-variables">2. Geography and Variables</a></li>
-  <li><a href="#downloading-the-data" id="toc-downloading-the-data" class="nav-link" data-scroll-target="#downloading-the-data">3. Downloading the data</a></li>
-  <li><a href="#deliverables-and-interpretation" id="toc-deliverables-and-interpretation" class="nav-link" data-scroll-target="#deliverables-and-interpretation">4. Deliverables and Interpretation</a></li>
+  <li><a href="#labs---in-class-march-24th" id="toc-labs---in-class-march-24th" class="nav-link active" data-scroll-target="#labs---in-class-march-24th">Labs - In Class March 24th</a></li>
   </ul>
 </nav>
     </div>
@@ -232,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 3 - Maping Census Data</h1>
+<h1 class="title">Labs</h1>
 </div>
 
 
@@ -249,47 +246,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Objective:</p>
-<p>Using <em>tidycensus</em> to retrieve ACS 2023 5 years estimates, to create a tidy data set, and to produce <strong>one map and one table</strong> along with an interpretation.</p>
-<section id="set-up" class="level2">
-<h2 class="anchored" data-anchor-id="set-up">1. Set Up</h2>
-<p>The Census Key was obtained from the following website (https://api.census.gov/data/key_signup.html)</p>
-<p><strong>API Key: ae35c975d8902be5656eaf5d7f3c5d36e1682a8e</strong></p>
-<p>The following R packages were installed into R:</p>
-<ul>
-<li><p><em>tidycensus</em></p></li>
-<li><p><em>tigris</em></p></li>
-<li><p><em>sf</em></p></li>
-<li><p><em>dplyr</em></p></li>
-<li><p><em>ggplot2</em></p></li>
-<li><p><em>readr.</em></p></li>
-</ul>
-<p>The API key was then put into R using the following R-Script:</p>
-<p><strong>census_api_key(“ae35c975d8902be5656eaf5d7f3c5d36e1682a8e”, install = FALSE).</strong></p>
-</section>
-<section id="geography-and-variables" class="level2">
-<h2 class="anchored" data-anchor-id="geography-and-variables">2. Geography and Variables</h2>
-<p>Chosen Location: <em>Texas, USA</em></p>
-<p>The variables were searched using the following R-script: <strong>load_variables(2023, “acs5”, cache = TRUE)</strong></p>
-<p>Variables:</p>
-<p><strong>B02015_004: Estimate Total: East Asian - Japanese - Asian Alone by Selected Groups</strong></p>
-<p><strong>B17001_054: Income in the past 12 months at or above poverty level - Female - 25 to 34 years - Poverty Status in the Past 12 Months by Sex by Age</strong></p>
-</section>
-<section id="downloading-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="downloading-the-data">3. Downloading the data</h2>
-<p>R-Script:</p>
-<p><img src="images/EPPS6302assignment3rscript1.png" class="img-fluid"></p>
-<p><img src="images/EPPS6302/assignment3rscript2.png" class="img-fluid"></p>
-</section>
-<section id="deliverables-and-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="deliverables-and-interpretation">4. Deliverables and Interpretation</h2>
-<p>Map: <img src="images/EPPS6302/acs2023japanpop.png" class="img-fluid"></p>
-<p>Table: <img src="images/EPPS6302/epps6302assignment3table.png" class="img-fluid"></p>
-<p>R-Script for Table:</p>
-<p><img src="images/EPPS6302/assignment3tablerscript1.png" class="img-fluid"></p>
-<p><img src="images/EPPS6302/assignment3tablerscript2.png" class="img-fluid"></p>
-<p>Interpretation:</p>
-<p>Map: The map shows and visualizes where Japanese residents are most numerous in. There is a heavy concentration in major cities, such as Dallas, Houston, Austin, and San Antonio. It is very low or near-zero in rural areas, which is expected due to the population settlement. The table ranks the top/bottom 10 tracts by the Japanese population below poverty. The two visuals are related due to the clustering of the Japanese population can be directly correlated with the level of poverty within the counties that are shown in the table.</p>
+<section id="labs---in-class-march-24th" class="level2">
+<h2 class="anchored" data-anchor-id="labs---in-class-march-24th">Labs - In Class March 24th</h2>
 
 
 </section>
