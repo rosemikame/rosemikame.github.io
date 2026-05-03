@@ -131,6 +131,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./epps6323assignment3.html">
  <span class="dropdown-text">Assignment 3</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./epps6323assignment4.html">
+ <span class="dropdown-text">Assignment 4</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -325,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
 <p>5. Validate with close readings</p>
 <p>6. Interpret with theory</p>
 <hr>
-<p><strong>March 30th: LLM’s Pros and Cons</strong></p>
+<p><strong>March 31st: LLM’s Pros and Cons</strong></p>
 <ol type="1">
 <li>What can LLM’s do well and where do they fail? Evaluate one specific failure mode (hallucination, bias, reasoning error) someone may encounter.</li>
 </ol>
@@ -342,6 +346,34 @@ ul.task-list li input[type="checkbox"] {
 <li>How might generative AI reshape our discipline in the next 5 years and what research tasks might change the most and what should remain human driven.</li>
 </ol>
 <p>Gen AI will reshape data analysis in many different ways. I believe that research tasks will be likely to change, with AI handling the initial sweep of papers and locate data quicker and more efficient. It would save time for researchers with tasks that would initially take weeks to do. It would also help with data cleaning and formatting. The thing that should remain human driven is the use of ethics. Researchers should use ethical scoping to decidenext steps and use their best judgment.</p>
+<hr>
+<p><strong>April 7th: What is RAG?</strong></p>
+<ol type="1">
+<li>What is Retrieval-Augmented Generation (RAG) and why does it matter for research? How does grounding generation in retrieved documents change the trustworthiness of AI output?</li>
+</ol>
+<p>RAG is an approach that combines document retrieval with language generation, where an AI first pulls relevant external sources (like articles or data sets) and then generates responses grounded in that evidence. This matters for research because it improves trustworthiness by making outputs more verifiable, transparent, and up-to-date, reducing hallucinations compared to standalone models.</p>
+<ol start="2" type="1">
+<li>What are the recent criticisms about RAG? Any suggestions for improving generation?</li>
+</ol>
+<p>RAG relies heavily on the quality of retrieval—if the wrong or biased documents are retrieved, the output will reflect those errors and for sometimes producing shallow analysis rather than true synthesis. Current improvements focus on better retrieval methods, multi-step reasoning, and stronger prompting to ensure the model accurately uses and cites the retrieved information.</p>
+<hr>
+<p><strong>April 14th: Knowledge Graphs</strong></p>
+<ol type="a">
+<li>What is a knowledge graph and how does it differ from a traditional database or a vector store? Why are relationships between entities valuable for knowledge mining?</li>
+</ol>
+<p>A knowledge graph is a structured representation of information where entities are connected by relationships, forming a network of meaning rather than just stored records. Unlike a traditional database, a knowledge graph explicitly encodes relationships between entities, allowing systems to reason over connections. These relationships are valuable for knowledge mining because they enable more complex queries uncover hidden patterns, and support explainable insights rather than just retrieving similar data points.</p>
+<ol start="2" type="a">
+<li>Identify three entities and three relationships from your research domain that could form a small knowledge graph. How would this structure help answer questions that a flat dataset cannot?</li>
+</ol>
+<p>We are researching media framing of ICE-related shootings. Three entities could be 1. News outlet 2. Frame type (e.g., humanitarian, law-and-order) 3. incident</p>
+<p>Three relationships could be:</p>
+<ol type="1">
+<li>“Covers” (news outlet → incident)</li>
+<li>“Uses frame” (news outlet → frame type)</li>
+<li>“Describes” (frame type → incident)</li>
+</ol>
+<p>This structure can allow us to questions like: “Which outlets consistently use law-and-order framing for specific incidents?” “How do framing patterns differ across outlets for the same event?”</p>
+<p>This is something a flat dataset cannot easily capture because it lacks explicit connections and multi-level relationships between variables.</p>
 
 
 </section>

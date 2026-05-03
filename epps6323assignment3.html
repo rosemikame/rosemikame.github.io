@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -130,6 +165,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./epps6323assignment3.html">
  <span class="dropdown-text">Assignment 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./epps6323assignment4.html">
+ <span class="dropdown-text">Assignment 4</span></a>
   </li>  
     </ul>
   </li>
@@ -249,9 +288,63 @@ ul.task-list li input[type="checkbox"] {
 <section id="assignment-3-ml-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="assignment-3-ml-exercise">Assignment 3: ML Exercise</h2>
 <ol type="1">
-<li>Review ISLR Chapter 3</li>
-<li>Run Lab_ML01.R</li>
+<li><p>Review ISLR Chapter 3</p>
+<p><strong>Chapter 3</strong> introduces <strong>linear regression</strong>, a simple but foundational method for predicting a quantitative response. Though it may seem basic compared to newer techniques, understanding it well is essential before moving on to more advanced models.</p></li>
+<li><p>Run <strong>Lab_ML01.R</strong>:</p></li>
+</ol>
+<p><img src="images/one.png" class="img-fluid"> <img src="images/two.png" class="img-fluid"> <img src="images/three.png" class="img-fluid"> <img src="images/four.png" class="img-fluid"> <img src="images/five.png" class="img-fluid"> <img src="images/six.png" class="img-fluid"> <img src="images/seven.png" class="img-fluid"> <img src="images/eight.png" class="img-fluid"></p>
+<ol start="3" type="1">
 <li>Use TEDS2016 data set to run a multiple regression model. Access the data set using the following codes:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>TEDS_2016 <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="st">"https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="4" type="1">
+<li>Write a function called regplot to plot a regression line.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>regplot <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>     fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>     <span class="fu">plot</span>(x, y)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>     <span class="fu">abline</span>(fit, <span class="at">col =</span> <span class="st">"red"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot</span>(TEDS_2016<span class="sc">$</span>age, TEDS_2016<span class="sc">$</span>PartyID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="epps6323assignment3_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot</span>(TEDS_2016<span class="sc">$</span>edu, TEDS_2016<span class="sc">$</span>PartyID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="epps6323assignment3_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot</span>(TEDS_2016<span class="sc">$</span>income, TEDS_2016<span class="sc">$</span>PartyID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="epps6323assignment3_files/figure-html/unnamed-chunk-2-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p>The regression plots created from the codes above :</p>
+<p>a. Age: <img src="images/clipboard-3675804642.png" class="img-fluid"></p>
+<p>b. Education: <img src="images/clipboard-385287697.png" class="img-fluid"></p>
+<p>c. Income: <img src="images/clipboard-3239184262.png" class="img-fluid"></p></li>
+<li><p>What is the problem and why?</p>
+<p>The issue is that multiple regression and regression plots work best when the dependent variable is continuous. The dependent variable is categorical, not continuous. A categorical dependent variable does not meet the assumption of a continuous outcome. Due to this, the model can produce inaccurate or unrealistic predictions.</p></li>
+<li><p>What can be done to improve prediction of the dependent variable?</p>
+<p>To improve the prediction, a model designed for categorical outcomes should be used. If the dependent variable is a binary number, the logistic regression would be more appropriate. If it has more than two categories, a multinomial or ordinal logistic regression would be a better fit.</p></li>
 </ol>
 
 

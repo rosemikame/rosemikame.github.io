@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prepare for Class Assignments – Rose Mikame</title>
+<title>Assignment 4 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -224,13 +224,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#class-2-comparing-articles-breiman-vs-shmueli" id="toc-class-2-comparing-articles-breiman-vs-shmueli" class="nav-link active" data-scroll-target="#class-2-comparing-articles-breiman-vs-shmueli">Class #2: <strong>Comparing Articles: Breiman vs Shmueli</strong></a></li>
-  <li><a href="#class-4-summarize-mining-scientific-papers" id="toc-class-4-summarize-mining-scientific-papers" class="nav-link" data-scroll-target="#class-4-summarize-mining-scientific-papers">Class #4: Summarize “Mining Scientific Papers”</a></li>
-  <li><a href="#class-5-text-data" id="toc-class-5-text-data" class="nav-link" data-scroll-target="#class-5-text-data">Class #5: Text Data</a></li>
-  <li><a href="#class-6-association-rules-and-proposal-presentation" id="toc-class-6-association-rules-and-proposal-presentation" class="nav-link" data-scroll-target="#class-6-association-rules-and-proposal-presentation">Class #6: Association Rules and Proposal Presentation</a></li>
-  <li><a href="#class-7-cross-validation-big-data" id="toc-class-7-cross-validation-big-data" class="nav-link" data-scroll-target="#class-7-cross-validation-big-data">Class #7: Cross Validation + Big Data</a></li>
-  <li><a href="#class-8-nlp-and-llms" id="toc-class-8-nlp-and-llms" class="nav-link" data-scroll-target="#class-8-nlp-and-llms">Class 8: NLP and LLM’s</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#text-analytics-using-quanteda" id="toc-text-analytics-using-quanteda" class="nav-link active" data-scroll-target="#text-analytics-using-quanteda">Text Analytics using Quanteda:</a></li>
   </ul>
 </nav>
     </div>
@@ -239,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prepare for Class Assignments</h1>
+<h1 class="title">Assignment 4</h1>
 </div>
 
 
@@ -256,124 +250,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<hr>
-<section id="class-2-comparing-articles-breiman-vs-shmueli" class="level2">
-<h2 class="anchored" data-anchor-id="class-2-comparing-articles-breiman-vs-shmueli">Class #2: <strong>Comparing Articles: Breiman vs Shmueli</strong></h2>
-<p>Breiman, Leo: Statistical Modeling: The Two Cultures</p>
-<p><strong>Main takeaways:</strong></p>
-<ul>
-<li><p>There are&nbsp;<strong>two cultures</strong>&nbsp;in statistics: <strong>data modeling and algorithmic modeling.</strong></p></li>
-<li><p>Data models dominate but often:</p>
-<ul>
-<li><p>Assume the wrong structure</p></li>
-<li><p>Give fragile conclusions</p></li>
-<li><p>Hide poor predictive performance.</p></li>
-</ul></li>
-<li><p>Predictive accuracy is the most honest test&nbsp;of a model.</p></li>
-<li><p>Many different models can fit the same data equally well - <strong>Rashomon effect</strong>.</p></li>
-<li><p>Simplicity and accuracy are in conflict - <strong>Occam dilemma</strong></p></li>
-<li><p>High dimensionality can help, not hurt - <strong>Bellman’s reversal</strong></p></li>
-<li><p>Algorithmic models:</p>
-<ul>
-<li>Often predict better and can provide&nbsp;more reliable information</li>
-</ul></li>
-<li><p>He argues that statistics should focus on&nbsp;solving problems, not defending models.</p></li>
-<li><p>The future of statistics depends on embracing different types of tools</p></li>
-</ul>
-<p>Shmueli, Galit: To Explain or to Predict?</p>
-<hr>
-<p><strong>Main takeaways:</strong></p>
-<ul>
-<li><p>Statistical modeling is used for causal explanation, prediction, and description.</p></li>
-<li><p>Many fields conflate explanation and prediction, assuming models with high explanatory power automatically has high predictive power - this would be wrong and harmful to scientific progress.</p></li>
-<li><p>Explanatory modeling and predictive modeling serve&nbsp;different scientific goals&nbsp;and affect&nbsp;every step of the modeling process.</p></li>
-<li><p>Focuses on&nbsp;explanatory modeling (causal explanation)&nbsp;vs.&nbsp;predictive modeling (empirical prediction)</p></li>
-</ul>
-<p><strong>How the two articles compare:</strong></p>
-<p>Breiman argues that statistics should prioritize&nbsp;prediction accuracy and real-world performance over strict probabilistic modeling assumptions.</p>
-<ul>
-<li><p>Sees&nbsp;explanatory models&nbsp;as often weak predictors.</p></li>
-<li><p>Argues that prediction is undervalued in classical statistics.</p></li>
-<li><p>Promotes models like random forests and other black-box methods.</p></li>
-</ul>
-<p>Shmueli argues that confusion in statistics arises because&nbsp;explanation (inference)&nbsp;and&nbsp;prediction&nbsp;are fundamentally different goals that require different methods and evaluation criteria.</p>
-<ul>
-<li><p><strong>Explanatory modeling</strong>→ causality, theory testing</p></li>
-<li><p><strong>Predictive modeling</strong>→ forecasting, decision support</p></li>
-<li><p>Warns against using inferential tools (p-values, coefficients) for predictive claims.</p></li>
-</ul>
-<p><strong>How are they similar?:</strong><br>
-Both criticize traditional statistical practice for conflating explanation and prediction.</p>
-<p><strong>How are they different?</strong>:</p>
-<ul>
-<li><p>Breiman pushes statistics <strong>for prediction and algorithms</strong>.</p></li>
-<li><p>Shmueli pushes statistics&nbsp;<strong>toward clarity and goal alignment</strong>.</p></li>
-</ul>
-<hr>
-</section>
-<section id="class-4-summarize-mining-scientific-papers" class="level2">
-<h2 class="anchored" data-anchor-id="class-4-summarize-mining-scientific-papers">Class #4: Summarize “Mining Scientific Papers”</h2>
-<p>i. “Mining Scientific Papers: NLP-enhanced Bibliometrics”</p>
-<ul>
-<li><p>Traditional bibliometrics relies mainly on&nbsp;<strong>metadata</strong>, but new methods analyze&nbsp;<strong>full-text scientific papers</strong>.</p></li>
-<li><p><strong>NLP and machine learning</strong>&nbsp;allow deeper analysis of citation context, argument structure, and scientific writing.</p></li>
-<li><p>The growth of&nbsp;<strong>open access datasets and NLP tools</strong>&nbsp;enables large-scale mining of research literature.</p></li>
-<li><p>Combining&nbsp;<strong>bibliometrics + NLP + computational linguistics</strong>&nbsp;helps reveal patterns in how knowledge is produced and cited.</p></li>
-<li><p>Future research focuses on&nbsp;<strong>better datasets, citation analysis, and automated knowledge extraction from scientific papers</strong>.</p></li>
-</ul>
-<p>ii. “Mining Scientific Papers, Volume II: Knowledge Discovert and Data Exploitation”</p>
-<ul>
-<li><p>Scientific literature is growing rapidly, making&nbsp;<strong>automated analysis essential</strong>.</p></li>
-<li><p><strong>Text mining, NLP, and machine learning</strong>&nbsp;allow researchers to analyze large collections of papers.</p></li>
-<li><p>These techniques help identify&nbsp;<strong>research trends, citation networks, and knowledge structures</strong>.</p></li>
-<li><p>The field relies heavily on&nbsp;<strong>open-access datasets and large research corpora</strong>.</p></li>
-<li><p>Combining&nbsp;<strong>bibliometrics with computational methods</strong>&nbsp;enables deeper insights into how scientific knowledge develops.</p></li>
-</ul>
-<p>Discussion questions based on “Mining Scientific Paper”</p>
+<section id="text-analytics-using-quanteda" class="level2">
+<h2 class="anchored" data-anchor-id="text-analytics-using-quanteda">Text Analytics using Quanteda:</h2>
 <ol type="1">
-<li>Why is it useful to use NLP and machine learning to analyze scientific papers?</li>
-<li>How can analyzing the full text of research papers help researchers understand scientific trends better than just looking at citations?</li>
-<li>What are some benefits of using automated tools to study large collections of scientific articles?</li>
+<li><p>Read Quanteda tutorial: <a href="https://tutorials.quanteda.io/" class="uri">https://tutorials.quanteda.io/</a></p></li>
+<li><p>Analyze:</p>
+<p>a. US presidential inaugural speeches and any similarities or differences over time and among presidents?</p></li>
 </ol>
-<hr>
-</section>
-<section id="class-5-text-data" class="level2">
-<h2 class="anchored" data-anchor-id="class-5-text-data">Class #5: Text Data</h2>
-<p>Identify a topic with text data to analyze:</p>
-<p>a. Data source? Social Media Data, Tik Tok</p>
-<p>b. How to get the data? Research API or Web Scraping Tools</p>
-<hr>
-</section>
-<section id="class-6-association-rules-and-proposal-presentation" class="level2">
-<h2 class="anchored" data-anchor-id="class-6-association-rules-and-proposal-presentation">Class #6: Association Rules and Proposal Presentation</h2>
-<p>What are Association Rules? These are a data mining method use to find relationships or patterns between items in a data set.</p>
-<p>Whats the difference between Data Mining and Unsupervised Learning? <strong>Data mining</strong>&nbsp;is a&nbsp;<strong>broad process</strong>&nbsp;of discovering useful patterns, trends, or knowledge from large datasets. <strong>Unsupervised learning</strong>&nbsp;is a&nbsp;<strong>type of machine learning</strong>&nbsp;where the algorithm learns patterns&nbsp;<strong>without labeled data</strong>.</p>
-<hr>
-</section>
-<section id="class-7-cross-validation-big-data" class="level2">
-<h2 class="anchored" data-anchor-id="class-7-cross-validation-big-data">Class #7: Cross Validation + Big Data</h2>
-<p><strong>What is cross-validation?</strong>: Cross-validation is a method used to evaluate how well a model will perform on new, unseen data. Instead of testing the model on the same data used to train it, the data is split into multiple parts so the model is tested on data it has not seen before.</p>
-<p><strong>How to sample big data? Why is it important? What are the difficulties? How to solve the problem?:</strong></p>
-<p>Sampling means selecting a smaller subset of data from a very large data set so analysis becomes manageable. Common sampling methods:</p>
-<p>1. Random Sampling Every observation has equal probability.</p>
-<p>2. Stratified Sampling Data is divided into groups (strata), then sampled from each group.</p>
-<p>3. Systematic Sampling Select every kth observation.</p>
-<p>4. Cluster Sampling Divide data into clusters and sample entire clusters.</p>
-<p><strong>Why is this important?</strong> Big data sets often have millions or billions of observations, high computational cost, long processing time, and memory limitations</p>
-<hr>
-</section>
-<section id="class-8-nlp-and-llms" class="level2">
-<h2 class="anchored" data-anchor-id="class-8-nlp-and-llms">Class 8: NLP and LLM’s</h2>
-<p>Do a quick survey based on the readings how NLP and LLM have advanced Knowledge Mining as a field.</p>
-<p>a. Summarize the findings:</p>
-<p>The readings show that the central finding is that LLMs represent a paradigm shift in NLP that fundamentally expands the scope of knowledge mining. LLMs are trained on massive corpora using self-supervised learning. Knowledge is implicitly stored in model parameters and this enables generalization across all tasks and reduced need for task specific models.</p>
-<p>There are also pre-trained models that improved language understanding and transfer learning. Knowledge mining becomes more semantic and less dependent on manual preprocessing. LLMs require new evaluation frameworks and traditional metrics are insufficient. Challenges include hallucination, reasoning reliability, and benchmark limitations.</p>
-<p>b. Identify the key concepts:</p>
-<p>Pretraining and scaling laws, in-context learning, transfer learning, and self-attention and transformer architecture.</p>
-<hr>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<p><img src="images/1.png" class="img-fluid"> <img src="images/2.png" class="img-fluid"> <img src="images/3.png" class="img-fluid"> <img src="images/4.png" class="img-fluid"> <img src="images/5.png" class="img-fluid"> <img src="images/6.png" class="img-fluid"> <img src="images/7.png" class="img-fluid"> <img src="images/8.png" class="img-fluid"> <img src="images/9.png" class="img-fluid"></p>
+<p>The speeches are similar because many presidents use different themes such as nation, people, freedom, government, and unity.</p>
+<p>The differences appear over time because earlier speeches often focus more on constitutional government, union, and public duty, while modern speeches tend to include more references to global issues, democracy, security, and social change.</p>
+<p><br>
+b. US Department of Defense reports (USDOD.zip)</p>
+<ol start="3" type="1">
+<li><p>What is wordfish? Wordfish is a text scaling model used to estimate the position of documents based on word usage. It assumed the documents with similar word patterns are closer together, while documents with different patterns are set apart.</p>
+<p>a. Run Wordfish on DOD reports. The Wordfish model estimates the relative position of each DOD report based on word usage. Reports placed closer together are likely to use similar language and emphasize similar policy concerns. Reports farther apart likely differ in terminology.</p></li>
+</ol>
+<p><img src="images/wf1.png" class="img-fluid"> <img src="images/wf2.png" class="img-fluid"> <img src="images/wf3.png" class="img-fluid"> <img src="images/wf4.png" class="img-fluid"> <img src="images/wf5.png" class="img-fluid"> <img src="images/wf6.png" class="img-fluid"> <img src="images/wf7.png" class="img-fluid"> <img src="images/wf8.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><p>How to compare positions: They can be compared by looking at the Wordfish theta scores. Documents with higher/lower theta values are interpreted as being located at different positions on the estimated text dimension.</p>
+<p><img src="images/clipboard-867696913.png" class="img-fluid"></p></li>
+<li><p>Hackathon:</p>
+<p>a. Create a corpus using APSA eJobs website and perform Text Analytics using Quanteda: The corpus was created by importing the APSA job postings and reading the PDFs. There were some issues/warnings within the PDF’s but the readable text was stil used for the analysis.</p></li>
+</ol>
+<p><img src="images/job1.png" class="img-fluid"> <img src="images/job2.png" class="img-fluid"> <img src="images/job3.png" class="img-fluid"> <img src="images/job4.png" class="img-fluid"> <img src="images/job5.png" class="img-fluid"> <img src="images/job6.png" class="img-fluid"> <img src="images/job7.png" class="img-fluid"></p>
 
 
 </section>
