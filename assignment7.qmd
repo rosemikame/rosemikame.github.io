@@ -1,0 +1,13 @@
+---
+title: "EPPS 6354 - Assignment 7"
+---
+
+**Shiny exercise:**
+
+1.  app.R in Shiny/1 Teams folder - Sorting changed to high to low:
+
+![](images/7.1.png)
+
+2.  app.R in Shiny/2 Teams folder - Color changed from blue to green
+
+![](images/7.2.png)

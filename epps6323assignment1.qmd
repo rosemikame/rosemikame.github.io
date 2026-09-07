@@ -1,0 +1,45 @@
+---
+title: "EPPS 6323 - Assignment #1"
+format: html
+editor: visual
+---
+
+## Brushing up on R and Quarto
+
+Step 1:
+
+Review
+
+i.  [Introduction to R](https://www.uscspec.org/applied-data-science-trainings/introduction-to-r)
+
+ii. [EPPS Math and Coding Camp (Day 3)](https://eppsmathandcodingcamp.com/modules/)
+
+------------------------------------------------------------------------
+
+Step 2:
+
+- [Lab 01](Labs/Lab01.html)
+
+- [Lab 02](Labs/Lab02.html)
+
+------------------------------------------------------------------------
+
+Step 3:
+
+Review
+
+i.  Chapters 3-7 in [R4DS](https://r4ds.had.co.nz/index.html)
+
+ii. Section 3.5 in [Data Programming](https://datageneration.io/dataprogramming/r-programming.html#illustration)
+
+iii. Run the exploratory data analysis with R using the TEDS2016 dataset:
+
+library(haven) TEDS_2016 \<- haven::read_dta("https://github.com/datageneration/home/blob/master/DataProgra mming/data/TEDS_2016.dta?raw=true") str(TEDS_2016) summary(TEDS_2016)
+
+------------------------------------------------------------------------
+
+Challenges:
+
+When running the code, I had this error:
+
+Error in `haven::read_dta()`: ! This kind of input is not handled. Run `rlang::last_trace()` to see where the error occurred.

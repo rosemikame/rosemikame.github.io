@@ -1,0 +1,181 @@
+---
+title: "Weekly Reflections"
+format: html
+editor: visual
+---
+
+## Weekly Reflections
+
+------------------------------------------------------------------------
+
+**February 10th: Cathy O'Neil: Weapons of Math Destruction**
+
+[Weapons of Math Destruction](https://www.youtube.com/watch?v=TQHs8SA1qpk)
+
+a.  AI and originality
+
+O'Neils argument is that AI and algorithimc systems are not original and replicate and amplify existing human bias despite being thought as being objective and neutral.
+
+-   Algorithms are built from historical data, which can be unequal, have discrimination bias, and flawed ideas.
+-   They are pattern enforcers
+-   AI automates old assumptions and gives them legitimacy.
+
+AI is being too heavily relied on, and too trusted!
+
+b.  What is AGI? How does AGI affect scientific research?
+
+AGI is defined as Artificial General Intelligence: this is a form of AI that can reason across domains, being flexible to learn, and can apply intelligence broadly. It affects scientific research because it can add faster data analysis and pattern detection, automation of repetitive tasks, and give insights at a large scale. However, it can reduce research quality, have hidden bias, and a loss of interpretability.
+
+------------------------------------------------------------------------
+
+**February 17th: AI**
+
+How to start using AI for our project?
+
+-   We will be using AI as a tool in our project. We will be using it to aid in the brainstorming, creation, and implementation of our research project. The whole exchange will be documented and disclosed at the end of the project.
+
+Which two AI models will we be using? and how to leverage them to help your research?
+
+-   Within our team members, we have access to ChatGPT and Gemini. We will use them to brainstorm and use as a tool for our research project.
+
+------------------------------------------------------------------------
+
+**February 24th: Humans and Knowledge**
+
+a\. I believe that humans find knowledge in many different ways. Whether it is through pure curiosity and researching, or simply through life experience, it is something that happens on an everyday basis. Children learn in school everyday, but it would not be until you apply it to real life situations is where that information becomes knowledge. What we choose to do with the information is what knowledge becomes. For example, I can read the guidebook to how to use R/RStudio all that I want. However, I will not know how to apply that information until I am getting hands on use with R to really learn it.
+
+b\. AI discrepancies/failures.
+
+-   High profile cases where AI was utilized as a therapist/mental health resource.
+
+-   AI may be bias, as it is only knowledgeable as the information it has been trained on
+
+-   May generate errors that are outdated or misinformation
+
+-   Cheating - students can use AI to write essays and complete assignments. AI is a tool and should be utilized as a tool instead of a replacement.
+
+------------------------------------------------------------------------
+
+**March 3rd: Machine Learning Pipeline**
+
+a\. Starting a Machine Learning pipeline! What is a Machine Learning pipeline? This is an automated, end to end workflow that connects every step of the machine learning life cycle.
+
+b\. What did the error analysis reveal that the accuracy score alone did not? How does over fitting relate to knowledge vs noise?
+
+------------------------------------------------------------------------
+
+**March 10th: Prediction vs Explanation**
+
+a\. Prediction vs Explanation:
+
+Prediction is what will happen. A guess or hypothesis on outcome will happen.
+
+Explanation is why something happened. The reasoning and scientific research behind it.
+
+b\. Simple Causal Diagram for relationship in our research area:
+
+"Do Major U.S. news outlets differ in how they frame the ICE related fatal shootings during Operation Metro Surge (Jan 2026)?"
+
+Media Outlet Ideology -\> Framing of the Event -\> Emotional Language -\> Political Context -\> Audience
+
+Possible Cofounders (a variable that influences both the media outlet and the framing): Political Context, Audience Ideology, or Event Details
+
+------------------------------------------------------------------------
+
+**March 24th: Text Mining, NLP, and LLMs**
+
+a.  How can text mining reveal patterns that close reading alone cannot? What are its blind spots?
+
+Text Mining can analyze thousands and millions of documents simultaneously. It can also detect macro level patterns (such as trends over time and across outlets). It also detects patterns and gives consistent and you are able to replicate the results. Blind spots are loss of context, oversimplifying complex narratives, model bias, casualty limitations, and important outliers may be dismissed.
+
+b.  How NLP and LLM can assist in your research and provide data/assistance for your project? Give specific examples.
+
+NLP and LLM's can assist in data collection and processing. NLP tools can use API's, scraping, and cleaning. It can also help with topic modeling. LLM's can help with qualitative coding and to classify frames, summarize articles, and generate coding schemes.
+
+c.  Name limitations and suggest solutions:
+
+Limitations include but are not limited to: - Bias in models and data: this skews results. Solution: Use diverse datasets and validate with human coding - Hallucination (LLMs): False insights. Solution: Cross check with original text - Over-Automation: Loss of critical thinking. Solution: Combine with close readings.
+
+d.  Write an AI for research guide (you can use bullet points) incorporating ethical, technical and academic concerns that could lead to more problems than solutions.
+
+Ethical Considerations: - Bias and fairness, data ethics, and misuse risk
+
+Academic Integrity: - Do not treat AI outputs as facts, always double check. - Use AI as a tool, not as an author - Disclose if AI is being used
+
+Workflow:
+
+1\. Collect data
+
+2\. Clean and preprocess (NLP)
+
+3\. Explore patterns (topics, sentiments)
+
+4\. Use LLM for coding assistance and summarization
+
+5\. Validate with close readings
+
+6\. Interpret with theory
+
+------------------------------------------------------------------------
+
+**March 31st: LLM's Pros and Cons**
+
+1.  What can LLM's do well and where do they fail? Evaluate one specific failure mode (hallucination, bias, reasoning error) someone may encounter.
+
+What LLM's Do Well - They excel at condensing massive data sets, long documents, or messy meeting transcripts into concise bullet points.
+
+-   LLM's are highly proficient in structured logic, helping developers write boilerplate code or find syntax errors in seconds.
+
+-   They offer dozens of variations for headlines, emails, or marketing copy.
+
+-   Beyond literal translation, they can rewrite a technical manual to sound like a children's book or turn a formal email into a casual text.
+
+-   A hallucination occurs when a model generates a response that is grammatically perfect and highly confident but factually incorrect.
+
+The Reasoning: LLM's do not have a built-in "truth" compass. They operate on probabilistic associations. If you ask a model about a fictional historical event, it may "hallucinate" a detailed timeline because its training data contains millions of examples of what a "historical timeline" looks like. It fills the structural template with plausible-sounding but invented data.
+
+Example: In a legal setting, a lawyer once used an LLM to find precedents. The model provided six citations that looked perfectly legitimate, complete with case numbers and judge names. However, none of those cases actually existed; the model had simply synthesized the pattern of a legal citation.
+
+2.  How might generative AI reshape our discipline in the next 5 years and what research tasks might change the most and what should remain human driven.
+
+Gen AI will reshape data analysis in many different ways. I believe that research tasks will be likely to change, with AI handling the initial sweep of papers and locate data quicker and more efficient. It would save time for researchers with tasks that would initially take weeks to do. It would also help with data cleaning and formatting. The thing that should remain human driven is the use of ethics. Researchers should use ethical scoping to decidenext steps and use their best judgment.
+
+------------------------------------------------------------------------
+
+**April 7th: What is RAG?**
+
+1. What is Retrieval-Augmented Generation (RAG) and why does it matter for research? How does grounding generation in retrieved documents change the trustworthiness of AI output? 
+
+RAG is an approach that combines document retrieval with language generation, where an AI first pulls relevant external sources (like articles or data sets) and then generates responses grounded in that evidence. This matters for research because it improves trustworthiness by making outputs more verifiable, transparent, and up-to-date, reducing hallucinations compared to standalone models.
+
+2. What are the recent criticisms about RAG? Any suggestions for improving generation? 
+
+RAG relies heavily on the quality of retrieval—if the wrong or biased documents are retrieved, the output will reflect those errors and for sometimes producing shallow analysis rather than true synthesis. Current improvements focus on better retrieval methods, multi-step reasoning, and stronger prompting to ensure the model accurately uses and cites the retrieved information.
+
+
+------------------------------------------------------------------------
+
+**April 14th: Knowledge Graphs**
+
+a. What is a knowledge graph and how does it differ from a traditional database or a vector store? Why are relationships between entities valuable for knowledge mining?
+
+A knowledge graph is a structured representation of information where entities are connected by relationships, forming a network of meaning rather than just stored records. Unlike a traditional database, a knowledge graph explicitly encodes relationships between entities, allowing systems to reason over connections. These relationships are valuable for knowledge mining because they enable more complex queries uncover hidden patterns, and support explainable insights rather than just retrieving similar data points.
+
+
+b. Identify three entities and three relationships from your research domain that could form a small knowledge graph. How would this structure help answer questions that a flat dataset cannot?
+
+We are researching media framing of ICE-related shootings. Three entities could be 1. News outlet
+2. Frame type (e.g., humanitarian, law-and-order)
+3. incident
+
+Three relationships could be: 
+
+1. “Covers” (news outlet → incident)
+2. "Uses frame” (news outlet → frame type)
+3. “Describes” (frame type → incident)
+
+This structure can allow us to questions like: 
+“Which outlets consistently use law-and-order framing for specific incidents?”
+“How do framing patterns differ across outlets for the same event?” 
+
+This is something a flat dataset cannot easily capture because it lacks explicit connections and multi-level relationships between variables.

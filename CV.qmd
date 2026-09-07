@@ -1,0 +1,17 @@
+---
+title: ""
+format: html
+---
+
+::: {#gdoc-embed}
+<iframe
+  src="https://docs.google.com/document/d/e/2PACX-1vRsZLQP75NDwMwtnQ9zJc9UT11WdGlbl7tJ07bdlO1xK9BZnseXwb9A6EUHx1FnqssqHWztaBZ-K_Dt/pub?embedded=true"
+  width="100%"
+  style="height:85vh;border:1px solid #ddd;border-radius:8px"
+  title="Live Google Doc"
+></iframe>
+
+<p style="margin-top:0.5rem">
+  Trouble viewing? <a href="https://docs.google.com/document/d/e/PASTE-YOURS/pub" target="_blank" rel="noopener">Open in a new tab</a>.
+</p>
+:::

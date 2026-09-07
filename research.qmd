@@ -1,0 +1,55 @@
+---
+title: "Social Data Analytics and Research Projects"
+format: html
+editor: visual
+---
+
+## Academic Research Projects
+
+**Data Mining & Machine Learning Methods - Graduate Project - EPPS 6323 - Knowledge Mining**
+
+- Topic: *How News Outlets Frame ICE Conflict Events in the U.S? - How Selected News Outlets Differed systematically in their Framing of ICE-related fatal shootings during Operation Metro Surge (January 2026), as reflected in both the relative prevalence of Humanitarian, Law-and-order, Institutional-Legitimacy, and Political Frames.*
+
+- Right-leaning outlets were significantly more likely to combine law-and-order and political frames in the same sentence. In contrast, left-leaning outlets more frequently paired humanitarian and political frames, portraying victims as both human losses and evidence of broader institutional or governmental failure.
+
+- Findings showed that media framing is not neutral reporting but a systematic construction of meaning shaped by outlet ideology and journalistic form. Since AI-generated content and algorithmic curation increasingly shape how information is distributed and consumed, understanding how frames are produced and reinforced becomes not only an academic concern but also a civic one.
+
+- Reinforced the argument that LLM-based analysis requires structured human validation rather than relying on AI alone as a standalone research instrument.
+
+- Tools: R, R-Studio, LLM, Claude Sonnet 4.6.
+
+**API-Based Data Collection - Graduate Project - EPPS 6302 Methods of Data Collection and Production**
+
+- Topic: *Microplastics and the Impact on Human Health - How did the Microbead-Free Waters Act of 2015 influence the risk of microplastic exposure and related public health outcomes in U.S. coastal cities?*
+
+- Collected data from the National Oceanic and Atmospheric Administration (NOAA) and Centers for Disease Control (CDC) to demonstrate the use of API's to integrate cross disciplinary data for policy evaluation.
+
+- Contributed to reproducible research framework and alighted with data science principles and resolved troubleshooting errors to ensure accuracy.
+
+- Tools: API Data from NOAA and CDC, RStudio, Python.
+
+**SQL Database Design - Graduate Project - EPPS 6354 Information Management**
+
+- Topic: *Rabbit Intake Database* - [Link Provided](https://rosemikame.shinyapps.io/rabbit_intake_database/)
+
+- Designed and implemented a functional database using reliable data sources
+
+- Resolved troubleshooting errors to ensure database accuracy and usability 
+
+- Tools: PostgreSQL, Shiny Apps, RStudio, Github, Excel 
+
+**Quantitative Data Analysis - Graduate Project - EPPS 6313 Intro to Quantitative Methods**
+
+- Topic: *How do Education Levels Influence the Development of Pacifist Attitudes?*
+
+- Analyzed multiple datasets to test and reject the null hypothesis through statistical modeling 
+
+- Tools: STATA, RStudio
+
+**Qualitative Research - Graduate Project - EPPS 6346 Qualitative Research Orientation**
+
+- Topic: *Social Assimilation and Immigration in the United States* 
+
+- Conducted qualitative research through interviews, literature review and coding of transcripts.
+
+- Collected, analyzed, and synthesized qualitative data to draw conclusions.

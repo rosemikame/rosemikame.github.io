@@ -1,0 +1,100 @@
+project:
+  type: website
+
+website:
+  title: "Rose Mikame"
+
+  navbar:
+    right:
+      - text: "About"
+        href: index.qmd
+
+      - text: "Resume"
+        href: CV.qmd
+
+      - text: "Research"
+        href: research.qmd
+
+      - text: "Graduate Coursework"
+        menu:
+          - text: "DATA VISUALIZATION"
+
+          - text: "Assignment 1"
+            href: epps6356assignment1.qmd
+
+          - "---"
+
+          - text: "KNOWLEDGE MINING"
+
+          - text: "Weekly Reflections"
+            href: weeklyreflectionepps6323.qmd
+
+          - text: "Prepare for Class"
+            href: epps6323prepareforclass.qmd
+
+          - text: "Assignment 1"
+            href: epps6323assignment1.qmd
+
+          - text: "Assignment 2"
+            href: epps6323assignment2.qmd
+
+          - text: "Assignment 3"
+            href: epps6323assignment3.qmd
+
+          - text: "Assignment 4"
+            href: epps6323assignment4.qmd
+
+          - "---"
+
+          - text: "DATA COLLECTION/PRODUCTION"
+
+          - text: "Assignment 1"
+            href: epps6302assignment1.qmd
+
+          - text: "Assignment 2"
+            href: epps6302assignment2.qmd
+
+          - text: "Assignment 3"
+            href: epps6302assignment3.qmd
+
+          - text: "Assignment 4"
+            href: epps6302assignment4.qmd
+
+          - text: "Assignment 5"
+            href: epps6302assignment5.qmd
+
+          - text: "Assignment 6"
+            href: epps6302assignment6.qmd
+
+          - "---"
+
+          - text: "INFORMATION MANAGEMENT"
+
+          - text: "Project Presentation"
+            href: project.qmd
+
+          - text: "Assignment 1"
+            href: assignment1.qmd
+
+          - text: "Assignment 2"
+            href: assignment2.qmd
+
+          - text: "Assignment 3"
+            href: assignment3.qmd
+
+          - text: "Assignment 4"
+            href: assignment4.qmd
+
+          - text: "Assignment 5"
+            href: assignment5.qmd
+
+          - text: "Assignment 6"
+            href: assignment6.qmd
+
+          - text: "Assignment 7"
+            href: assignment7.qmd
+
+format:
+  html:
+    theme: journal
+    toc: true

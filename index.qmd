@@ -1,0 +1,15 @@
+---
+title: "About"
+---
+
+My name is Rose Mikame and I am currently pursuing a Master’s in Social Data Analytics and Research at the University of Texas at Dallas, building on my background in sociology, mathematics, and statistics.
+
+My career goal is to contribute within my role as a data analyst, using tools like R, SQL, and data visualization platforms to uncover trends, optimize strategies, and inform decision-making.
+
+## Contact me
+
+rom230000\@utdallas.edu
+
+mikame.rose\@gmail.com
+
+[LinkedIn](https://www.linkedin.com/in/rose-mikame-m-s-1ab50b178/)

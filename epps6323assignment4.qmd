@@ -1,0 +1,38 @@
+---
+title: "EPPS 6323 - Assignment #4"
+format: html
+editor: visual
+---
+
+## Text Analytics using Quanteda:
+
+1.  Read Quanteda tutorial: <https://tutorials.quanteda.io/>
+
+2.  Analyze:
+
+    a\. US presidential inaugural speeches and any similarities or differences over time and among presidents?
+
+![](images/1.png) ![](images/2.png) ![](images/3.png) ![](images/4.png) ![](images/5.png) ![](images/6.png) ![](images/7.png) ![](images/8.png) ![](images/9.png)
+
+The speeches are similar because many presidents use different themes such as nation, people, freedom, government, and unity.
+
+The differences appear over time because earlier speeches often focus more on constitutional government, union, and public duty, while modern speeches tend to include more references to global issues, democracy, security, and social change.
+
+\
+b. US Department of Defense reports (USDOD.zip)
+
+3.  What is wordfish? Wordfish is a text scaling model used to estimate the position of documents based on word usage. It assumed the documents with similar word patterns are closer together, while documents with different patterns are set apart.
+
+    a\. Run Wordfish on DOD reports. The Wordfish model estimates the relative position of each DOD report based on word usage. Reports placed closer together are likely to use similar language and emphasize similar policy concerns. Reports farther apart likely differ in terminology.
+
+![](images/wf1.png) ![](images/wf2.png) ![](images/wf3.png) ![](images/wf4.png) ![](images/wf5.png) ![](images/wf6.png) ![](images/wf7.png) ![](images/wf8.png)
+
+4.  How to compare positions: They can be compared by looking at the Wordfish theta scores. Documents with higher/lower theta values are interpreted as being located at different positions on the estimated text dimension.
+
+    ![](images/clipboard-867696913.png)
+
+5.  Hackathon:
+
+    a\. Create a corpus using APSA eJobs website and perform Text Analytics using Quanteda: The corpus was created by importing the APSA job postings and reading the PDFs. There were some issues/warnings within the PDF's but the readable text was stil used for the analysis.
+
+![](images/job1.png) ![](images/job2.png) ![](images/job3.png) ![](images/job4.png) ![](images/job5.png) ![](images/job6.png) ![](images/job7.png)

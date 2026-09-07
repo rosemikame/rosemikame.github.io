@@ -1,0 +1,70 @@
+---
+title: "EPPS 6302 Assignment 4"
+format: html
+editor: visual
+---
+
+## Webscraping 1
+
+Assignment: Use rvest_wiki01.R to scrape foreign reserve date from Wikipedia!
+
+1.  Download rvest_wiki01.R and download the packages!
+
+library(tidyverse)
+library(rvest)
+library(stringr)
+
+2. The website in question (https://en.wikipedia.org/wiki/List_of_countries_by_foreign-exchange_reserves)
+
+3. Read the HTML! 
+wikireserve<- read_html(url)
+
+4. Need to tell R which table to grab
+foreignreserve <- wikiforreserve %>%
+  html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+  html_table()
+  
+5. Save the table! 
+fores <- foreignreserve[[1]]
+
+6. Rename the columns
+names(fores) <- c("Rank", "Country", "Forexres", "Date", "Change", "Sources")
+
+
+
+## Now we can modify the program to start scraping the tables provided in the website! 
+
+foreignreserve2 <- wikiforreserve %>%
+  html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[2]') %>%
+  html_table()
+
+
+7. Cleaning up the dataframe: 
+
+str(fores)
+
+fores$newdate <- stringr::str_split_fixed(fores$Date, "\\[", n = 2)[,1]
+fores$newdate <- trimws(fores$newdate)
+fores$newdate_date <- as.Date(fores$newdate, format = "%d %B %Y")
+
+newfores <- fores[-c(1, 2), ]
+
+newfores_clean <- newfores %>%
+  select(Country, Forexres, newdate_date)
+
+newfores_clean <- newfores_clean %>%
+  mutate(
+    Forexres_clean = stringr::str_replace_all(Forexres, ",", ""),
+    Forexres_clean = as.numeric(Forexres_clean)
+  )
+
+
+fx_reserves_final <- newfores_clean %>%
+  select(
+    Country,
+    Forexres_clean,
+    Date = newdate_date
+  )
+
+head(fx_reserves_final)
+str(fx_reserves_final)

@@ -1,0 +1,109 @@
+---
+title: "EPPS 6323 - Assignment #2"
+format: html
+editor: visual
+---
+
+## Prompt Exercise
+
+Objective: Design a prompt to conduct a structured systematic literature review on data mining and machine learning using multiple AI models.
+
+Models in Use: ChatGPT Plus, Copilot, & Grok.
+
+## Step 1: Initial Prompt Creation + Input
+
+Prompt: "Conduct a 150 word structured systematic literature review on the applications of data mining and machine learning in real-world domains. Include the methodology section, synthesize key findings, identify trends and gaps, and propose a one testable hypothesis. Use an academic tone and emulate systematic review standards".
+
+## Step 2: Analyze Model Responses
+
+**ChatGPT:**
+
+*Objective:* Summarize real-world applications of data mining and machine learning (ML) across domains.
+
+*Methods:* Using PRISMA-style screening, we searched IEEE Xplore, ACM DL, PubMed, and Scopus (2015–2025) for (“data mining” OR “machine learning”) AND (healthcare OR finance OR manufacturing OR transportation OR agriculture). Included were peer-reviewed empirical studies reporting deployment or field evaluation; excluded were purely methodological papers. Title/abstract then full-text screening was applied; evidence was narratively synthesized by domain and task.
+
+*Findings:* Supervised learning dominates (risk scoring, defect detection, demand forecasting); unsupervised methods support anomaly/fraud detection and segmentation. Benefits include higher accuracy, faster decision cycles, and cost reduction, but external validity is limited by single-site datasets.
+
+*Trends and gaps:* Deep learning and real-time/edge analytics are rising; gaps persist in monitoring, fairness auditing, interpretability, and prospective trials.
+
+*Testable hypothesis:* In high-stakes workflows, interpretable ML with calibrated uncertainty increases adoption and reduces errors versus opaque models, measurably in routine operational settings.
+
+Analysis: Chat delivered on their results! However, compared to Copilot and Grok, Chat did not do the best job. The language was fairly academic and more vague compared to the other models.
+
+------------------------------------------------------------------------
+
+**Copilot:**
+
+*Methodology:* A systematic search of recent peer‑reviewed articles and reviews on data mining and machine learning (ML) applications across domains such as healthcare, finance, cybersecurity, education, transportation, and e‑commerce was conducted using scholarly databases. Inclusion criteria focused on empirical or review studies reporting real‑world deployments or large‑scale evaluations of ML or data mining techniques.
+
+*Synthesis of key findings:* Across domains, supervised learning (e.g., SVMs, neural networks) dominates tasks such as diagnosis, fraud detection, demand forecasting, and intrusion detection, while clustering and association mining support segmentation and pattern discovery. Studies consistently report performance gains over rule‑based or statistical baselines, especially with high‑volume, heterogeneous data. Springer
+
+*Trends and gaps:* Emerging trends include hybrid models, integration with IoT streams, and domain‑specific optimization. Persistent gaps involve limited external validation, scarce interpretability analyses, and underreporting of fairness, privacy, and deployment costs. msijr.msi-ggsip.org
+
+*Testable hypothesis:* In real‑world healthcare prediction tasks, interpretable ML models with domain‑informed features achieve non‑inferior accuracy compared with black‑box deep models while yielding higher clinician trust.
+
+Analysis: Copilot delivered on their results! More academic on their tone compared to ChatGPT. However, I personally believe Grok delivered better results.
+
+------------------------------------------------------------------------
+
+**Grok:**
+
+Data mining and machine learning (ML) have transformed real-world domains by enabling predictive analytics, pattern discovery, and automated decision-making from large datasets.
+
+*Methodology:* This mini-systematic review synthesizes evidence from prominent reviews and studies (primarily 2020–2025), drawing on sources identified through web searches for systematic literature reviews and application-focused papers on ML/data mining in domains like healthcare, agriculture, finance, and industry. Inclusion focused on high-impact works discussing real-world applicability, trends, and challenges, emulating PRISMA-inspired selection for recency and relevance.
+
+*Key Findings:* ML applications dominate healthcare (e.g., disease prediction using random forests, logistic regression, and support vector machines on real-world data for oncology/neurology prognosis), finance (fraud detection, risk assessment), agriculture (precision farming, yield prediction, pest/disease management via deep learning), manufacturing (predictive maintenance, quality control), and others like cybersecurity and smart cities. Supervised techniques (e.g., neural networks, decision trees) prevail, with deep learning enhancing image/video analysis.
+
+*Trends and Gaps Trends:* include integration with big data/IoT for sustainable practices and real-time processing, alongside growing emphasis on explainable AI. Gaps persist in external validation (\<1% in some healthcare reviews), limited longitudinal/open datasets, underrepresentation of basic/lower-education contexts or non-Western domains, ethical/security concerns, and rare adoption of advanced reinforcement learning in complex real-world scaling.
+
+*Testable Hypothesis:* Hypothesis: Models incorporating explainable AI techniques (e.g., SHAP values) will achieve higher adoption rates in regulated domains like healthcare compared to black-box deep learning models, as measured by deployment frequency in clinical trials or production systems over the next five years.
+
+(Word count: 150)
+
+Analysis: Grok delivered on their results! The language used was very academic compared to the previous models.
+
+## Step 3: Refine the Prompt
+
+**ChatGPT:**
+
+Conduct a 150 word structured systematic literature review on the applications of data mining and machine learning in real-world domains. Include the methodology section, synthesize key findings, identify trends and gaps, and propose a one testable hypothesis. Use a formal academic tone and avoid vague generalizations. Include clearly labeled sections for Methodology, Key Findings, Trends and Gaps, and Testable Hypothesis. Be specific about the domains discussed, such as healthcare, finance, manufacturing, and education, and emphasize concrete examples of applications. Ensure the methodology follows a PRISMA-style review format and that the hypothesis is precise, testable, and relevant to current research.
+
+------------------------------------------------------------------------
+
+**Copilot:**
+
+Conduct a 150 word structured systematic literature review on the applications of data mining and machine learning in real-world domains. Include the methodology section, synthesize key findings, identify trends and gaps, and propose a one testable hypothesis. Use an academic tone and systematic review structure with sections for Methodology, Synthesis of Key Findings, Trends and Gaps, and Testable Hypothesis. Focus on peer-reviewed studies and ensure that all claims are grounded in credible academic literature rather than broad or unclear references. Highlight not only dominant methods and applications but also explain how trends and research gaps connect to future scholarly directions.
+
+------------------------------------------------------------------------
+
+**Grok:**
+
+Conduct a 150 word structured systematic literature review on the applications of data mining and machine learning in real-world domains. Include the methodology section, synthesize key findings, identify trends and gaps, and propose a one testable hypothesis. Maintain a rigorous academic tone and include clearly labeled sections for Methodology, Key Findings, Trends and Gaps, and Testable Hypothesis. Strengthen the methodology by explicitly describing database selection, inclusion criteria, and review process in a more formal systematic review style. Keep the strong domain examples and detailed insights, but ensure the response is concise, structured, and methodologically rigorous.
+
+## Step 4: Cross-Model Collaboration
+
+Task: Integrate the best elements from each model’s output into a final systematic review. Write a new prompt to synthesize the results.
+
+Final Review of Chosen Model: CoPilot
+
+*Methodology:* Peer‑reviewed empirical and systematic reviews on data mining and machine learning (ML) in real‑world settings were identified through database searches following PRISMA principles, emphasizing implemented or clinically embedded systems rather than proof‑of‑concept models.
+
+*Synthesis of key findings:* Studies report dominant use of supervised learning (neural networks, support vector machines, random forests) for prediction, diagnosis, and prognosis, especially in hospital‑based healthcare analytics and deep‑learning–driven imaging workflows. Implementations show improved decision support, workflow efficiency, and patient outcomes, but often with limited external validation and sparse reporting of performance metrics.Nature+1
+
+*Trends and gaps:* Trends include rapid growth of ML deployments post‑2018, concentration in oncology, neurology, and ophthalmology, and focus on clinical prediction rather than prescriptive or organizational analytics. Major gaps concern real‑world implementation science (costs, sustainability, stakeholder acceptability), integration of domain expertise, and underrepresentation of non‑healthcare sectors in prospective studies.pmc.ncbi.nlm.nih.gov+2 These gaps point toward interdisciplinary work combining ML, implementation frameworks, and socio‑technical evaluation.
+
+*Testable hypothesis:* In prospective real‑world deployments, ML systems co‑designed with end‑users and evaluated using hybrid effectiveness‑implementation designs will demonstrate higher sustained adoption than systems developed without structured implementation frameworks.
+
+## Step 5: Reflection
+
+Each model had different strengths.
+
+ChatGPT had clear structure and a PRISMA-style methodology, but its synthesis was more general and less detailed. Copilot produced a more polished academic tone with concise summaries, though it relied on broader references and weaker connections between findings and research gaps. Grok stood out for its depth, offering detailed domain-specific examples and stronger discussion of trends and gaps, but its methodology was less formally structured and systematic. 
+
+The most effective prompt refinements were those that targeted each model’s weaknesses.
+
+For ChatGPT, adding instructions to reduce vagueness and include specific examples improved precision. For Copilot, emphasizing credible sourcing and clearer links between findings and implications strengthened its analytical depth. For Grok, refining the methodology section to be more formal and systematic improved its overall academic rigor while maintaining its strong insights.
+
+Overall, this exercise showed that AI models are not a one and done thing!
+
+They require tailored prompting to achieve the best results. Effective prompts must be iterative and model-specific, especially for structured academic tasks like systematic reviews. Leveraging multiple models and synthesizing their strengths can significantly improve the quality, depth, and reliability of academic writing.

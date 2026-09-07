@@ -1,0 +1,95 @@
+---
+title: "EPPS 6354 Assignment 5"
+---
+
+## Question 1 - What does the following mean in terms of the structure of an enterprise schema?
+
+**Disconnected** - at least one entity set that has no relationships with any other entity sets. This suggests that some parts of the database are isolated and do not interact with others.
+
+**Ex. 2 separate entity sets:**
+
+[Students (ID, Name, Age)]{.underline}
+
+[Products (Product_ID, Name, Price)]{.underline}
+
+If there is no relationship between them, then they are disconnected. This might indicate missing relationships in the design, or could be intentional or a design flaw
+
+------------------------------------------------------------------------
+
+**Cycle** - means there is a loop in the entity relationships. This implies that a sequence of relationships leads back to the original entity
+
+\
+**Ex.**\
+[Employee -\> works for -\> department]{.underline}
+
+[Dept -\> managed by -\> manager (also employee)]{.underline}
+
+[Manager -\> reports to -\> senior employee]{.underline}
+
+[Senior Employee -\> works for -\> department]{.underline}
+
+- forming a circle
+
+Cycles may be essential in hierarchical structures, such as employee-manager relationships. However, unintended cycles can lead to data redundancy or infinite loops in queries.
+
+------------------------------------------------------------------------
+
+**Summary:**
+
+[Disconnected graph:]{.underline} some entities are isolated (meaning missing relationships)
+
+[Cycle in graph:]{.underline} entities are interconnected in a loop (could be intentional or a design issue)
+
+## Question 2 - Why do we still have weak entity sets?
+
+[Weak entity sets]{.underline} naturally model real work scenarios where certain entities do not have an independent existence. They preserve the natural relationship in the data and reinforce constraints that ensure their existence depends on a related strong entity. **This helps maintain data consistency.**
+
+**Ex.** A dependent must always be associated with an employee, ensuring meaningful relationships in the database.
+
+Real-world representation: some concepts naturally fit in the weak entity model better
+
+## Question 3 - SQL Exercise
+
+i\. Find the ID and name of each employee who lives in the same city as the location of the company for which the employee works:
+
+**SELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID JOIN company AS c ON w.company_name = c.company_name WHERE e.city = c.city;**
+
+- Join employee with works using ID to get the company they work for
+
+- Join works with company using company name to get the companies city
+
+- Filter employees whos city matches the companies city
+
+------------------------------------------------------------------------
+
+ii\. Find ID and name of each employee who lives in the same city and on the same street as does her or his manager.
+
+**SELECT e.ID, e.person_nam FROM employee AS e JOIN manages AS m ON e.ID = m.ID JOIN employee AS mgr ON m.manager_id = mgr.ID WHERE e.city = mgr.city AND e.street = mgr.street;**
+
+- Self join employee to compare an employee (e) with manager
+
+- Use manages to get the manager id for each employee
+
+- Filter employees who share the same city and street as their manager
+
+------------------------------------------------------------------------
+
+iii\. Find ID and name of each employee who earns more than the average salary of all employees of her or his company.
+
+**SELECT e.ID, e.person_name FROM employee AS e JOIN works AS w ON e.ID = w.ID WHERE w.salary \> ( SELECT AVG(w2.salary) FROM works AS w2 WHERE w.company_name = w2.company_name)**
+
+- Join employee with works to get salary information
+
+- Compare each employees salary to the average salary of all employees working in the same company
+
+------------------------------------------------------------------------
+
+**b) Consider the query... what is wrong with it?:**
+
+**Using natural join can cause incorrect joins.** Natural join joines tables based on common column names automatically If tables share multiple common columns, the database might join them incorrectly Could lead to wrong or missing results
+
+- Ambiguous Column Names Semester and year columns are likely in the section table, but the query does not specify The database might get confused if other tables also have the columns
+
+- Missing Explicit Conditions Instructor table has an ID column, but teaches also has ID Need to explicitly specify how tables are related using ON conditions
+
+**In short, the issue was due to the natural join making unintended matches, and the fixed query uses join... on to explicitly define relationships, preventing errors.**

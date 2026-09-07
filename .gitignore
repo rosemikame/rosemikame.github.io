@@ -1,0 +1,19 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/.quarto/
+
+**/*.quarto_ipynb
+.positai
+_site/
+_site/
+_site/
+_site/
+.DS_Store
+.RData
+.Rhistory
+ejobs_raw_data.rds
+ejobs_raw_data 2.rds
+ejobs_raw_data.zip

@@ -1,0 +1,37 @@
+---
+title: "EPPS 6354 - Assignment #1 "
+---
+
+## Question 1.
+
+Google Translate - Language Translation Services -
+
+i.  Purpose of this is to give translation services to consumers. You are able to translate text, speech, images, and websites from one language to another.
+
+ii. Functions include: Text, Speech, Image, and Website translation.
+
+iii.The Interface design of Google Translate has input/output fields where you can text/speak into the original language then translate it to the preferred language. It contains different translation methods, such as text, voice, image, and even a handwriting option. It has a simple interface, I imagine because when in a situation to use the app in real life where there are language barriers, it is important to keep it simple and in a way where anyone can understand how to use it regardless of the language you speak.
+
+DoorDash - E-commerce and Food Delivery -
+
+i.  Purpose is to provide consumers food, grocery, convenience store, and additional deliveries such as pet supplies and flower delivery. There are 3 parties involved, the consumer, merchant (restaurant/store), and delivery driver.
+
+ii. Functions of DoorDash for each party involved are as follows. Consumer Functions include the easy to use browsing for food/products, ordering/customizing your order, payment processing, tracking your order, and leaving a review. Functions of the merchant include order management, being able to update menus/prices, promotions, and sales information. Functions of the delivery driver include the ability to accept deliveries, navigating to the location, tracking earnings and tips, and showing delivery hotspots.
+
+iii. The interface design of Door Dash is user friendly, yet attention grabbing. There are many tabs showing what is popular, as well as any promotions or deals happening, including different categories of food or restaurants. It should be easy to use and navigate, as being hungry and confused is not a good combination. It is organized and attention grabbing, as well as displaying a simple check out screen.
+
+Yelp - E-commerce and Digital Marketing -
+
+i.  Purpose is to help businesses and professionals to expand their clientele and gain visibility, and help consumers search and discover businesses depending on their need and wants. They are also able to leave reviews, make reservations, and check in at certain locations.
+
+ii. Functions of Yelp for consumers include being able to search and discover businesses by category, location, and name, as well as leaving reviews including uploading photos. Functions of Yelp for businesses include having the ability to advertise and promote their business, respond to reviews, and create their own business profile.
+
+iii.The simple interface design of Yelp includes being able to easily search different businesses by category and name. It lists the business name and rating, as well as pictures of the menu/photos of the establishment with reviews that are easily sorted by number of stars. The action of writing a review is simple and easy to follow. It is very user friendly and allows for t
+
+## Question 2.
+
+Why is data mining needed if data is being able to be stored and reviewed effectively?
+
+Data mining is very important because it allows for data to be analyzed and reviewed so that it can be used within all sectors of business, which includes but is not limited to healthcare, social media, banking, and retail. Even though the data is being retrieved in an accurate way, we still need to analyze the data to uncover different trends, patterns, and allow for accurate decision making. Data mining can help predict trends, help decision making, and detect any issues. In addition, we also need to understand real world necessities and trends and in turn would help us predict consumer patterns and make business decisions. There are certain things that databases are unable to provide, and external tools such as SQL, R, and Python are still needed.
+
+3 tables that might be used to store information in a social media system include a user name table, table that displays number of followers, and table that shows the number of interactions a user has with others. User name table - this table would show the user accounts and their information such as : user name, number of followers, email, biography. User account details Followers table - this table would show the number of followers that a user has, and possibly display what other attributes such as how long that person has been following them, or could be sorted by most recent, least interacted with, and followers that they don't follow back. Manages following relationships Interactions table - this table would show the different interactions that someone would have with other followers. This would include the number of times a person liked their post, viewed their story, commented or responded to their post. Displays user engagement

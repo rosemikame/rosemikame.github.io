@@ -1,0 +1,42 @@
+---
+title: "EPPS 6302 Assignment 5"
+format: html
+editor: visual
+---
+
+1.  Go to the GovInfo search page:\
+    https://www.govinfo.gov/app/search/\
+2.  Enter search terms or filters to narrow the results to the **Foreign Relations Committee**.
+    -   Example search string might include `"Foreign Relations Committee"` or similar filtering by committee (metadata filters vary).\
+    -   Use the advanced search options on GovInfo to narrow by **date issued**, **committee**, or **type of document**.
+3.  Examine the returned results.
+
+------------------------------------------------------------------------
+
+## 1.3 R Script (`govtdata01.R`) – Downloading Documents
+
+1.  Load R packages for web requests and file downloads (for example, `httr`, `jsonlite`, `tidyverse`).
+2.  Craft search queries or use GovInfo’s API to pull results that match Foreign Relations Committee.
+    -   GovInfo has a Search API that accepts POST requests. :contentReference[oaicite:3]{index="3"}
+3.  Download documents using returned URLs.
+4.  Save each downloaded file locally (e.g., as PDF, XML, or text).
+
+# Define search query
+
+search_url \<- "https://api.govinfo.gov/search" query_body \<- list( query = "Committee on Foreign Relations", pageSize = 10, offsetMark = "\*" )
+
+API key
+
+api_key \<- Sys.getenv("GOVINFO_API_KEY")
+
+response \<- POST( search_url, add_headers(`X-Api-Key` = api_key), body = query_body, encode = "json" )
+
+search_results \<- content(response, as = "parsed", simplifyVector = TRUE)
+
+Access result items
+
+docs \<- search_results\$results
+
+Loop to download each document (if a direct document link is available)
+
+for (i in seq_along(docs)) { doc \<- docs\[\[i\]\] download_link \<- doc\$link \# Replace with actual document URL element download_file \<- paste0("doc\_", i, ".pdf") GET(download_link, write_disk(download_file)) }

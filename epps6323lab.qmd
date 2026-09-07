@@ -1,0 +1,8 @@
+---
+title: "Labs"
+format: html
+editor: visual
+---
+
+## Labs - In Class March 24th 
+
