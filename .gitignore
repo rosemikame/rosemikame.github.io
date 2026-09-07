@@ -17,3 +17,4 @@ _site/
 ejobs_raw_data.rds
 ejobs_raw_data 2.rds
 ejobs_raw_data.zip
+renv/
