@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment #1 – Rose Mikame</title>
+<title>EPPS 6356 - Assignment #1 – Rose Mikame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment #1</h1>
+<h1 class="title">EPPS 6356 - Assignment #1</h1>
 </div>
 
 
@@ -235,6 +235,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<ol type="1">
+<li>Reading Anscombe’s 1973 paper, “Graphs in Statistical Analysis” with a paragraph to analyze and suggest a solution:</li>
+</ol>
+<p>In Anscombe’s 1973 paper, “<em>Graphs in Statistical Analysis</em>”, he argues that graphs have various purposes but are most valuable because they help us understand and view the data for what it is. As he said, there might be assumptions about the data, and it might be false or misleading. <strong>Analysis should be done multiple times, such as involving multiple forms of examination.</strong></p>
+<p>Before anything, you should plot the x and y variables on a graph and see what the data is doing. If there are outliers, check to see if the values are correct first. If they are correct, we can look more closely at them later. This becomes clear in Anscombe’s four datasets, which produce essentially the same regression statistics despite displaying very different patterns when graphed. <strong>While the first dataset reasonably fits a linear model, the second exhibits a curved relationship, the third contains an influential outlier, and the fourth relies heavily on a single observation to establish the regression relationship.</strong></p>
+<p>The solution would be for researchers to look at their variables before fitting a model, investigate unusual observations to determine whether they are errors or not, and examine plots after regression to identify patterns that may indicate certain assumptions they might have about the model.</p>
+<ol start="2" type="1">
+<li>Run <strong>Fall.R</strong> and give it your own color and export it and post on Github.</li>
+</ol>
+<p><img src="images/fallRcode.png" class="img-fluid"> <img src="images/pinkburlywood.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>“<strong>Race and Occupation</strong>” Critique:</li>
+</ol>
+<p>I am critiquing Nathan Yau’s graph, “<a href="https://flowingdata.com/2024/02/16/race-and-occupation/"><strong>Race and Occupation</strong></a>”. Within this chart, he shows how different race and ethnic groups are represented across occupations relative to their overall representation in the U.S. workforce. Overall, this is a visually interesting and fascinating graph! I love it and it drew my attention. There are multiple variables that are based on the <u>2022 American Community Survey</u>:</p>
+<ul>
+<li><p><strong>Race/Ethnicity -</strong> The racial or ethnic group being looked at, such as Asian, Black, White, Hispanic, or Native American.</p></li>
+<li><p><strong>Occupation -</strong> The type of job people work in, such as physicians, nurses, engineers, or agricultural workers.</p></li>
+<li><p><strong>% of Occupation Belonging to Certain Race -</strong> How much of a certain occupation is made up of a specific racial or ethnic group.</p></li>
+<li><p><strong>% of the Total Work Force Belonging to Certain Race -</strong> How much of the entire U.S. workforce is made up of that racial or ethnic group. This gives us something to compare the occupation percentage to.</p></li>
+<li><p><strong>Representation -</strong> This compares how represented a racial or ethnic group is in a certain occupation to how represented that group is in the workforce overall. Yau refers to this as how many “times more likely” a group is to work in an occupation.</p></li>
+<li><p><strong>Total Workers -</strong> How many people from that racial or ethnic group work in the occupation. This is shown through the&nbsp;<strong>size of the circles</strong>—larger circles represent more workers.</p></li>
+</ul>
+<p>The graphs main measure compares a group’s representation in a specific occupation with its representation in the workforce overall. Each circle represents an occupation, while the size of the circle represents the number of workers. This allows the reader to see not only which occupations are more common among certain racial or ethnic groups, but also how large those occupations are.</p>
+<p>One call out about the graph would be that at times it might be difficult for the reader to understand it at first due to presenting multiple variables at once. The reader needs to understand fully what the size of the circles mean and the position before interpreting. It is a lot of visualization, but very fascinating and visually appealing.</p>
+<p><img src="images/nathanyau.png" class="img-fluid"></p>
+<hr>
+<p><strong>Teaching To See - Review:</strong></p>
+<p>In this film, Inge Druckrey explains that good design starts with learning how to really pay attention to what you see. Instead of jumping straight into creating something, students should first notice small details like shapes, spacing, size, and form. Her teaching shows that even small visual changes can make a big difference in how we see and understand something.</p>
+<p>**1. What do thin/thick and curve/linearity mean in Druckrey’s teaching?** Thin versus thick and curved versus straight are ways of teaching students to notice differences in visual form. She encourages students to pay attention to small details that might not seem important at first, like how thick a line is or whether something is curved or straight. These small differences can change the overall look of a design. The point is not to label something but to get better at noticing those visual details. Students should look at the individual parts of an object instead of just seeing it as a whole. This connects to Druckrey’s main idea that seeing is a skill that we have to practice and develop over time.</p>
+<p>**2. How did Holmes describe and contrast the eye and the hand in writing?** Holmes compares what the eye sees to what the hand actually creates when writing. The eye notices things like spacing, size, shape etc. while the hand is responsible for making the marks. Your hand relies on the eye to guide it. Just because someone knows how to draw or write doesn’t necessarily mean the end result will look good.</p>
+<p>**3. Why was calligraphy important to Steve Jobs and to the design of the Macintosh?** Calligraphy was important to Steve Jobs because it taught him to think about typography as a form of design. He learned about different fonts, letter spacing, and what makes text visually appealing. At the time, the class didn’t seem like it would have much practical use, but he later used what he learned when developing the Mac which was super cool. His experience with calligraphy helped influence the Mac’s use of different typefaces and thoughtfully designed typography.</p>
+<p>**4. Differentiate geometric accuracy from optical accuracy.** Geometric accuracy means that something is mathematically exact, while optical accuracy is more about whether something looks right to the human eye. As an example, a design can be perfectly symmetrical or evenly spaced but still look a little off or unbalanced. Because of this, designers sometimes have to make small adjustments that aren’t technically perfect but make the design look more balanced.</p>
 
 
 
@@ -312,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/rosemikame\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
